@@ -1,0 +1,7 @@
+platform :ios, '15.0'
+
+target 'NewsAPP' do
+
+  # Pods for NewsAPP
+
+end
