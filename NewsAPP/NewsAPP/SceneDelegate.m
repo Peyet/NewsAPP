@@ -6,6 +6,9 @@
 //
 
 #import "SceneDelegate.h"
+#import "ViewController.h"
+#import "MyVideoViewController.h"
+#import "MyRecommendViewController.h"
 
 @interface SceneDelegate ()
 
@@ -18,6 +21,33 @@
     // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
     // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+    self.window = [[UIWindow alloc] initWithWindowScene:(UIWindowScene *)scene];
+        
+    UITabBarController *tabbarController = [[UITabBarController alloc] init];
+//    tabbarController.tabBarItem.standardAppearance = [[UITabBarAppearance alloc] init];
+    
+    ViewController *newsViewController = [[ViewController alloc] init];
+     newsViewController.tabBarItem.title = @"首页";
+    newsViewController.tabBarItem.image = [UIImage imageNamed:@"page@2x.png"];
+    newsViewController.tabBarItem.selectedImage = [UIImage imageNamed:@"page@2x_selected.png"];
+    
+    MyVideoViewController *videoViewController = [[MyVideoViewController alloc] init];
+    
+    MyRecommendViewController *recommendViewController = [[MyRecommendViewController alloc] init];
+    
+    UIViewController *mineViewController = [[UIViewController alloc] init];
+    mineViewController.view.backgroundColor = [UIColor grayColor];
+    mineViewController.tabBarItem.title = @"我的";
+    mineViewController.tabBarItem.image = [UIImage imageNamed:@"home@2x.png"];
+    mineViewController.tabBarItem.selectedImage = [UIImage imageNamed:@"home@2x_selected.png"];
+
+    [tabbarController setViewControllers:@[newsViewController, videoViewController, recommendViewController, mineViewController]];
+    
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:tabbarController];
+
+    self.window.rootViewController = navigationController;
+    [self.window makeKeyAndVisible];
+    
 }
 
 
