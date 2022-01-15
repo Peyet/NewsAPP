@@ -7,6 +7,7 @@
 
 #import "ViewController.h"
 #import "MyNormalTableViewCell.h"
+#import "MyDetailViewController.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -39,13 +40,13 @@
     return cell;
 }
 
-#pragma mark - UITableViewDataSourceDelegate
+#pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 100;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    UIViewController *viewController = [[UIViewController alloc] init];
+    MyDetailViewController *viewController = [[MyDetailViewController alloc] init];
     viewController.navigationItem.title = [NSString stringWithFormat:@"title - %@", @(indexPath.row)];
     viewController.view.backgroundColor = [UIColor whiteColor];
     [self.navigationController pushViewController:viewController animated:YES];
