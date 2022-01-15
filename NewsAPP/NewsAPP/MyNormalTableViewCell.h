@@ -9,7 +9,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol MyNormalTableViewCellDelegate <NSObject>
+
+- (void)tableViewCell:(UITableViewCell *)tableViewCell clickDeleteButton:(UIButton *)deleteButton;
+
+@end
+
 @interface MyNormalTableViewCell : UITableViewCell
+
+@property (nonatomic, weak, readwrite) id<MyNormalTableViewCellDelegate> delegate;
 
 - (void)layoutTableViewCell; 
 

@@ -8,24 +8,38 @@
 #import "ViewController.h"
 #import "MyNormalTableViewCell.h"
 #import "MyDetailViewController.h"
+#import "MyDeleteCellView.h"
 
-@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
-
+@interface ViewController () <UITableViewDataSource, UITableViewDelegate, MyNormalTableViewCellDelegate>
+@property (nonatomic, strong, readwrite) UITableView *tableView;
+@property (nonatomic, strong, readwrite) NSMutableArray *dataArray;
 @end
 
 @implementation ViewController
 
+// 初始化TableVIew数据源
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        _dataArray = @[].mutableCopy;
+        for (int i = 0; i < 20; i++) {
+            [_dataArray addObject:@(i)];
+        }
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UITableView *tableView =[[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
-    tableView.dataSource = self;
-    tableView.delegate = self;
-    [self.view addSubview:tableView];
+    _tableView =[[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+    _tableView.dataSource = self;
+    _tableView.delegate = self;
+    [self.view addSubview:_tableView];
 }
 
 #pragma mark - UITableViewDataSourceDelegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 30;
+    return self.dataArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -33,6 +47,7 @@
     if (!cell) {
         cell = [[MyNormalTableViewCell	 alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"id"];
     }
+    cell.delegate = self;
 //    cell.textLabel.text = [NSString stringWithFormat:@"title - %@", @(indexPath.row)];
 //    cell.detailTextLabel.text = @"detail label";
 //    cell.imageView.image = [UIImage imageNamed:@"home@2x.png"];
@@ -51,5 +66,20 @@
     viewController.view.backgroundColor = [UIColor whiteColor];
     [self.navigationController pushViewController:viewController animated:YES];
 }
+
+#pragma mark - MyNormalTableViewCellDelegate
+- (void)tableViewCell:(UITableViewCell *)tableViewCell clickDeleteButton:(UIButton *)deleteButton {
+    MyDeleteCellView *deleteView = [[MyDeleteCellView alloc] initWithFrame:self.view.bounds];
+    CGRect rect = [tableViewCell convertRect:deleteButton.frame toView:nil];
+    
+    __weak typeof(self)wself = self;
+    [deleteView showDeleteViewFromPoint:rect.origin clickBlock:^{
+        __strong typeof(wself) strongSelf = wself;
+        [strongSelf.dataArray removeLastObject];
+        [strongSelf.tableView deleteRowsAtIndexPaths:@[[strongSelf.tableView indexPathForCell:tableViewCell]] withRowAnimation:UITableViewRowAnimationTop];
+    }];
+    
+}
+
 
 @end
