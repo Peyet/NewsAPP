@@ -1,5 +1,5 @@
 //
-//  MyDetailViewController.h
+//  MyMineViewController.h
 //  NewsAPP
 //
 //  Created by PeyetZhao on 2022/1/15.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MyDetailViewController : UIViewController
+@interface MyMineViewController : UIViewController
 
 @end
 

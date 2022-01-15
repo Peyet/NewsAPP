@@ -6,9 +6,10 @@
 //
 
 #import "SceneDelegate.h"
-#import "ViewController.h"
-#import "MyVideoViewController.h"
-#import "MyRecommendViewController.h"
+#import "NewsController/Controller/MyNewsViewController.h"
+#import "VideoController/Controller/MyVideoViewController.h"
+#import "RecommendController/Controller/MyRecommendViewController.h"
+#import "MineController/Controller/MyMineViewController.h"
 
 @interface SceneDelegate ()
 
@@ -26,20 +27,13 @@
     UITabBarController *tabbarController = [[UITabBarController alloc] init];
 //    tabbarController.tabBarItem.standardAppearance = [[UITabBarAppearance alloc] init];
     
-    ViewController *newsViewController = [[ViewController alloc] init];
-     newsViewController.tabBarItem.title = @"首页";
-    newsViewController.tabBarItem.image = [UIImage imageNamed:@"page@2x.png"];
-    newsViewController.tabBarItem.selectedImage = [UIImage imageNamed:@"page@2x_selected.png"];
-    
+    MyNewsViewController *newsViewController = [[MyNewsViewController alloc] init];
+ 
     MyVideoViewController *videoViewController = [[MyVideoViewController alloc] init];
     
     MyRecommendViewController *recommendViewController = [[MyRecommendViewController alloc] init];
     
-    UIViewController *mineViewController = [[UIViewController alloc] init];
-    mineViewController.view.backgroundColor = [UIColor grayColor];
-    mineViewController.tabBarItem.title = @"我的";
-    mineViewController.tabBarItem.image = [UIImage imageNamed:@"home@2x.png"];
-    mineViewController.tabBarItem.selectedImage = [UIImage imageNamed:@"home@2x_selected.png"];
+    MyMineViewController *mineViewController = [[MyMineViewController alloc] init];
 
     [tabbarController setViewControllers:@[newsViewController, videoViewController, recommendViewController, mineViewController]];
     

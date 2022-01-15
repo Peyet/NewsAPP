@@ -1,30 +1,34 @@
 //
-//  ViewController.m
+//  MyNewsViewController.m
 //  NewsAPP
 //
 //  Created by PeyetZhao on 2022/1/9.
 //
 
-#import "ViewController.h"
+#import "MyNewsViewController.h"
 #import "MyNormalTableViewCell.h"
 #import "MyDetailViewController.h"
 #import "MyDeleteCellView.h"
 
-@interface ViewController () <UITableViewDataSource, UITableViewDelegate, MyNormalTableViewCellDelegate>
+@interface MyNewsViewController () <UITableViewDataSource, UITableViewDelegate, MyNormalTableViewCellDelegate>
 @property (nonatomic, strong, readwrite) UITableView *tableView;
 @property (nonatomic, strong, readwrite) NSMutableArray *dataArray;
 @end
 
-@implementation ViewController
+@implementation MyNewsViewController
 
-// 初始化TableVIew数据源
 - (instancetype)init {
     self = [super init];
     if (self) {
+        self.tabBarItem.title = @"新闻";
+        self.tabBarItem.image = [UIImage imageNamed:@"page@2x.png"];
+        self.tabBarItem.selectedImage = [UIImage imageNamed:@"page@2x_selected.png"];
+        
         _dataArray = @[].mutableCopy;
         for (int i = 0; i < 20; i++) {
             [_dataArray addObject:@(i)];
         }
+        
     }
     return self;
 }

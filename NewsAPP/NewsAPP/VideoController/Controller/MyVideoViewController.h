@@ -9,6 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// 视频Tab对应的Controller
 @interface MyVideoViewController : UIViewController
 
 @end

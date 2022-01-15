@@ -80,6 +80,7 @@
     return self ;
 }
 
+/// cell重新布局
 - (void)layoutTableViewCell {
     self.titleLabel.text = @"NewsTitle";
     

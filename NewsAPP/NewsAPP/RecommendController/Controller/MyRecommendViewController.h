@@ -9,6 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// 推荐Tab对应的Controller
 @interface MyRecommendViewController : UIViewController
 
 @end

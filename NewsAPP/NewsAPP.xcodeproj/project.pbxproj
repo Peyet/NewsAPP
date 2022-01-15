@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2134EEC3278A8AE300A5B24C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2134EEC2278A8AE300A5B24C /* AppDelegate.m */; };
 		2134EEC6278A8AE300A5B24C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2134EEC5278A8AE300A5B24C /* SceneDelegate.m */; };
-		2134EEC9278A8AE300A5B24C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2134EEC8278A8AE300A5B24C /* ViewController.m */; };
+		2134EEC9278A8AE300A5B24C /* MyNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2134EEC8278A8AE300A5B24C /* MyNewsViewController.m */; };
 		2134EECC278A8AE300A5B24C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2134EECA278A8AE300A5B24C /* Main.storyboard */; };
 		2134EECE278A8AE600A5B24C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2134EECD278A8AE600A5B24C /* Assets.xcassets */; };
 		2134EED1278A8AE600A5B24C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2134EECF278A8AE600A5B24C /* LaunchScreen.storyboard */; };
@@ -25,6 +25,10 @@
 		2134EF1C27916C3A00A5B24C /* MyVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2134EF1B27916C3A00A5B24C /* MyVideoViewController.m */; };
 		2134EF1F2791889300A5B24C /* MyRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2134EF1E2791889300A5B24C /* MyRecommendViewController.m */; };
 		2134EF222791929300A5B24C /* MyNormalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2134EF212791929300A5B24C /* MyNormalTableViewCell.m */; };
+		2134EF242792586B00A5B24C /* aaa.png in Resources */ = {isa = PBXBuildFile; fileRef = 2134EF232792586B00A5B24C /* aaa.png */; };
+		2134EF2A279264EE00A5B24C /* MyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2134EF29279264EE00A5B24C /* MyDetailViewController.m */; };
+		2134EF2D2792A30000A5B24C /* MyDeleteCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2134EF2C2792A30000A5B24C /* MyDeleteCellView.m */; };
+		2134EF382792E83600A5B24C /* MyMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2134EF372792E83600A5B24C /* MyMineViewController.m */; };
 		8CC034AE46BB861FF84AA58B /* libPods-NewsAPP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EC15F34A90107CF267E195 /* libPods-NewsAPP.a */; };
 /* End PBXBuildFile section */
 
@@ -34,8 +38,8 @@
 		2134EEC2278A8AE300A5B24C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2134EEC4278A8AE300A5B24C /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		2134EEC5278A8AE300A5B24C /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		2134EEC7278A8AE300A5B24C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2134EEC8278A8AE300A5B24C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2134EEC7278A8AE300A5B24C /* MyNewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyNewsViewController.h; sourceTree = "<group>"; };
+		2134EEC8278A8AE300A5B24C /* MyNewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyNewsViewController.m; sourceTree = "<group>"; };
 		2134EECB278A8AE300A5B24C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2134EECD278A8AE600A5B24C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2134EED0278A8AE600A5B24C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +59,13 @@
 		2134EF1E2791889300A5B24C /* MyRecommendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyRecommendViewController.m; sourceTree = "<group>"; };
 		2134EF202791929300A5B24C /* MyNormalTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyNormalTableViewCell.h; sourceTree = "<group>"; };
 		2134EF212791929300A5B24C /* MyNormalTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyNormalTableViewCell.m; sourceTree = "<group>"; };
+		2134EF232792586B00A5B24C /* aaa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aaa.png; sourceTree = "<group>"; };
+		2134EF28279264EE00A5B24C /* MyDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyDetailViewController.h; sourceTree = "<group>"; };
+		2134EF29279264EE00A5B24C /* MyDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyDetailViewController.m; sourceTree = "<group>"; };
+		2134EF2B2792A30000A5B24C /* MyDeleteCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyDeleteCellView.h; sourceTree = "<group>"; };
+		2134EF2C2792A30000A5B24C /* MyDeleteCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyDeleteCellView.m; sourceTree = "<group>"; };
+		2134EF362792E83600A5B24C /* MyMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyMineViewController.h; sourceTree = "<group>"; };
+		2134EF372792E83600A5B24C /* MyMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyMineViewController.m; sourceTree = "<group>"; };
 		64EC15F34A90107CF267E195 /* libPods-NewsAPP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NewsAPP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6DFA0BB8C1D4F988E11C9A4 /* Pods-NewsAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsAPP.debug.xcconfig"; path = "Target Support Files/Pods-NewsAPP/Pods-NewsAPP.debug.xcconfig"; sourceTree = "<group>"; };
 		FE993D6D18BB1DBC3136FF5F /* Pods-NewsAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsAPP.release.xcconfig"; path = "Target Support Files/Pods-NewsAPP/Pods-NewsAPP.release.xcconfig"; sourceTree = "<group>"; };
@@ -93,24 +104,20 @@
 		2134EEC0278A8AE300A5B24C /* NewsAPP */ = {
 			isa = PBXGroup;
 			children = (
+				2134EF2E2792E4F200A5B24C /* NewsController */,
+				2134EF332792E5E700A5B24C /* VideoController */,
+				2134EF342792E5F900A5B24C /* RecommendController */,
+				2134EF352792E60700A5B24C /* MineController */,
 				2134EEE02790702500A5B24C /* icon */,
 				2134EEC1278A8AE300A5B24C /* AppDelegate.h */,
 				2134EEC2278A8AE300A5B24C /* AppDelegate.m */,
 				2134EEC4278A8AE300A5B24C /* SceneDelegate.h */,
 				2134EEC5278A8AE300A5B24C /* SceneDelegate.m */,
-				2134EEC7278A8AE300A5B24C /* ViewController.h */,
-				2134EEC8278A8AE300A5B24C /* ViewController.m */,
 				2134EECA278A8AE300A5B24C /* Main.storyboard */,
 				2134EECD278A8AE600A5B24C /* Assets.xcassets */,
 				2134EECF278A8AE600A5B24C /* LaunchScreen.storyboard */,
 				2134EED2278A8AE600A5B24C /* Info.plist */,
 				2134EED3278A8AE600A5B24C /* main.m */,
-				2134EF1A27916C3A00A5B24C /* MyVideoViewController.h */,
-				2134EF1B27916C3A00A5B24C /* MyVideoViewController.m */,
-				2134EF1D2791889300A5B24C /* MyRecommendViewController.h */,
-				2134EF1E2791889300A5B24C /* MyRecommendViewController.m */,
-				2134EF202791929300A5B24C /* MyNormalTableViewCell.h */,
-				2134EF212791929300A5B24C /* MyNormalTableViewCell.m */,
 			);
 			path = NewsAPP;
 			sourceTree = "<group>";
@@ -118,6 +125,7 @@
 		2134EEE02790702500A5B24C /* icon */ = {
 			isa = PBXGroup;
 			children = (
+				2134EF232792586B00A5B24C /* aaa.png */,
 				2134EF0C279162A700A5B24C /* home_selected@2x.png */,
 				2134EF0E279162A700A5B24C /* home@2x.png */,
 				2134EF07279162A700A5B24C /* like_selected@2x.png */,
@@ -128,6 +136,152 @@
 				2134EF08279162A700A5B24C /* video@2x.png */,
 			);
 			path = icon;
+			sourceTree = "<group>";
+		};
+		2134EF2E2792E4F200A5B24C /* NewsController */ = {
+			isa = PBXGroup;
+			children = (
+				2134EF312792E5BC00A5B24C /* Model */,
+				2134EF2F2792E58600A5B24C /* View */,
+				2134EF302792E5B000A5B24C /* Controller */,
+				2134EF322792E5C700A5B24C /* Detail */,
+			);
+			path = NewsController;
+			sourceTree = "<group>";
+		};
+		2134EF2F2792E58600A5B24C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2134EF202791929300A5B24C /* MyNormalTableViewCell.h */,
+				2134EF212791929300A5B24C /* MyNormalTableViewCell.m */,
+				2134EF2B2792A30000A5B24C /* MyDeleteCellView.h */,
+				2134EF2C2792A30000A5B24C /* MyDeleteCellView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2134EF302792E5B000A5B24C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2134EEC7278A8AE300A5B24C /* MyNewsViewController.h */,
+				2134EEC8278A8AE300A5B24C /* MyNewsViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2134EF312792E5BC00A5B24C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2134EF322792E5C700A5B24C /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				2134EF28279264EE00A5B24C /* MyDetailViewController.h */,
+				2134EF29279264EE00A5B24C /* MyDetailViewController.m */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		2134EF332792E5E700A5B24C /* VideoController */ = {
+			isa = PBXGroup;
+			children = (
+				2134EF3B2792EAF200A5B24C /* Model */,
+				2134EF3A2792EAED00A5B24C /* View */,
+				2134EF392792EADA00A5B24C /* Controller */,
+			);
+			path = VideoController;
+			sourceTree = "<group>";
+		};
+		2134EF342792E5F900A5B24C /* RecommendController */ = {
+			isa = PBXGroup;
+			children = (
+				2134EF3E2792EB0C00A5B24C /* Model */,
+				2134EF3D2792EB0700A5B24C /* View */,
+				2134EF3C2792EAFC00A5B24C /* Controller */,
+			);
+			path = RecommendController;
+			sourceTree = "<group>";
+		};
+		2134EF352792E60700A5B24C /* MineController */ = {
+			isa = PBXGroup;
+			children = (
+				2134EF412792EB2600A5B24C /* Model */,
+				2134EF402792EB1F00A5B24C /* View */,
+				2134EF3F2792EB1500A5B24C /* Controller */,
+			);
+			path = MineController;
+			sourceTree = "<group>";
+		};
+		2134EF392792EADA00A5B24C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2134EF1A27916C3A00A5B24C /* MyVideoViewController.h */,
+				2134EF1B27916C3A00A5B24C /* MyVideoViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2134EF3A2792EAED00A5B24C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2134EF3B2792EAF200A5B24C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2134EF3C2792EAFC00A5B24C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2134EF1D2791889300A5B24C /* MyRecommendViewController.h */,
+				2134EF1E2791889300A5B24C /* MyRecommendViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2134EF3D2792EB0700A5B24C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2134EF3E2792EB0C00A5B24C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2134EF3F2792EB1500A5B24C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2134EF362792E83600A5B24C /* MyMineViewController.h */,
+				2134EF372792E83600A5B24C /* MyMineViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2134EF402792EB1F00A5B24C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2134EF412792EB2600A5B24C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		41190DF981BF77FC7C5F123B /* Frameworks */ = {
@@ -214,6 +368,7 @@
 				2134EF0F279162A700A5B24C /* like_selected@2x.png in Resources */,
 				2134EF10279162A800A5B24C /* video@2x.png in Resources */,
 				2134EECC278A8AE300A5B24C /* Main.storyboard in Resources */,
+				2134EF242792586B00A5B24C /* aaa.png in Resources */,
 				2134EF15279162A800A5B24C /* like@2x.png in Resources */,
 				2134EF16279162A800A5B24C /* home@2x.png in Resources */,
 			);
@@ -252,8 +407,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2134EF222791929300A5B24C /* MyNormalTableViewCell.m in Sources */,
-				2134EEC9278A8AE300A5B24C /* ViewController.m in Sources */,
+				2134EEC9278A8AE300A5B24C /* MyNewsViewController.m in Sources */,
 				2134EF1F2791889300A5B24C /* MyRecommendViewController.m in Sources */,
+				2134EF2D2792A30000A5B24C /* MyDeleteCellView.m in Sources */,
+				2134EF2A279264EE00A5B24C /* MyDetailViewController.m in Sources */,
+				2134EF382792E83600A5B24C /* MyMineViewController.m in Sources */,
 				2134EEC3278A8AE300A5B24C /* AppDelegate.m in Sources */,
 				2134EED4278A8AE600A5B24C /* main.m in Sources */,
 				2134EF1C27916C3A00A5B24C /* MyVideoViewController.m in Sources */,
