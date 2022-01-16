@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /// 列表结构化数据
-@interface MyListItem : NSObject
+@interface MyListItem : NSObject <NSSecureCoding>
 
 @property (nonatomic, copy, readwrite) NSString *category;
 @property (nonatomic, copy, readwrite) NSString *is_content;

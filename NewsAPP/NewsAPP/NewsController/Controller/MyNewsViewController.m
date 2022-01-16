@@ -75,6 +75,9 @@
     viewController.navigationItem.title = [NSString stringWithFormat:@"%@", item.title];
     viewController.view.backgroundColor = [UIColor whiteColor];
     [self.navigationController pushViewController:viewController animated:YES];
+    
+    // 文章已读标记
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:item.uniquekey];
 }
 
 #pragma mark - MyNormalTableViewCellDelegate

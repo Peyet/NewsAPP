@@ -99,6 +99,14 @@
     self.commentLabel.frame = CGRectMake(self.timeLabel.frame.origin.x + self.timeLabel.frame.size.width + 15, self.timeLabel.frame.origin.y, self.commentLabel.frame.origin.y, self.commentLabel.frame.size.height);
     [self.commentLabel sizeToFit];
     
+    // 已读标记
+    BOOL hasRead = [[NSUserDefaults standardUserDefaults] boolForKey:item.uniquekey];
+    if (hasRead) {
+        self.titleLabel.textColor = [UIColor lightGrayColor];
+    }else{
+        self.titleLabel.textColor = [UIColor blackColor];
+    }
+    
 #warning todo
     UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:item.thumbnail_pic_s]]];
     self.rightImageView.image = image;
