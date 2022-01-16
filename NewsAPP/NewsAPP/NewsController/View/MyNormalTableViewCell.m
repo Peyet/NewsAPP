@@ -7,6 +7,7 @@
 
 #import "MyNormalTableViewCell.h"
 #import "MyListItem.h"
+#import <SDWebImage.h>
 
 @interface MyNormalTableViewCell ()
 
@@ -61,7 +62,7 @@
         
         [self.contentView addSubview:({
             self.rightImageView = [[UIImageView alloc] initWithFrame:CGRectMake(295, 15, 125, 80)];
-            self.rightImageView.backgroundColor = [UIColor redColor];
+//            self.rightImageView.backgroundColor = [UIColor redColor];
             self.rightImageView;
         })];
         
@@ -107,9 +108,22 @@
         self.titleLabel.textColor = [UIColor blackColor];
     }
     
-#warning todo
-    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:item.thumbnail_pic_s]]];
-    self.rightImageView.image = image;
+//    UIImage *placeholder_image = [UIImage imageNamed:@"placeholder_image.png"];
+//    self.rightImageView.contentMode = UIViewContentModeScaleToFill;
+//    self.rightImageView.image = placeholder_image;
+//    dispatch_queue_global_t downloadQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+//    dispatch_queue_main_t mainQueue = dispatch_get_main_queue();
+//
+//    dispatch_async(downloadQueue, ^{
+//        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:item.thumbnail_pic_s]]];
+//        dispatch_async(mainQueue, ^{
+//            self.rightImageView.image = image;
+//        });
+//    });
+    
+    [self.rightImageView sd_setImageWithURL:[NSURL URLWithString:item.thumbnail_pic_s] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+            
+    }];
 
 }
 
