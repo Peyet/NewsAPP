@@ -32,6 +32,7 @@
 		2134EF442792F88A00A5B24C /* MyListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2134EF432792F88A00A5B24C /* MyListLoader.m */; };
 		2140292D2793C876004712AB /* MyListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2140292C2793C876004712AB /* MyListItem.m */; };
 		2140292F279433F2004712AB /* placeholder_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 2140292E279433F2004712AB /* placeholder_image.png */; };
+		214029322794493F004712AB /* MyVideoCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 214029312794493F004712AB /* MyVideoCoverView.m */; };
 		8CC034AE46BB861FF84AA58B /* libPods-NewsAPP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EC15F34A90107CF267E195 /* libPods-NewsAPP.a */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,8 @@
 		2140292B2793C876004712AB /* MyListItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyListItem.h; sourceTree = "<group>"; };
 		2140292C2793C876004712AB /* MyListItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyListItem.m; sourceTree = "<group>"; };
 		2140292E279433F2004712AB /* placeholder_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder_image.png; sourceTree = "<group>"; };
+		214029302794493F004712AB /* MyVideoCoverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVideoCoverView.h; sourceTree = "<group>"; };
+		214029312794493F004712AB /* MyVideoCoverView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVideoCoverView.m; sourceTree = "<group>"; };
 		64EC15F34A90107CF267E195 /* libPods-NewsAPP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NewsAPP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6DFA0BB8C1D4F988E11C9A4 /* Pods-NewsAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsAPP.debug.xcconfig"; path = "Target Support Files/Pods-NewsAPP/Pods-NewsAPP.debug.xcconfig"; sourceTree = "<group>"; };
 		FE993D6D18BB1DBC3136FF5F /* Pods-NewsAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsAPP.release.xcconfig"; path = "Target Support Files/Pods-NewsAPP/Pods-NewsAPP.release.xcconfig"; sourceTree = "<group>"; };
@@ -240,6 +243,8 @@
 		2134EF3A2792EAED00A5B24C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				214029302794493F004712AB /* MyVideoCoverView.h */,
+				214029312794493F004712AB /* MyVideoCoverView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -424,6 +429,7 @@
 				2134EF222791929300A5B24C /* MyNormalTableViewCell.m in Sources */,
 				2134EEC9278A8AE300A5B24C /* MyNewsViewController.m in Sources */,
 				2134EF1F2791889300A5B24C /* MyRecommendViewController.m in Sources */,
+				214029322794493F004712AB /* MyVideoCoverView.m in Sources */,
 				2134EF2D2792A30000A5B24C /* MyDeleteCellView.m in Sources */,
 				2134EF2A279264EE00A5B24C /* MyDetailViewController.m in Sources */,
 				2134EF382792E83600A5B24C /* MyMineViewController.m in Sources */,
