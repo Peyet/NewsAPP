@@ -9,8 +9,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/// 新闻内容（webView）对应的controller
+/// 新闻内容（webView）对应的controller，文章底层页
 @interface MyDetailViewController : UIViewController
+
+- (instancetype)initWithUrlString:(NSString *)urlString;
 
 @end
 

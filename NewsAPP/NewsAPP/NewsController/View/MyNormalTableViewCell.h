@@ -9,19 +9,23 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class MyListItem;
 
 @protocol MyNormalTableViewCellDelegate <NSObject>
 
+/// 点击删除按钮
+/// @param tableViewCell cell所在的tableview
+/// @param deleteButton 点击的删除按钮
 - (void)tableViewCell:(UITableViewCell *)tableViewCell clickDeleteButton:(UIButton *)deleteButton;
 
 @end
 
-/// 普通新闻TableViewCell控制器
+/// 新闻列表Cell
 @interface MyNormalTableViewCell : UITableViewCell
 
 @property (nonatomic, weak, readwrite) id<MyNormalTableViewCellDelegate> delegate;
 
-- (void)layoutTableViewCell;
+- (void)layoutTableViewCellWithItem:(MyListItem *)item;
 
 @end
 

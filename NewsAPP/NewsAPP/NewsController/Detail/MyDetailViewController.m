@@ -12,10 +12,19 @@
 
 @property (nonatomic, strong, readwrite) WKWebView *webView;
 @property (nonatomic, strong, readwrite) UIProgressView *progressView;
+@property (nonatomic, strong, readwrite) NSString *articleUrl;
 
 @end
 
 @implementation MyDetailViewController
+
+- (instancetype)initWithUrlString:(NSString *)urlString {
+    self = [super init];
+    if (self) {
+        _articleUrl = urlString;
+    }
+    return self;
+}
 
 - (void)dealloc {
     [self.webView removeObserver:self forKeyPath:@"estimatedProgress"];
@@ -34,7 +43,7 @@
         self.progressView;
     })];
     
-    [self.webView loadRequest:[[NSURLRequest alloc] initWithURL:[ NSURL URLWithString:@"https://www.baidu.com"]]];
+    [self.webView loadRequest:[[NSURLRequest alloc] initWithURL:[NSURL URLWithString:self.articleUrl]]];
     
     // 监听网页加载进度
     [self.webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];

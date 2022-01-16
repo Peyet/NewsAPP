@@ -6,6 +6,7 @@
 //
 
 #import "MyNormalTableViewCell.h"
+#import "MyListItem.h"
 
 @interface MyNormalTableViewCell ()
 
@@ -29,6 +30,8 @@
             self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 15, 270, 60)];
 //            self.titleLabel.backgroundColor = [UIColor redColor];
             self.titleLabel.font = [UIFont systemFontOfSize:16];
+            self.titleLabel.numberOfLines = 2;
+            self.titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
             self.titleLabel;
         })];
         
@@ -81,22 +84,24 @@
 }
 
 /// cell重新布局
-- (void)layoutTableViewCell {
-    self.titleLabel.text = @"NewsTitle";
+- (void)layoutTableViewCellWithItem:(MyListItem *)item {
+    self.titleLabel.text = item.title;
     
-    self.sourceLabel.text = @"NYTime";
+    self.sourceLabel.text = item.author_name;
     [self.sourceLabel sizeToFit];
 
-    self.timeLabel.text = @"3min ago";
+    self.timeLabel.text = item.date;
     self.timeLabel.frame = CGRectMake(self.sourceLabel.frame.origin.x + self.sourceLabel.frame.size.width + 15, self.sourceLabel.frame.origin.y, self.timeLabel.frame.origin.y, self.timeLabel.frame.size.height);
     [self.timeLabel sizeToFit];
 
 
-    self.commentLabel.text = @"22comment";
+    self.commentLabel.text = item.category;
     self.commentLabel.frame = CGRectMake(self.timeLabel.frame.origin.x + self.timeLabel.frame.size.width + 15, self.timeLabel.frame.origin.y, self.commentLabel.frame.origin.y, self.commentLabel.frame.size.height);
     [self.commentLabel sizeToFit];
-
-    self.rightImageView.image = [UIImage imageNamed:@"aaa.png"];
+    
+#warning todo
+    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:item.thumbnail_pic_s]]];
+    self.rightImageView.image = image;
 
 }
 

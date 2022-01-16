@@ -29,6 +29,8 @@
 		2134EF2A279264EE00A5B24C /* MyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2134EF29279264EE00A5B24C /* MyDetailViewController.m */; };
 		2134EF2D2792A30000A5B24C /* MyDeleteCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2134EF2C2792A30000A5B24C /* MyDeleteCellView.m */; };
 		2134EF382792E83600A5B24C /* MyMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2134EF372792E83600A5B24C /* MyMineViewController.m */; };
+		2134EF442792F88A00A5B24C /* MyListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2134EF432792F88A00A5B24C /* MyListLoader.m */; };
+		2140292D2793C876004712AB /* MyListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2140292C2793C876004712AB /* MyListItem.m */; };
 		8CC034AE46BB861FF84AA58B /* libPods-NewsAPP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EC15F34A90107CF267E195 /* libPods-NewsAPP.a */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +68,10 @@
 		2134EF2C2792A30000A5B24C /* MyDeleteCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyDeleteCellView.m; sourceTree = "<group>"; };
 		2134EF362792E83600A5B24C /* MyMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyMineViewController.h; sourceTree = "<group>"; };
 		2134EF372792E83600A5B24C /* MyMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyMineViewController.m; sourceTree = "<group>"; };
+		2134EF422792F88A00A5B24C /* MyListLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyListLoader.h; sourceTree = "<group>"; };
+		2134EF432792F88A00A5B24C /* MyListLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyListLoader.m; sourceTree = "<group>"; };
+		2140292B2793C876004712AB /* MyListItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyListItem.h; sourceTree = "<group>"; };
+		2140292C2793C876004712AB /* MyListItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyListItem.m; sourceTree = "<group>"; };
 		64EC15F34A90107CF267E195 /* libPods-NewsAPP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NewsAPP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6DFA0BB8C1D4F988E11C9A4 /* Pods-NewsAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsAPP.debug.xcconfig"; path = "Target Support Files/Pods-NewsAPP/Pods-NewsAPP.debug.xcconfig"; sourceTree = "<group>"; };
 		FE993D6D18BB1DBC3136FF5F /* Pods-NewsAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsAPP.release.xcconfig"; path = "Target Support Files/Pods-NewsAPP/Pods-NewsAPP.release.xcconfig"; sourceTree = "<group>"; };
@@ -172,6 +178,10 @@
 		2134EF312792E5BC00A5B24C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2134EF422792F88A00A5B24C /* MyListLoader.h */,
+				2134EF432792F88A00A5B24C /* MyListLoader.m */,
+				2140292B2793C876004712AB /* MyListItem.h */,
+				2140292C2793C876004712AB /* MyListItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -406,6 +416,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2140292D2793C876004712AB /* MyListItem.m in Sources */,
 				2134EF222791929300A5B24C /* MyNormalTableViewCell.m in Sources */,
 				2134EEC9278A8AE300A5B24C /* MyNewsViewController.m in Sources */,
 				2134EF1F2791889300A5B24C /* MyRecommendViewController.m in Sources */,
@@ -414,6 +425,7 @@
 				2134EF382792E83600A5B24C /* MyMineViewController.m in Sources */,
 				2134EEC3278A8AE300A5B24C /* AppDelegate.m in Sources */,
 				2134EED4278A8AE600A5B24C /* main.m in Sources */,
+				2134EF442792F88A00A5B24C /* MyListLoader.m in Sources */,
 				2134EF1C27916C3A00A5B24C /* MyVideoViewController.m in Sources */,
 				2134EEC6278A8AE300A5B24C /* SceneDelegate.m in Sources */,
 			);
