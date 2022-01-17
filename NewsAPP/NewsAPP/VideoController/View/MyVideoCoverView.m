@@ -7,7 +7,7 @@
 
 #import "MyVideoCoverView.h"
 #import <SDWebImage.h>
-#import <AVFoundation/AVFoundation.h>
+#import "MyVideoPlayer.h"
 
 @interface MyVideoCoverView()
 
@@ -15,10 +15,6 @@
 @property (nonatomic, strong, readwrite) UIImageView *playButton;
 @property (nonatomic, copy, readwrite) NSString *videoUrl;
 @property (nonatomic, copy, readwrite) NSString *videoCoverUrl;
-
-@property (nonatomic, strong, readwrite) AVPlayerItem *videoItem;
-@property (nonatomic, strong, readwrite) AVPlayer *avPlayer;
-@property (nonatomic, strong, readwrite) AVPlayerLayer *playerLayer;
 
 @end
 
@@ -41,62 +37,24 @@
         //点击全部Item都支持播放
         UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(_tapToPlay)];
         [self addGestureRecognizer:tapGesture];
-        
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_handlePlayEnd) name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
-
     }
     return self;
 }
 
 - (void)dealloc {
-    // 移除监听对象
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-    [_videoItem removeObserver:self forKeyPath:@"status"];
 }
 
 #pragma mark - public method
 
 - (void)layoutWithVideoCoverUrl:(NSString *)videoCoverUrl videoUrl:(NSString *)videoUrl {
-    _coverView.image = [UIImage imageNamed:videoCoverUrl];
+    [_coverView sd_setImageWithURL:[NSURL URLWithString:videoCoverUrl]];
     _videoUrl = videoUrl;
-    
-//    [_toolbar layoutWithModel:nil];
 }
 
 #pragma mark - private method
 
 - (void)_tapToPlay {
-    NSURL *videoUrl = [NSURL URLWithString:_videoUrl];
-    
-    AVAsset *asset = [AVAsset assetWithURL:videoUrl];
-    
-    _videoItem = [AVPlayerItem playerItemWithAsset:asset];
-    [_videoItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
-    
-    _avPlayer = [AVPlayer playerWithPlayerItem:_videoItem];
-    
-    _playerLayer = [AVPlayerLayer playerLayerWithPlayer:_avPlayer];
-    _playerLayer.frame = _coverView.bounds;
-    [_coverView.layer addSublayer:_playerLayer];
-}
-
-- (void)_handlePlayEnd {
-    [_playerLayer removeFromSuperlayer];
-    _videoItem = nil;
-    _avPlayer = nil;
-}
-
-#pragma mark - KVO
-
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
-    if ([keyPath isEqualToString:@"status"]) {
-        if (((NSNumber *)[change objectForKey:NSKeyValueChangeNewKey]).integerValue == AVPlayerItemStatusReadyToPlay) {
-            [_avPlayer play];
-        } else{
-            // 资源加载失败
-            
-        }
-    }
+    [[MyVideoPlayer sharedPlayer] playVideoWithvideoUrl:_videoUrl attachView:_coverView];
 }
 
 @end

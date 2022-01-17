@@ -33,6 +33,7 @@
 		2140292D2793C876004712AB /* MyListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2140292C2793C876004712AB /* MyListItem.m */; };
 		2140292F279433F2004712AB /* placeholder_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 2140292E279433F2004712AB /* placeholder_image.png */; };
 		214029322794493F004712AB /* MyVideoCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 214029312794493F004712AB /* MyVideoCoverView.m */; };
+		2196AAE127954ECF00C06FA8 /* MyVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2196AAE027954ECF00C06FA8 /* MyVideoPlayer.m */; };
 		8CC034AE46BB861FF84AA58B /* libPods-NewsAPP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EC15F34A90107CF267E195 /* libPods-NewsAPP.a */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,8 @@
 		2140292E279433F2004712AB /* placeholder_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder_image.png; sourceTree = "<group>"; };
 		214029302794493F004712AB /* MyVideoCoverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVideoCoverView.h; sourceTree = "<group>"; };
 		214029312794493F004712AB /* MyVideoCoverView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVideoCoverView.m; sourceTree = "<group>"; };
+		2196AADF27954ECF00C06FA8 /* MyVideoPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVideoPlayer.h; sourceTree = "<group>"; };
+		2196AAE027954ECF00C06FA8 /* MyVideoPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVideoPlayer.m; sourceTree = "<group>"; };
 		64EC15F34A90107CF267E195 /* libPods-NewsAPP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NewsAPP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6DFA0BB8C1D4F988E11C9A4 /* Pods-NewsAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsAPP.debug.xcconfig"; path = "Target Support Files/Pods-NewsAPP/Pods-NewsAPP.debug.xcconfig"; sourceTree = "<group>"; };
 		FE993D6D18BB1DBC3136FF5F /* Pods-NewsAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsAPP.release.xcconfig"; path = "Target Support Files/Pods-NewsAPP/Pods-NewsAPP.release.xcconfig"; sourceTree = "<group>"; };
@@ -245,6 +248,8 @@
 			children = (
 				214029302794493F004712AB /* MyVideoCoverView.h */,
 				214029312794493F004712AB /* MyVideoCoverView.m */,
+				2196AADF27954ECF00C06FA8 /* MyVideoPlayer.h */,
+				2196AAE027954ECF00C06FA8 /* MyVideoPlayer.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -435,6 +440,7 @@
 				2134EF382792E83600A5B24C /* MyMineViewController.m in Sources */,
 				2134EEC3278A8AE300A5B24C /* AppDelegate.m in Sources */,
 				2134EED4278A8AE600A5B24C /* main.m in Sources */,
+				2196AAE127954ECF00C06FA8 /* MyVideoPlayer.m in Sources */,
 				2134EF442792F88A00A5B24C /* MyListLoader.m in Sources */,
 				2134EF1C27916C3A00A5B24C /* MyVideoViewController.m in Sources */,
 				2134EEC6278A8AE300A5B24C /* SceneDelegate.m in Sources */,
