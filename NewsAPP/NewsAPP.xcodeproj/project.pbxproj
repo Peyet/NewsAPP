@@ -34,6 +34,15 @@
 		2140292F279433F2004712AB /* placeholder_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 2140292E279433F2004712AB /* placeholder_image.png */; };
 		214029322794493F004712AB /* MyVideoCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 214029312794493F004712AB /* MyVideoCoverView.m */; };
 		2196AAE127954ECF00C06FA8 /* MyVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2196AAE027954ECF00C06FA8 /* MyVideoPlayer.m */; };
+		2196AAE42795ACC900C06FA8 /* MyVideoToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2196AAE32795ACC900C06FA8 /* MyVideoToolbar.m */; };
+		2196AB1C2798FC9D00C06FA8 /* NSString+LabelSizeCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2196AB1B2798FC9D00C06FA8 /* NSString+LabelSizeCalculator.m */; };
+		2196AB1F2798FFB200C06FA8 /* MyFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2196AB1E2798FFB200C06FA8 /* MyFlowLayout.m */; };
+		2196AB23279A475E00C06FA8 /* toPlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 2196AB22279A475E00C06FA8 /* toPlay.png */; };
+		2196AB27279A700200C06FA8 /* 屏蔽.png in Resources */ = {isa = PBXBuildFile; fileRef = 2196AB24279A700100C06FA8 /* 屏蔽.png */; };
+		2196AB28279A700200C06FA8 /* 不感兴趣.png in Resources */ = {isa = PBXBuildFile; fileRef = 2196AB25279A700100C06FA8 /* 不感兴趣.png */; };
+		2196AB29279A700200C06FA8 /* 举报.png in Resources */ = {isa = PBXBuildFile; fileRef = 2196AB26279A700200C06FA8 /* 举报.png */; };
+		219CD3B4279AFDD500FB0759 /* MyVideoListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 219CD3B3279AFDD500FB0759 /* MyVideoListLoader.m */; };
+		219CD3BD279C56C800FB0759 /* MyVideoListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 219CD3BC279C56C800FB0759 /* MyVideoListItem.m */; };
 		8CC034AE46BB861FF84AA58B /* libPods-NewsAPP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EC15F34A90107CF267E195 /* libPods-NewsAPP.a */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +89,20 @@
 		214029312794493F004712AB /* MyVideoCoverView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVideoCoverView.m; sourceTree = "<group>"; };
 		2196AADF27954ECF00C06FA8 /* MyVideoPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVideoPlayer.h; sourceTree = "<group>"; };
 		2196AAE027954ECF00C06FA8 /* MyVideoPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVideoPlayer.m; sourceTree = "<group>"; };
+		2196AAE22795ACC900C06FA8 /* MyVideoToolbar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVideoToolbar.h; sourceTree = "<group>"; };
+		2196AAE32795ACC900C06FA8 /* MyVideoToolbar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVideoToolbar.m; sourceTree = "<group>"; };
+		2196AB1A2798FC9D00C06FA8 /* NSString+LabelSizeCalculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+LabelSizeCalculator.h"; sourceTree = "<group>"; };
+		2196AB1B2798FC9D00C06FA8 /* NSString+LabelSizeCalculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+LabelSizeCalculator.m"; sourceTree = "<group>"; };
+		2196AB1D2798FFB200C06FA8 /* MyFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyFlowLayout.h; sourceTree = "<group>"; };
+		2196AB1E2798FFB200C06FA8 /* MyFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyFlowLayout.m; sourceTree = "<group>"; };
+		2196AB22279A475E00C06FA8 /* toPlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toPlay.png; sourceTree = "<group>"; };
+		2196AB24279A700100C06FA8 /* 屏蔽.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "屏蔽.png"; sourceTree = "<group>"; };
+		2196AB25279A700100C06FA8 /* 不感兴趣.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "不感兴趣.png"; sourceTree = "<group>"; };
+		2196AB26279A700200C06FA8 /* 举报.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "举报.png"; sourceTree = "<group>"; };
+		219CD3B2279AFDD500FB0759 /* MyVideoListLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVideoListLoader.h; sourceTree = "<group>"; };
+		219CD3B3279AFDD500FB0759 /* MyVideoListLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVideoListLoader.m; sourceTree = "<group>"; };
+		219CD3BB279C56C800FB0759 /* MyVideoListItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVideoListItem.h; sourceTree = "<group>"; };
+		219CD3BC279C56C800FB0759 /* MyVideoListItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVideoListItem.m; sourceTree = "<group>"; };
 		64EC15F34A90107CF267E195 /* libPods-NewsAPP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NewsAPP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6DFA0BB8C1D4F988E11C9A4 /* Pods-NewsAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsAPP.debug.xcconfig"; path = "Target Support Files/Pods-NewsAPP/Pods-NewsAPP.debug.xcconfig"; sourceTree = "<group>"; };
 		FE993D6D18BB1DBC3136FF5F /* Pods-NewsAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsAPP.release.xcconfig"; path = "Target Support Files/Pods-NewsAPP/Pods-NewsAPP.release.xcconfig"; sourceTree = "<group>"; };
@@ -139,6 +162,10 @@
 		2134EEE02790702500A5B24C /* icon */ = {
 			isa = PBXGroup;
 			children = (
+				2196AB25279A700100C06FA8 /* 不感兴趣.png */,
+				2196AB26279A700200C06FA8 /* 举报.png */,
+				2196AB24279A700100C06FA8 /* 屏蔽.png */,
+				2196AB22279A475E00C06FA8 /* toPlay.png */,
 				2140292E279433F2004712AB /* placeholder_image.png */,
 				2134EF232792586B00A5B24C /* aaa.png */,
 				2134EF0C279162A700A5B24C /* home_selected@2x.png */,
@@ -207,6 +234,7 @@
 		2134EF332792E5E700A5B24C /* VideoController */ = {
 			isa = PBXGroup;
 			children = (
+				2196AAE82796C9C300C06FA8 /* Tool */,
 				2134EF3B2792EAF200A5B24C /* Model */,
 				2134EF3A2792EAED00A5B24C /* View */,
 				2134EF392792EADA00A5B24C /* Controller */,
@@ -250,6 +278,10 @@
 				214029312794493F004712AB /* MyVideoCoverView.m */,
 				2196AADF27954ECF00C06FA8 /* MyVideoPlayer.h */,
 				2196AAE027954ECF00C06FA8 /* MyVideoPlayer.m */,
+				2196AAE22795ACC900C06FA8 /* MyVideoToolbar.h */,
+				2196AAE32795ACC900C06FA8 /* MyVideoToolbar.m */,
+				2196AB1D2798FFB200C06FA8 /* MyFlowLayout.h */,
+				2196AB1E2798FFB200C06FA8 /* MyFlowLayout.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -257,6 +289,10 @@
 		2134EF3B2792EAF200A5B24C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				219CD3B2279AFDD500FB0759 /* MyVideoListLoader.h */,
+				219CD3B3279AFDD500FB0759 /* MyVideoListLoader.m */,
+				219CD3BB279C56C800FB0759 /* MyVideoListItem.h */,
+				219CD3BC279C56C800FB0759 /* MyVideoListItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -305,6 +341,15 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		2196AAE82796C9C300C06FA8 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				2196AB1A2798FC9D00C06FA8 /* NSString+LabelSizeCalculator.h */,
+				2196AB1B2798FC9D00C06FA8 /* NSString+LabelSizeCalculator.m */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 		41190DF981BF77FC7C5F123B /* Frameworks */ = {
@@ -383,10 +428,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2140292F279433F2004712AB /* placeholder_image.png in Resources */,
+				2196AB29279A700200C06FA8 /* 举报.png in Resources */,
 				2134EED1278A8AE600A5B24C /* LaunchScreen.storyboard in Resources */,
 				2134EF14279162A800A5B24C /* home_selected@2x.png in Resources */,
 				2134EF13279162A800A5B24C /* video_selected@2x.png in Resources */,
 				2134EECE278A8AE600A5B24C /* Assets.xcassets in Resources */,
+				2196AB27279A700200C06FA8 /* 屏蔽.png in Resources */,
 				2134EF12279162A800A5B24C /* page@2x.png in Resources */,
 				2134EF11279162A800A5B24C /* page_selected@2x.png in Resources */,
 				2134EF0F279162A700A5B24C /* like_selected@2x.png in Resources */,
@@ -394,6 +441,8 @@
 				2134EECC278A8AE300A5B24C /* Main.storyboard in Resources */,
 				2134EF242792586B00A5B24C /* aaa.png in Resources */,
 				2134EF15279162A800A5B24C /* like@2x.png in Resources */,
+				2196AB23279A475E00C06FA8 /* toPlay.png in Resources */,
+				2196AB28279A700200C06FA8 /* 不感兴趣.png in Resources */,
 				2134EF16279162A800A5B24C /* home@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,8 +480,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2140292D2793C876004712AB /* MyListItem.m in Sources */,
+				2196AAE42795ACC900C06FA8 /* MyVideoToolbar.m in Sources */,
 				2134EF222791929300A5B24C /* MyNormalTableViewCell.m in Sources */,
 				2134EEC9278A8AE300A5B24C /* MyNewsViewController.m in Sources */,
+				219CD3BD279C56C800FB0759 /* MyVideoListItem.m in Sources */,
 				2134EF1F2791889300A5B24C /* MyRecommendViewController.m in Sources */,
 				214029322794493F004712AB /* MyVideoCoverView.m in Sources */,
 				2134EF2D2792A30000A5B24C /* MyDeleteCellView.m in Sources */,
@@ -440,7 +491,10 @@
 				2134EF382792E83600A5B24C /* MyMineViewController.m in Sources */,
 				2134EEC3278A8AE300A5B24C /* AppDelegate.m in Sources */,
 				2134EED4278A8AE600A5B24C /* main.m in Sources */,
+				2196AB1F2798FFB200C06FA8 /* MyFlowLayout.m in Sources */,
+				219CD3B4279AFDD500FB0759 /* MyVideoListLoader.m in Sources */,
 				2196AAE127954ECF00C06FA8 /* MyVideoPlayer.m in Sources */,
+				2196AB1C2798FC9D00C06FA8 /* NSString+LabelSizeCalculator.m in Sources */,
 				2134EF442792F88A00A5B24C /* MyListLoader.m in Sources */,
 				2134EF1C27916C3A00A5B24C /* MyVideoViewController.m in Sources */,
 				2134EEC6278A8AE300A5B24C /* SceneDelegate.m in Sources */,
