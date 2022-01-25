@@ -6,6 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
+@class MyVideoListItem;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param videoCoverUrl 视频封面图URL
 /// @param videoUrl 视频内容URL
 - (void)layoutWithVideoCoverUrl:(NSString *)videoCoverUrl videoUrl:(NSString *)videoUrl;
+
+- (void)layoutWithVideoItem:(MyVideoListItem *)videoListItem;
 
 @end
 

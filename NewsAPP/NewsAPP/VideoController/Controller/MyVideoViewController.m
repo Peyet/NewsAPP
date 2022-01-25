@@ -7,8 +7,16 @@
 
 #import "MyVideoViewController.h"
 #import "MyVideoCoverView.h"
+#import "MyFlowLayout.h"
+#import "MyVideoListLoader.h"
+#import "MyVideoListItem.h"
 
-@interface MyVideoViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
+@interface MyVideoViewController () <UICollectionViewDelegate, UICollectionViewDataSource, MyFlowLayoutDelegate>
+
+@property (nonatomic, strong, readwrite) UICollectionView *collectionView;
+@property (nonatomic, strong, readwrite) MyFlowLayout *flowLayout;
+
+@property (nonatomic, strong, readwrite) NSMutableArray *dataArray;
 
 @end
 
@@ -28,16 +36,23 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
-    flowLayout.minimumLineSpacing = 10;
-    flowLayout.minimumInteritemSpacing = 10;
-    flowLayout.itemSize = CGSizeMake(self.view.bounds.size.width - 16, (self.view.bounds.size.width - 16) * 9 / 16);
+    self.flowLayout = [[MyFlowLayout alloc] init];
+    self.flowLayout.delegate = self;
+    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:self.flowLayout];
+    self.collectionView = collectionView;
     
     collectionView.delegate = self;
     collectionView.dataSource = self;
     
     [collectionView registerClass:[MyVideoCoverView class] forCellWithReuseIdentifier:@"MyVideoCoverView"];
+    
+    collectionView.backgroundColor = [UIColor colorWithRed:235.0/255 green:235.0/255 blue:243.0/255 alpha:1];
+    __weak typeof(self)wself = self;
+    [[[MyVideoListLoader alloc] init] loadListDataWithFinishBlock:^(BOOL success, NSArray<MyVideoListItem *> * _Nonnull dataArray) {
+        __strong typeof(wself) strongSelf = wself;
+        strongSelf.dataArray = dataArray;
+        [strongSelf.collectionView reloadData];
+    }];
     
     [self.view addSubview:collectionView];
 }
@@ -45,28 +60,40 @@
 #pragma mark - UICollectionViewFlowLayoutDelegate
 
 //- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-//    if (indexPath.item % 3 == 0) {
-//        return CGSizeMake(self.view.bounds.size.width, 100);
-//    } else {
-//        return CGSizeMake((self.view.bounds.size.width - 10) / 2, 300);
-//    }
+//    return [collectionView cellForItemAtIndexPath:indexPath].frame.size;
 //}
 
 
 #pragma mark - UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 20;
+    return self.dataArray.count;
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     MyVideoCoverView * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MyVideoCoverView" forIndexPath:indexPath];
     if ([cell isKindOfClass:[MyVideoCoverView class]]) {
-        [cell layoutWithVideoCoverUrl:@"placeholder_image.png" videoUrl:@"http://ali.cdn.kaiyanapp.com/03ffffeec373a3e8e3aab6863deff1d6_1280x720_854x480.mp4?auth_key=1642348484-0-0-7329003e61ef878a2ea3be998a184ce3"];
+        MyVideoListItem *item = self.dataArray[indexPath.item];
+        [cell layoutWithVideoItem:item];
     }
     cell.backgroundColor = [UIColor blackColor];
     return cell;
 }
 
+#pragma mark - UICollectionViewDelegate
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"-----------------selected item at row : %ld----------", indexPath.item);
+}
+
+#pragma mark - MyFlowLayoutDelegate
+/// 返回cell高度
+- (CGFloat)cellHeightWithIndexPath:(NSIndexPath *)indexPath {
+    MyVideoListItem *item = self.dataArray[indexPath.item];
+    return item.videoCellHeight;
+}
+
+- (NSInteger)cellCount {
+    return self.dataArray.count;
+}
 
 @end
