@@ -10,6 +10,7 @@
 #import "VideoController/Controller/MyVideoViewController.h"
 #import "RecommendController/Controller/MyRecommendViewController.h"
 #import "MineController/Controller/MyMineViewController.h"
+#import "MySplashView.h"
 
 @interface SceneDelegate ()
 
@@ -28,6 +29,7 @@
 //    tabbarController.tabBarItem.standardAppearance = [[UITabBarAppearance alloc] init];
     
     MyNewsViewController *newsViewController = [[MyNewsViewController alloc] init];
+//    UIViewController *newsViewController = [[UIViewController alloc] init];
  
     MyVideoViewController *videoViewController = [[MyVideoViewController alloc] init];
     
@@ -41,7 +43,11 @@
 
     self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
-    
+    [self.window addSubview:({
+            MySplashView *splash = [[MySplashView alloc] initWithFrame:self.window.bounds];
+            splash;
+    })];
+
 }
 
 

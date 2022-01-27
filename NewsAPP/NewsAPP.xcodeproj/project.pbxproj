@@ -10,7 +10,6 @@
 		2134EEC3278A8AE300A5B24C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2134EEC2278A8AE300A5B24C /* AppDelegate.m */; };
 		2134EEC6278A8AE300A5B24C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2134EEC5278A8AE300A5B24C /* SceneDelegate.m */; };
 		2134EEC9278A8AE300A5B24C /* MyNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2134EEC8278A8AE300A5B24C /* MyNewsViewController.m */; };
-		2134EECC278A8AE300A5B24C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2134EECA278A8AE300A5B24C /* Main.storyboard */; };
 		2134EECE278A8AE600A5B24C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2134EECD278A8AE600A5B24C /* Assets.xcassets */; };
 		2134EED1278A8AE600A5B24C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2134EECF278A8AE600A5B24C /* LaunchScreen.storyboard */; };
 		2134EED4278A8AE600A5B24C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2134EED3278A8AE600A5B24C /* main.m */; };
@@ -43,6 +42,8 @@
 		2196AB29279A700200C06FA8 /* 举报.png in Resources */ = {isa = PBXBuildFile; fileRef = 2196AB26279A700200C06FA8 /* 举报.png */; };
 		219CD3B4279AFDD500FB0759 /* MyVideoListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 219CD3B3279AFDD500FB0759 /* MyVideoListLoader.m */; };
 		219CD3BD279C56C800FB0759 /* MyVideoListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 219CD3BC279C56C800FB0759 /* MyVideoListItem.m */; };
+		21DE2B6427A29866006C742C /* MySplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DE2B6327A29866006C742C /* MySplashView.m */; };
+		21DE2B6827A2A1B3006C742C /* Splash@x4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 21DE2B6727A2A1B3006C742C /* Splash@x4.jpg */; };
 		8CC034AE46BB861FF84AA58B /* libPods-NewsAPP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EC15F34A90107CF267E195 /* libPods-NewsAPP.a */; };
 /* End PBXBuildFile section */
 
@@ -54,7 +55,6 @@
 		2134EEC5278A8AE300A5B24C /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		2134EEC7278A8AE300A5B24C /* MyNewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyNewsViewController.h; sourceTree = "<group>"; };
 		2134EEC8278A8AE300A5B24C /* MyNewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyNewsViewController.m; sourceTree = "<group>"; };
-		2134EECB278A8AE300A5B24C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2134EECD278A8AE600A5B24C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2134EED0278A8AE600A5B24C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2134EED2278A8AE600A5B24C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -103,6 +103,9 @@
 		219CD3B3279AFDD500FB0759 /* MyVideoListLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVideoListLoader.m; sourceTree = "<group>"; };
 		219CD3BB279C56C800FB0759 /* MyVideoListItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVideoListItem.h; sourceTree = "<group>"; };
 		219CD3BC279C56C800FB0759 /* MyVideoListItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVideoListItem.m; sourceTree = "<group>"; };
+		21DE2B6227A29866006C742C /* MySplashView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MySplashView.h; sourceTree = "<group>"; };
+		21DE2B6327A29866006C742C /* MySplashView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MySplashView.m; sourceTree = "<group>"; };
+		21DE2B6727A2A1B3006C742C /* Splash@x4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Splash@x4.jpg"; sourceTree = "<group>"; };
 		64EC15F34A90107CF267E195 /* libPods-NewsAPP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NewsAPP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6DFA0BB8C1D4F988E11C9A4 /* Pods-NewsAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsAPP.debug.xcconfig"; path = "Target Support Files/Pods-NewsAPP/Pods-NewsAPP.debug.xcconfig"; sourceTree = "<group>"; };
 		FE993D6D18BB1DBC3136FF5F /* Pods-NewsAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsAPP.release.xcconfig"; path = "Target Support Files/Pods-NewsAPP/Pods-NewsAPP.release.xcconfig"; sourceTree = "<group>"; };
@@ -150,11 +153,12 @@
 				2134EEC2278A8AE300A5B24C /* AppDelegate.m */,
 				2134EEC4278A8AE300A5B24C /* SceneDelegate.h */,
 				2134EEC5278A8AE300A5B24C /* SceneDelegate.m */,
-				2134EECA278A8AE300A5B24C /* Main.storyboard */,
 				2134EECD278A8AE600A5B24C /* Assets.xcassets */,
 				2134EECF278A8AE600A5B24C /* LaunchScreen.storyboard */,
 				2134EED2278A8AE600A5B24C /* Info.plist */,
 				2134EED3278A8AE600A5B24C /* main.m */,
+				21DE2B6227A29866006C742C /* MySplashView.h */,
+				21DE2B6327A29866006C742C /* MySplashView.m */,
 			);
 			path = NewsAPP;
 			sourceTree = "<group>";
@@ -162,6 +166,7 @@
 		2134EEE02790702500A5B24C /* icon */ = {
 			isa = PBXGroup;
 			children = (
+				21DE2B6727A2A1B3006C742C /* Splash@x4.jpg */,
 				2196AB25279A700100C06FA8 /* 不感兴趣.png */,
 				2196AB26279A700200C06FA8 /* 举报.png */,
 				2196AB24279A700100C06FA8 /* 屏蔽.png */,
@@ -437,8 +442,8 @@
 				2134EF12279162A800A5B24C /* page@2x.png in Resources */,
 				2134EF11279162A800A5B24C /* page_selected@2x.png in Resources */,
 				2134EF0F279162A700A5B24C /* like_selected@2x.png in Resources */,
+				21DE2B6827A2A1B3006C742C /* Splash@x4.jpg in Resources */,
 				2134EF10279162A800A5B24C /* video@2x.png in Resources */,
-				2134EECC278A8AE300A5B24C /* Main.storyboard in Resources */,
 				2134EF242792586B00A5B24C /* aaa.png in Resources */,
 				2134EF15279162A800A5B24C /* like@2x.png in Resources */,
 				2196AB23279A475E00C06FA8 /* toPlay.png in Resources */,
@@ -496,6 +501,7 @@
 				2196AAE127954ECF00C06FA8 /* MyVideoPlayer.m in Sources */,
 				2196AB1C2798FC9D00C06FA8 /* NSString+LabelSizeCalculator.m in Sources */,
 				2134EF442792F88A00A5B24C /* MyListLoader.m in Sources */,
+				21DE2B6427A29866006C742C /* MySplashView.m in Sources */,
 				2134EF1C27916C3A00A5B24C /* MyVideoViewController.m in Sources */,
 				2134EEC6278A8AE300A5B24C /* SceneDelegate.m in Sources */,
 			);
@@ -504,14 +510,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2134EECA278A8AE300A5B24C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2134EECB278A8AE300A5B24C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2134EECF278A8AE600A5B24C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -647,7 +645,6 @@
 				INFOPLIST_FILE = NewsAPP/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -674,7 +671,6 @@
 				INFOPLIST_FILE = NewsAPP/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
