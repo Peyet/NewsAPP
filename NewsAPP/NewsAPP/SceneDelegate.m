@@ -12,7 +12,9 @@
 #import "MineController/Controller/MyMineViewController.h"
 #import "MySplashView.h"
 
-@interface SceneDelegate ()
+@interface SceneDelegate () <UITabBarControllerDelegate>
+
+@property (nonatomic, strong, readwrite) UINavigationController *navigationController;
 
 @end
 
@@ -26,6 +28,7 @@
     self.window = [[UIWindow alloc] initWithWindowScene:(UIWindowScene *)scene];
         
     UITabBarController *tabbarController = [[UITabBarController alloc] init];
+    tabbarController.delegate = self;
 //    tabbarController.tabBarItem.standardAppearance = [[UITabBarAppearance alloc] init];
     
     MyNewsViewController *newsViewController = [[MyNewsViewController alloc] init];
@@ -39,9 +42,9 @@
 
     [tabbarController setViewControllers:@[newsViewController, videoViewController, recommendViewController, mineViewController]];
     
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:tabbarController];
+    _navigationController = [[UINavigationController alloc] initWithRootViewController:tabbarController];
 
-    self.window.rootViewController = navigationController;
+    self.window.rootViewController = _navigationController;
     [self.window makeKeyAndVisible];
     [self.window addSubview:({
             MySplashView *splash = [[MySplashView alloc] initWithFrame:self.window.bounds];
@@ -50,6 +53,14 @@
 
 }
 
+#pragma mark - UITabBarControllerDelegate
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+    if ([viewController isKindOfClass:[MyNewsViewController class]]) {
+        [_navigationController setNavigationBarHidden:NO animated:NO];
+    } else {
+        [_navigationController setNavigationBarHidden:YES animated:NO];
+    }
+}
 
 - (void)sceneDidDisconnect:(UIScene *)scene {
     // Called as the scene is being released by the system.

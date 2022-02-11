@@ -9,6 +9,7 @@
 #import <SDWebImage.h>
 #import "MyDeleteCellView.h"
 #import "MyVideoListItem.h"
+#import "MyDeleteCellView.h"
 
 @interface MyVideoToolbar()
 
@@ -116,9 +117,19 @@
     self.frame = CGRectMake(0, self.frame.origin.y, self.frame.size.width, _tagLabel.frame.origin.y +_tagLabel.frame.size.height + marginWithSuperViewBottom);
 }
 
+- (void)_deleteButtonClick {
+    MyDeleteCellView *deleteView = [MyDeleteCellView new];
+    [deleteView showDeleteViewFromPoint:CGPointMake(0, 0) clickBlock:^{
+            
+    }];
+}
+
 #pragma mark - private method
 - (void)_closeClicked {
-    
+    MyDeleteCellView *deleteView = [[MyDeleteCellView alloc] initWithFrame:[UIApplication sharedApplication].keyWindow.frame];
+    [deleteView showDeleteViewFromPoint:CGPointMake(0, 0) clickBlock:^{
+            
+    }];
 }
 
 @end

@@ -11,10 +11,11 @@
 #import "MyDeleteCellView.h"
 #import "MyListLoader.h"
 #import "MyListItem.h"
+#import "MySearchBar.h"
 
 @interface MyNewsViewController () <UITableViewDataSource, UITableViewDelegate, MyNormalTableViewCellDelegate>
 @property (nonatomic, strong, readwrite) UITableView *tableView;
-@property (nonatomic, strong, readwrite) NSArray *dataArray;
+@property (nonatomic, strong, readwrite) NSMutableArray *dataArray;
 @property (nonatomic, strong, readwrite) MyListLoader *listLoader;
 @end
 
@@ -41,9 +42,18 @@
     __weak typeof(self)wself = self;
     [self.listLoader loadListDataWithFinishBlock:^(BOOL success, NSArray<MyListItem *> * _Nonnull dataArray) {
         __strong typeof(wself) strongSelf = wself;
-        strongSelf.dataArray = dataArray;
+        strongSelf.dataArray = [dataArray mutableCopy];
         [strongSelf.tableView reloadData];
     }];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.barTintColor = [UIColor redColor];
+    [self.tabBarController.navigationItem setTitleView:({
+        MySearchBar *searchBar = [[MySearchBar alloc] initWithFrame:CGRectMake(0, 0, self.navigationController.navigationBar.bounds.size.width, self.navigationController.navigationBar.bounds.size.height)];
+        searchBar;
+    })];
 }
 
 #pragma mark - UITableViewDataSourceDelegate
@@ -89,6 +99,8 @@
     [deleteView showDeleteViewFromPoint:rect.origin clickBlock:^{
         __strong typeof(wself) strongSelf = wself;
 //        [strongSelf.dataArray removeLastObject];
+        NSIndexPath *selectedRow = [@[[strongSelf.tableView indexPathForCell:tableViewCell]] lastObject];
+        [strongSelf.dataArray removeObjectAtIndex:(selectedRow.row)];
         [strongSelf.tableView deleteRowsAtIndexPaths:@[[strongSelf.tableView indexPathForCell:tableViewCell]] withRowAnimation:UITableViewRowAnimationTop];
     }];
     

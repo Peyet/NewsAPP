@@ -6,6 +6,8 @@
 //
 
 #import "AppDelegate.h"
+#import "MyLocation.h"
+#import "MyNotification.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [[MyLocation locationManager] checkLocationAuthorization];
+    [[MyNotification notificationManager] checkNotificationAuthorization];;
     return YES;
 }
 

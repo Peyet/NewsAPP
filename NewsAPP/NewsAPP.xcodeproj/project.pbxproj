@@ -42,6 +42,10 @@
 		2196AB29279A700200C06FA8 /* 举报.png in Resources */ = {isa = PBXBuildFile; fileRef = 2196AB26279A700200C06FA8 /* 举报.png */; };
 		219CD3B4279AFDD500FB0759 /* MyVideoListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 219CD3B3279AFDD500FB0759 /* MyVideoListLoader.m */; };
 		219CD3BD279C56C800FB0759 /* MyVideoListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 219CD3BC279C56C800FB0759 /* MyVideoListItem.m */; };
+		219D706527A663550025AFC0 /* MyLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 219D706427A663550025AFC0 /* MyLocation.m */; };
+		219D706827A6D0D80025AFC0 /* MyNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 219D706727A6D0D70025AFC0 /* MyNotification.m */; };
+		21A0EB3C27B0C7AA00F30EE2 /* MySearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A0EB3B27B0C7AA00F30EE2 /* MySearchBar.m */; };
+		21A0EB3E27B6438800F30EE2 /* NewsApp.png in Resources */ = {isa = PBXBuildFile; fileRef = 21A0EB3D27B6438800F30EE2 /* NewsApp.png */; };
 		21DE2B6427A29866006C742C /* MySplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DE2B6327A29866006C742C /* MySplashView.m */; };
 		21DE2B6827A2A1B3006C742C /* Splash@x4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 21DE2B6727A2A1B3006C742C /* Splash@x4.jpg */; };
 		8CC034AE46BB861FF84AA58B /* libPods-NewsAPP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EC15F34A90107CF267E195 /* libPods-NewsAPP.a */; };
@@ -103,6 +107,13 @@
 		219CD3B3279AFDD500FB0759 /* MyVideoListLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVideoListLoader.m; sourceTree = "<group>"; };
 		219CD3BB279C56C800FB0759 /* MyVideoListItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVideoListItem.h; sourceTree = "<group>"; };
 		219CD3BC279C56C800FB0759 /* MyVideoListItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVideoListItem.m; sourceTree = "<group>"; };
+		219D706327A663550025AFC0 /* MyLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyLocation.h; sourceTree = "<group>"; };
+		219D706427A663550025AFC0 /* MyLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyLocation.m; sourceTree = "<group>"; };
+		219D706627A6D0D70025AFC0 /* MyNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyNotification.h; sourceTree = "<group>"; };
+		219D706727A6D0D70025AFC0 /* MyNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyNotification.m; sourceTree = "<group>"; };
+		21A0EB3A27B0C7AA00F30EE2 /* MySearchBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MySearchBar.h; sourceTree = "<group>"; };
+		21A0EB3B27B0C7AA00F30EE2 /* MySearchBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MySearchBar.m; sourceTree = "<group>"; };
+		21A0EB3D27B6438800F30EE2 /* NewsApp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewsApp.png; sourceTree = "<group>"; };
 		21DE2B6227A29866006C742C /* MySplashView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MySplashView.h; sourceTree = "<group>"; };
 		21DE2B6327A29866006C742C /* MySplashView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MySplashView.m; sourceTree = "<group>"; };
 		21DE2B6727A2A1B3006C742C /* Splash@x4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Splash@x4.jpg"; sourceTree = "<group>"; };
@@ -159,6 +170,10 @@
 				2134EED3278A8AE600A5B24C /* main.m */,
 				21DE2B6227A29866006C742C /* MySplashView.h */,
 				21DE2B6327A29866006C742C /* MySplashView.m */,
+				219D706327A663550025AFC0 /* MyLocation.h */,
+				219D706427A663550025AFC0 /* MyLocation.m */,
+				219D706627A6D0D70025AFC0 /* MyNotification.h */,
+				219D706727A6D0D70025AFC0 /* MyNotification.m */,
 			);
 			path = NewsAPP;
 			sourceTree = "<group>";
@@ -166,6 +181,7 @@
 		2134EEE02790702500A5B24C /* icon */ = {
 			isa = PBXGroup;
 			children = (
+				21A0EB3D27B6438800F30EE2 /* NewsApp.png */,
 				21DE2B6727A2A1B3006C742C /* Splash@x4.jpg */,
 				2196AB25279A700100C06FA8 /* 不感兴趣.png */,
 				2196AB26279A700200C06FA8 /* 举报.png */,
@@ -203,6 +219,8 @@
 				2134EF212791929300A5B24C /* MyNormalTableViewCell.m */,
 				2134EF2B2792A30000A5B24C /* MyDeleteCellView.h */,
 				2134EF2C2792A30000A5B24C /* MyDeleteCellView.m */,
+				21A0EB3A27B0C7AA00F30EE2 /* MySearchBar.h */,
+				21A0EB3B27B0C7AA00F30EE2 /* MySearchBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -436,6 +454,7 @@
 				2196AB29279A700200C06FA8 /* 举报.png in Resources */,
 				2134EED1278A8AE600A5B24C /* LaunchScreen.storyboard in Resources */,
 				2134EF14279162A800A5B24C /* home_selected@2x.png in Resources */,
+				21A0EB3E27B6438800F30EE2 /* NewsApp.png in Resources */,
 				2134EF13279162A800A5B24C /* video_selected@2x.png in Resources */,
 				2134EECE278A8AE600A5B24C /* Assets.xcassets in Resources */,
 				2196AB27279A700200C06FA8 /* 屏蔽.png in Resources */,
@@ -491,6 +510,7 @@
 				219CD3BD279C56C800FB0759 /* MyVideoListItem.m in Sources */,
 				2134EF1F2791889300A5B24C /* MyRecommendViewController.m in Sources */,
 				214029322794493F004712AB /* MyVideoCoverView.m in Sources */,
+				219D706527A663550025AFC0 /* MyLocation.m in Sources */,
 				2134EF2D2792A30000A5B24C /* MyDeleteCellView.m in Sources */,
 				2134EF2A279264EE00A5B24C /* MyDetailViewController.m in Sources */,
 				2134EF382792E83600A5B24C /* MyMineViewController.m in Sources */,
@@ -498,7 +518,9 @@
 				2134EED4278A8AE600A5B24C /* main.m in Sources */,
 				2196AB1F2798FFB200C06FA8 /* MyFlowLayout.m in Sources */,
 				219CD3B4279AFDD500FB0759 /* MyVideoListLoader.m in Sources */,
+				21A0EB3C27B0C7AA00F30EE2 /* MySearchBar.m in Sources */,
 				2196AAE127954ECF00C06FA8 /* MyVideoPlayer.m in Sources */,
+				219D706827A6D0D80025AFC0 /* MyNotification.m in Sources */,
 				2196AB1C2798FC9D00C06FA8 /* NSString+LabelSizeCalculator.m in Sources */,
 				2134EF442792F88A00A5B24C /* MyListLoader.m in Sources */,
 				21DE2B6427A29866006C742C /* MySplashView.m in Sources */,
