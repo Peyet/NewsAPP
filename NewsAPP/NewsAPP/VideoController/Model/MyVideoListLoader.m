@@ -11,15 +11,16 @@
 
 @implementation MyVideoListLoader
 
-- (void)loadListDataWithFinishBlock:(MyListLoaderFinishBlcok)finishBlock {
-    
+- (void)loadListDataWithChannel:(NSString *)channel FinishBlock:(MyListLoaderFinishBlcok)finishBlock {
+
     NSArray<MyVideoListItem *> *listData = [self _readDataFromLocal];
     if (listData) {
         finishBlock(YES, listData);
     }
     
     __weak typeof(self) weakSelf = self;
-    [[AFHTTPSessionManager manager] GET:@"http://baobab.kaiyanapp.com/api/v4/tabs/selected?date=1623718800000&page=2" parameters:nil headers:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    NSString *channelURL = [NSString stringWithFormat:@"http://baobab.kaiyanapp.com/api/v4/tabs/selected?date=%@718800000&page=2", channel];
+    [[AFHTTPSessionManager manager] GET:channelURL parameters:nil headers:nil progress:^(NSProgress * _Nonnull downloadProgress) {
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             __strong typeof(weakSelf) strongSelf = weakSelf;

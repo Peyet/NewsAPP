@@ -6,17 +6,11 @@
 //
 
 #import "MyNewsViewController.h"
-#import "MyNormalTableViewCell.h"
-#import "MyDetailViewController.h"
-#import "MyDeleteCellView.h"
-#import "MyListLoader.h"
-#import "MyListItem.h"
 #import "MySearchBar.h"
+#import <CMPageTitleView/CMPageTitleView.h>
+#import "MyNewsPageViewController.h"
 
-@interface MyNewsViewController () <UITableViewDataSource, UITableViewDelegate, MyNormalTableViewCellDelegate>
-@property (nonatomic, strong, readwrite) UITableView *tableView;
-@property (nonatomic, strong, readwrite) NSMutableArray *dataArray;
-@property (nonatomic, strong, readwrite) MyListLoader *listLoader;
+@interface MyNewsViewController ()
 @end
 
 @implementation MyNewsViewController
@@ -33,78 +27,36 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _tableView =[[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
-    _tableView.dataSource = self;
-    _tableView.delegate = self;
-    [self.view addSubview:_tableView];
+    CMPageTitleView *pageView = [[CMPageTitleView alloc] initWithFrame:CGRectMake(0, 44+47, self.view.bounds.size.width, self.view.bounds.size.height)];
+    pageView.delegate = self;
     
-    self.listLoader = [[MyListLoader alloc] init];
-    __weak typeof(self)wself = self;
-    [self.listLoader loadListDataWithFinishBlock:^(BOOL success, NSArray<MyListItem *> * _Nonnull dataArray) {
-        __strong typeof(wself) strongSelf = wself;
-        strongSelf.dataArray = [dataArray mutableCopy];
-        [strongSelf.tableView reloadData];
-    }];
+    CMPageTitleConfig *config = [CMPageTitleConfig defaultConfig];
+    // 遮罩样式
+    config.cm_switchMode = CMPageTitleSwitchMode_Cover;
+    // 是否全面屏显示
+    config.cm_fullScreen = NO;
+
+    NSMutableArray *childController = [NSMutableArray arrayWithCapacity:10];
+    // channel top(头条，默认),shehui(社会),guonei(国内),guoji(国际),yule(娱乐),tiyu(体育)junshi(军事),keji(科技),caijing(财经),shishang(时尚)
+    NSArray *channels = @[@{@"title":@"头条", @"type":@"top"}, @{@"title":@"国内", @"type":@"guonei"}, @{@"title":@"国际", @"type":@"guoji"}, @{@"title":@"娱乐", @"type":@"yule"}, @{@"title":@"体育", @"type":@"tiyu"}, @{@"title":@"军事", @"type":@"junshi"}, @{@"title":@"科技", @"type":@"keji"}, @{@"title":@"财经", @"type":@"caijing"}, @{@"title":@"时尚", @"type":@"shishang"}];
+    for (NSDictionary *channel in channels) {
+        MyNewsPageViewController *PageController = [[MyNewsPageViewController alloc] initControllerWithChannel:channel Frame:self.view.frame];
+        [childController addObject:PageController];
+    }
+    config.cm_childControllers = childController; //必传参数
+    
+    pageView.cm_config = config;
+
+    [self.view addSubview:pageView];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.navigationController.navigationBar.barTintColor = [UIColor redColor];
     [self.tabBarController.navigationItem setTitleView:({
         MySearchBar *searchBar = [[MySearchBar alloc] initWithFrame:CGRectMake(0, 0, self.navigationController.navigationBar.bounds.size.width, self.navigationController.navigationBar.bounds.size.height)];
         searchBar;
     })];
 }
-
-#pragma mark - UITableViewDataSourceDelegate
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.dataArray.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    MyNormalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"id"];
-    if (!cell) {
-        cell = [[MyNormalTableViewCell	 alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"id"];
-    }
-    cell.delegate = self;
-//    cell.textLabel.text = [NSString stringWithFormat:@"title - %@", @(indexPath.row)];
-//    cell.detailTextLabel.text = @"detail label";
-//    cell.imageView.image = [UIImage imageNamed:@"home@2x.png"];
-    [cell layoutTableViewCellWithItem:self.dataArray[indexPath.row]];
-    return cell;
-}
-
-#pragma mark - UITableViewDelegate
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 100;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    MyListItem *item = self.dataArray[indexPath.row];
-    MyDetailViewController *viewController = [[MyDetailViewController alloc] initWithUrlString:item.url];
-    viewController.navigationItem.title = [NSString stringWithFormat:@"%@", item.title];
-    viewController.view.backgroundColor = [UIColor whiteColor];
-    [self.navigationController pushViewController:viewController animated:YES];
-    
-    // 文章已读标记
-    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:item.uniquekey];
-}
-
-#pragma mark - MyNormalTableViewCellDelegate
-- (void)tableViewCell:(UITableViewCell *)tableViewCell clickDeleteButton:(UIButton *)deleteButton {
-    MyDeleteCellView *deleteView = [[MyDeleteCellView alloc] initWithFrame:self.view.bounds];
-    CGRect rect = [tableViewCell convertRect:deleteButton.frame toView:nil];
-    
-    __weak typeof(self)wself = self;
-    [deleteView showDeleteViewFromPoint:rect.origin clickBlock:^{
-        __strong typeof(wself) strongSelf = wself;
-//        [strongSelf.dataArray removeLastObject];
-        NSIndexPath *selectedRow = [@[[strongSelf.tableView indexPathForCell:tableViewCell]] lastObject];
-        [strongSelf.dataArray removeObjectAtIndex:(selectedRow.row)];
-        [strongSelf.tableView deleteRowsAtIndexPaths:@[[strongSelf.tableView indexPathForCell:tableViewCell]] withRowAnimation:UITableViewRowAnimationTop];
-    }];
-    
-}
-
 
 @end

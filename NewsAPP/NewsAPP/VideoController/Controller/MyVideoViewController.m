@@ -6,17 +6,10 @@
 //
 
 #import "MyVideoViewController.h"
-#import "MyVideoCoverView.h"
-#import "MyFlowLayout.h"
-#import "MyVideoListLoader.h"
-#import "MyVideoListItem.h"
+#import <CMPageTitleView/CMPageTitleView.h>
+#import "MyVideoPageViewController.h"
 
-@interface MyVideoViewController () <UICollectionViewDelegate, UICollectionViewDataSource, MyFlowLayoutDelegate>
-
-@property (nonatomic, strong, readwrite) UICollectionView *collectionView;
-@property (nonatomic, strong, readwrite) MyFlowLayout *flowLayout;
-
-@property (nonatomic, strong, readwrite) NSMutableArray *dataArray;
+@interface MyVideoViewController ()
 
 @end
 
@@ -34,66 +27,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    CMPageTitleView *pageView = [[CMPageTitleView alloc] initWithFrame:CGRectMake(0, 47, self.view.bounds.size.width, self.view.bounds.size.height)];
+    pageView.delegate = self;
     
-    self.flowLayout = [[MyFlowLayout alloc] init];
-    self.flowLayout.delegate = self;
-    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:self.flowLayout];
-    self.collectionView = collectionView;
-    
-    collectionView.delegate = self;
-    collectionView.dataSource = self;
-    
-    [collectionView registerClass:[MyVideoCoverView class] forCellWithReuseIdentifier:@"MyVideoCoverView"];
-    
-    collectionView.backgroundColor = [UIColor colorWithRed:235.0/255 green:235.0/255 blue:243.0/255 alpha:1];
-    __weak typeof(self)wself = self;
-    [[[MyVideoListLoader alloc] init] loadListDataWithFinishBlock:^(BOOL success, NSArray<MyVideoListItem *> * _Nonnull dataArray) {
-        __strong typeof(wself) strongSelf = wself;
-        strongSelf.dataArray = dataArray;
-        [strongSelf.collectionView reloadData];
-    }];
-    
-    [self.view addSubview:collectionView];
-}
+    CMPageTitleConfig *config = [CMPageTitleConfig defaultConfig];
+    // 遮罩样式
+    config.cm_switchMode = CMPageTitleSwitchMode_Cover;
+    // 是否全面屏显示
+    config.cm_fullScreen = NO;
 
-#pragma mark - UICollectionViewFlowLayoutDelegate
-
-//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-//    return [collectionView cellForItemAtIndexPath:indexPath].frame.size;
-//}
-
-
-#pragma mark - UICollectionViewDataSource
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.dataArray.count;
-}
-
-- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    MyVideoCoverView * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MyVideoCoverView" forIndexPath:indexPath];
-    if ([cell isKindOfClass:[MyVideoCoverView class]]) {
-        MyVideoListItem *item = self.dataArray[indexPath.item];
-        [cell layoutWithVideoItem:item];
+    NSMutableArray *childController = [NSMutableArray arrayWithCapacity:10];
+    // channel
+    NSArray *channels = @[@{@"title":@"推荐", @"type":@"1600"}, @{@"title":@"记录", @"type":@"1610"}, @{@"title":@"旅行", @"type":@"1620"}, @{@"title":@"科技", @"type":@"1630"}, @{@"title":@"搞笑", @"type":@"1611"}, @{@"title":@"综艺", @"type":@"1621"}, @{@"title":@"生活", @"type":@"1631"}, @{@"title":@"音乐", @"type":@"1612"}, @{@"title":@"时尚", @"type":@"1622"}];
+    for (NSDictionary *channel in channels) {
+        MyVideoPageViewController *PageController = [[MyVideoPageViewController alloc] initControllerWithChannel:channel Frame:self.view.frame];
+        [childController addObject:PageController];
     }
-    cell.backgroundColor = [UIColor blackColor];
-    return cell;
-}
+    config.cm_childControllers = childController; //必传参数
+    
+    pageView.cm_config = config;
 
-#pragma mark - UICollectionViewDelegate
--(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"-----------------selected item at row : %ld----------", indexPath.item);
-}
+    [self.view addSubview:pageView];
 
-#pragma mark - MyFlowLayoutDelegate
-/// 返回cell高度
-- (CGFloat)cellHeightWithIndexPath:(NSIndexPath *)indexPath {
-    MyVideoListItem *item = self.dataArray[indexPath.item];
-    return item.videoCellHeight;
-}
-
-- (NSInteger)cellCount {
-    return self.dataArray.count;
 }
 
 @end

@@ -4,5 +4,6 @@ target 'NewsAPP' do
 
   pod 'AFNetworking'
   pod 'SDWebImage'
+  pod 'CMPageTitleView'
 
 end

@@ -11,15 +11,16 @@
 
 @implementation MyListLoader
 
-- (void)loadListDataWithFinishBlock:(MyListLoaderFinishBlcok)finishBlock {
-    
+- (void)loadListDataWithChannel:(NSString *)channel FinishBlock:(MyListLoaderFinishBlcok)finishBlock {
+
     NSArray<MyListItem *> *listData = [self _readDataFromLocal];
     if (listData) {
         finishBlock(YES, listData);
     }
     
     __weak typeof(self) weakSelf = self;
-    [[AFHTTPSessionManager manager] GET:@"http://v.juhe.cn/toutiao/index?type=top&key=d268884b9b07c0eb9d6093dc54116018" parameters:nil headers:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    NSString *channelURL = [NSString stringWithFormat:@"http://v.juhe.cn/toutiao/index?type=%@&key=d268884b9b07c0eb9d6093dc54116018", channel];
+    [[AFHTTPSessionManager manager] GET:channelURL parameters:nil headers:nil progress:^(NSProgress * _Nonnull downloadProgress) {
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             __strong typeof(weakSelf) strongSelf = weakSelf;

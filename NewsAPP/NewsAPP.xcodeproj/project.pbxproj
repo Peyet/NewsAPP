@@ -46,6 +46,8 @@
 		219D706827A6D0D80025AFC0 /* MyNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 219D706727A6D0D70025AFC0 /* MyNotification.m */; };
 		21A0EB3C27B0C7AA00F30EE2 /* MySearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A0EB3B27B0C7AA00F30EE2 /* MySearchBar.m */; };
 		21A0EB3E27B6438800F30EE2 /* NewsApp.png in Resources */ = {isa = PBXBuildFile; fileRef = 21A0EB3D27B6438800F30EE2 /* NewsApp.png */; };
+		21A0EB6927B6956600F30EE2 /* MyNewsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A0EB6827B6956600F30EE2 /* MyNewsPageViewController.m */; };
+		21A0EB6C27B8EDAC00F30EE2 /* MyVideoPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A0EB6B27B8EDAC00F30EE2 /* MyVideoPageViewController.m */; };
 		21DE2B6427A29866006C742C /* MySplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DE2B6327A29866006C742C /* MySplashView.m */; };
 		21DE2B6827A2A1B3006C742C /* Splash@x4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 21DE2B6727A2A1B3006C742C /* Splash@x4.jpg */; };
 		8CC034AE46BB861FF84AA58B /* libPods-NewsAPP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EC15F34A90107CF267E195 /* libPods-NewsAPP.a */; };
@@ -114,6 +116,10 @@
 		21A0EB3A27B0C7AA00F30EE2 /* MySearchBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MySearchBar.h; sourceTree = "<group>"; };
 		21A0EB3B27B0C7AA00F30EE2 /* MySearchBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MySearchBar.m; sourceTree = "<group>"; };
 		21A0EB3D27B6438800F30EE2 /* NewsApp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewsApp.png; sourceTree = "<group>"; };
+		21A0EB6727B6956600F30EE2 /* MyNewsPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyNewsPageViewController.h; sourceTree = "<group>"; };
+		21A0EB6827B6956600F30EE2 /* MyNewsPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyNewsPageViewController.m; sourceTree = "<group>"; };
+		21A0EB6A27B8EDAC00F30EE2 /* MyVideoPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVideoPageViewController.h; sourceTree = "<group>"; };
+		21A0EB6B27B8EDAC00F30EE2 /* MyVideoPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVideoPageViewController.m; sourceTree = "<group>"; };
 		21DE2B6227A29866006C742C /* MySplashView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MySplashView.h; sourceTree = "<group>"; };
 		21DE2B6327A29866006C742C /* MySplashView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MySplashView.m; sourceTree = "<group>"; };
 		21DE2B6727A2A1B3006C742C /* Splash@x4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Splash@x4.jpg"; sourceTree = "<group>"; };
@@ -230,6 +236,8 @@
 			children = (
 				2134EEC7278A8AE300A5B24C /* MyNewsViewController.h */,
 				2134EEC8278A8AE300A5B24C /* MyNewsViewController.m */,
+				21A0EB6727B6956600F30EE2 /* MyNewsPageViewController.h */,
+				21A0EB6827B6956600F30EE2 /* MyNewsPageViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -290,6 +298,8 @@
 			children = (
 				2134EF1A27916C3A00A5B24C /* MyVideoViewController.h */,
 				2134EF1B27916C3A00A5B24C /* MyVideoViewController.m */,
+				21A0EB6A27B8EDAC00F30EE2 /* MyVideoPageViewController.h */,
+				21A0EB6B27B8EDAC00F30EE2 /* MyVideoPageViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -506,6 +516,7 @@
 				2140292D2793C876004712AB /* MyListItem.m in Sources */,
 				2196AAE42795ACC900C06FA8 /* MyVideoToolbar.m in Sources */,
 				2134EF222791929300A5B24C /* MyNormalTableViewCell.m in Sources */,
+				21A0EB6927B6956600F30EE2 /* MyNewsPageViewController.m in Sources */,
 				2134EEC9278A8AE300A5B24C /* MyNewsViewController.m in Sources */,
 				219CD3BD279C56C800FB0759 /* MyVideoListItem.m in Sources */,
 				2134EF1F2791889300A5B24C /* MyRecommendViewController.m in Sources */,
@@ -519,6 +530,7 @@
 				2196AB1F2798FFB200C06FA8 /* MyFlowLayout.m in Sources */,
 				219CD3B4279AFDD500FB0759 /* MyVideoListLoader.m in Sources */,
 				21A0EB3C27B0C7AA00F30EE2 /* MySearchBar.m in Sources */,
+				21A0EB6C27B8EDAC00F30EE2 /* MyVideoPageViewController.m in Sources */,
 				2196AAE127954ECF00C06FA8 /* MyVideoPlayer.m in Sources */,
 				219D706827A6D0D80025AFC0 /* MyNotification.m in Sources */,
 				2196AB1C2798FC9D00C06FA8 /* NSString+LabelSizeCalculator.m in Sources */,

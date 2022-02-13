@@ -15,7 +15,7 @@ typedef void(^MyListLoaderFinishBlcok)(BOOL success, NSArray<MyListItem *> *data
 /// 列表请求
 @interface MyListLoader : NSObject
 
-- (void)loadListDataWithFinishBlock:(MyListLoaderFinishBlcok)finishBlock;
+- (void)loadListDataWithChannel:(NSString *)channel FinishBlock:(MyListLoaderFinishBlcok)finishBlock;
 
 @end
  
