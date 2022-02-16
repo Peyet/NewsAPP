@@ -11,11 +11,14 @@
 NS_ASSUME_NONNULL_BEGIN
 
 typedef void(^MyListLoaderFinishBlcok)(BOOL success, NSArray<MyListItem *> *dataArray);
+typedef  NSString * _Nonnull (^MyListLoaderRequestURLBlcok)(void);
 
 /// 列表请求
 @interface MyListLoader : NSObject
 
-- (void)loadListDataWithChannel:(NSString *)channel FinishBlock:(MyListLoaderFinishBlcok)finishBlock;
++ (instancetype)sharedMyListLoader;
+
+- (void)loadListDataWithRequstBlock:(MyListLoaderRequestURLBlcok)requestURL FinishBlock:(MyListLoaderFinishBlcok)finishBlock;
 
 @end
  

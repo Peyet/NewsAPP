@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MyNewsPageViewController : UIViewController
 
-- (instancetype)initControllerWithChannel:(NSDictionary *)channel Frame:(CGRect)frame;
+@property (nonatomic, strong, readwrite) NSMutableDictionary *channelInfo;
 
 @end
 

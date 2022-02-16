@@ -11,20 +11,35 @@
 
 @implementation MyListLoader
 
-- (void)loadListDataWithChannel:(NSString *)channel FinishBlock:(MyListLoaderFinishBlcok)finishBlock {
++ (instancetype)sharedMyListLoader {
+    static MyListLoader *loader;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        loader = [[MyListLoader alloc] init];
+    });
+    return loader;
+}
 
+- (void)loadListDataWithRequstBlock:(MyListLoaderRequestURLBlcok)requestURL FinishBlock:(MyListLoaderFinishBlcok)finishBlock {
     NSArray<MyListItem *> *listData = [self _readDataFromLocal];
     if (listData) {
         finishBlock(YES, listData);
     }
     
     __weak typeof(self) weakSelf = self;
-    NSString *channelURL = [NSString stringWithFormat:@"http://v.juhe.cn/toutiao/index?type=%@&key=d268884b9b07c0eb9d6093dc54116018", channel];
-    [[AFHTTPSessionManager manager] GET:channelURL parameters:nil headers:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    [[AFHTTPSessionManager manager] GET:requestURL() parameters:nil headers:nil progress:^(NSProgress * _Nonnull downloadProgress) {
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             __strong typeof(weakSelf) strongSelf = weakSelf;
             
+            if ([responseObject[@"result"] isKindOfClass:[NSNull class]]) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    if (finishBlock) {
+                        finishBlock(YES, listData);
+                    }
+                });
+                return;
+            }
             NSArray *dataArray = [(responseObject[@"result"]) objectForKey:@"data"];
             NSMutableArray *listItemArray = [NSMutableArray arrayWithCapacity:30];
             for (NSDictionary *info in dataArray) {
@@ -41,7 +56,7 @@
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 if (finishBlock) {
-                    finishBlock(NO, nil);
+                    finishBlock(NO, listData);
                 }
             });
         }];

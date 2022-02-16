@@ -413,6 +413,7 @@
 				2134EEBA278A8AE300A5B24C /* Sources */,
 				2134EEBB278A8AE300A5B24C /* Frameworks */,
 				2134EEBC278A8AE300A5B24C /* Resources */,
+				8AD622D2BC4A1440D9142502 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -484,6 +485,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		8AD622D2BC4A1440D9142502 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NewsAPP/Pods-NewsAPP-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NewsAPP/Pods-NewsAPP-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NewsAPP/Pods-NewsAPP-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A0803EDA4C416EAB9A336C48 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

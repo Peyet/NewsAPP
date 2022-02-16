@@ -10,8 +10,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MyVideoPageViewController : UIViewController
+@property (nonatomic, strong, readwrite) NSMutableDictionary *channelInfo;
 
-- (instancetype)initControllerWithChannel:(NSDictionary *)channel Frame:(CGRect)frame;
+//- (void)loadControllerWithChannel:(NSDictionary *)channel Frame:(CGRect)frame;
 
 @end
 

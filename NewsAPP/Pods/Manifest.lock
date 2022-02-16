@@ -15,6 +15,7 @@ PODS:
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
   - CMPageTitleView (0.7.4)
+  - MJRefresh (3.7.5)
   - SDWebImage (5.12.2):
     - SDWebImage/Core (= 5.12.2)
   - SDWebImage/Core (5.12.2)
@@ -22,19 +23,22 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - CMPageTitleView
+  - MJRefresh
   - SDWebImage
 
 SPEC REPOS:
   trunk:
     - AFNetworking
     - CMPageTitleView
+    - MJRefresh
     - SDWebImage
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   CMPageTitleView: 368d52254e7b671d3e21ba7b9655020b9bb62167
+  MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
   SDWebImage: 240e5c12b592fb1268c1d03b8c90d90e8c2ffe82
 
-PODFILE CHECKSUM: ff77e5210dc4955644119f6b1809af86f80f7e05
+PODFILE CHECKSUM: ae711020c73e0ac5e9d98ac9ca6cd7815c6ef4be
 
 COCOAPODS: 1.11.2

@@ -10,7 +10,7 @@
 #import "MyVideoPageViewController.h"
 
 @interface MyVideoViewController ()
-
+@property (nonatomic, strong, readwrite) CMPageTitleView *pageView;
 @end
 
 @implementation MyVideoViewController
@@ -27,7 +27,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    CMPageTitleView *pageView = [[CMPageTitleView alloc] initWithFrame:CGRectMake(0, 47, self.view.bounds.size.width, self.view.bounds.size.height)];
+    [self setupPageTitleView];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+}
+
+#pragma mark - 设置PageTitleView
+- (void)setupPageTitleView {
+    CMPageTitleView *pageView = [[CMPageTitleView alloc] init];
+    self.pageView = pageView;
+    self.pageView.frame = CGRectMake(0, [[UIApplication sharedApplication] statusBarFrame].size.height, self.view.bounds.size.width, self.view.bounds.size.height - [[UIApplication sharedApplication] statusBarFrame].size.height - 83);
     pageView.delegate = self;
     
     CMPageTitleConfig *config = [CMPageTitleConfig defaultConfig];
@@ -40,15 +51,18 @@
     // channel
     NSArray *channels = @[@{@"title":@"推荐", @"type":@"1600"}, @{@"title":@"记录", @"type":@"1610"}, @{@"title":@"旅行", @"type":@"1620"}, @{@"title":@"科技", @"type":@"1630"}, @{@"title":@"搞笑", @"type":@"1611"}, @{@"title":@"综艺", @"type":@"1621"}, @{@"title":@"生活", @"type":@"1631"}, @{@"title":@"音乐", @"type":@"1612"}, @{@"title":@"时尚", @"type":@"1622"}];
     for (NSDictionary *channel in channels) {
-        MyVideoPageViewController *PageController = [[MyVideoPageViewController alloc] initControllerWithChannel:channel Frame:self.view.frame];
-        [childController addObject:PageController];
+        MyVideoPageViewController *pageController = [[MyVideoPageViewController alloc] init];
+        NSMutableDictionary *channelInfo = [channel mutableCopy];
+        NSValue *pageSize = [NSValue valueWithCGSize:CGSizeMake(self.view.frame.size.width, self.pageView.frame.size.height - 44)];
+        [channelInfo setObject:pageSize forKey:@"pageSize"];
+        pageController.channelInfo = channelInfo;
+        [childController addObject:pageController];
     }
     config.cm_childControllers = childController; //必传参数
     
     pageView.cm_config = config;
 
     [self.view addSubview:pageView];
-
 }
 
 @end

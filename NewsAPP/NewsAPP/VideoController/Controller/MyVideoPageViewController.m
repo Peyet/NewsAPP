@@ -10,6 +10,7 @@
 #import "MyFlowLayout.h"
 #import "MyVideoListLoader.h"
 #import "MyVideoListItem.h"
+#import <MJRefresh/MJRefresh.h>
 
 @interface MyVideoPageViewController () <UICollectionViewDelegate, UICollectionViewDataSource, MyFlowLayoutDelegate>
 
@@ -22,34 +23,88 @@
 
 @implementation MyVideoPageViewController
 
-- (instancetype)initControllerWithChannel:(NSDictionary *)channel Frame:(CGRect)frame {
-    self.title = channel[@"title"];
-    self.view.backgroundColor = [UIColor whiteColor];
-    
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self setupTableView];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+}
+
+#pragma mark - 初始化tableView
+- (void)setupTableView {
     self.flowLayout = [[MyFlowLayout alloc] init];
     self.flowLayout.delegate = self;
-    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:frame collectionViewLayout:self.flowLayout];
+    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:self.flowLayout];
     self.collectionView = collectionView;
+    CGSize pageSize = [_channelInfo[@"pageSize"] CGSizeValue];
+    self.view.frame = CGRectMake(0, 0, pageSize.width, pageSize.height);
+    self.collectionView.frame = CGRectMake(0, 0, pageSize.width, pageSize.height);
+
     
     collectionView.delegate = self;
     collectionView.dataSource = self;
-    
     [collectionView registerClass:[MyVideoCoverView class] forCellWithReuseIdentifier:@"MyVideoCoverView"];
-    
-    collectionView.backgroundColor = [UIColor colorWithRed:235.0/255 green:235.0/255 blue:243.0/255 alpha:1];
     __weak typeof(self)wself = self;
-    [[[MyVideoListLoader alloc] init] loadListDataWithChannel:channel[@"type"] FinishBlock:^(BOOL success, NSArray<MyVideoListItem *> * _Nonnull dataArray) {
-        __strong typeof(wself) strongSelf = wself;
-        strongSelf.dataArray = [dataArray mutableCopy];
-        [strongSelf.collectionView reloadData];
+    [[MyVideoListLoader sharedMyListLoader] loadListDataWithChannel:self.channelInfo[@"type"] FinishBlock:^(BOOL success, NSArray<MyVideoListItem *> * _Nonnull dataArray) {
+        if (success) {
+            __strong typeof(wself) strongSelf = wself;
+            strongSelf.dataArray = [dataArray mutableCopy];
+            [strongSelf.collectionView reloadData];
+        } else {
+            __strong typeof(wself) strongSelf = wself;
+            strongSelf.dataArray = [dataArray mutableCopy];
+            [strongSelf.collectionView reloadData];
+        }
     }];
-    
+    collectionView.backgroundColor = [UIColor colorWithRed:235.0/255 green:235.0/255 blue:243.0/255 alpha:1];
+    self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:collectionView];
-    return self;
+    [self setupRefresh];
+
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+#pragma mark - 创建上下拉刷新
+- (void)setupRefresh {
+    self.collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewmodels)];
+    self.collectionView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoremodels)];
+}
+
+#pragma mark - 加载下拉数据
+- (void)loadNewmodels {
+    __weak typeof(self)wself = self;
+    [[MyVideoListLoader sharedMyListLoader] loadListDataWithChannel:@"1655" FinishBlock:^(BOOL success, NSArray<MyVideoListItem *> * _Nonnull dataArray) {
+        if (success) {
+            __strong typeof(wself) strongSelf = wself;
+            strongSelf.dataArray = [dataArray mutableCopy];
+            [strongSelf.collectionView.mj_header endRefreshing];
+            [strongSelf.collectionView reloadData];
+        } else {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [wself.collectionView.mj_header endRefreshing];
+                [wself.collectionView reloadData];
+            });
+        }
+    }];
+}
+
+#pragma mark - 加载上拉数据
+- (void)loadMoremodels {
+    __weak typeof(self)wself = self;
+    [[MyVideoListLoader sharedMyListLoader] loadListDataWithChannel:@"1655" FinishBlock:^(BOOL success, NSArray<MyVideoListItem *> * _Nonnull dataArray) {
+        if (success) {
+            __strong typeof(wself) strongSelf = wself;
+            [strongSelf.dataArray addObjectsFromArray:dataArray];
+            [strongSelf.collectionView.mj_header endRefreshing];
+            [strongSelf.collectionView reloadData];
+        } else {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [wself.collectionView.mj_header endRefreshing];
+                [wself.collectionView reloadData];
+            });
+        }
+    }];
 }
 
 #pragma mark - UICollectionViewFlowLayoutDelegate
@@ -89,6 +144,18 @@
 
 - (NSInteger)cellCount {
     return self.dataArray.count;
+}
+
+#pragma mark - setter
+- (void)setChannelInfo:(NSMutableDictionary *)channelInfo {
+    if (![channelInfo isKindOfClass:[NSMutableDictionary class]]) {
+        _channelInfo = [channelInfo mutableCopy];
+    } else {
+    _channelInfo = channelInfo;
+    }
+    // 设置初始页
+    [_channelInfo setObject:[NSNumber numberWithInt:1] forKey:@"page"];
+    self.title = channelInfo[@"title"];
 }
 
 @end
