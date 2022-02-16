@@ -11,6 +11,15 @@
 
 @implementation MyVideoListLoader
 
++ (instancetype)sharedMyListLoader {
+    static MyVideoListLoader *loader;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        loader = [[MyVideoListLoader alloc] init];
+    });
+    return loader;
+}
+
 - (void)loadListDataWithChannel:(NSString *)channel FinishBlock:(MyListLoaderFinishBlcok)finishBlock {
 
     NSArray<MyVideoListItem *> *listData = [self _readDataFromLocal];
@@ -43,7 +52,7 @@
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 if (finishBlock) {
-                    finishBlock(NO, nil);
+                    finishBlock(NO, listData);
                 }
             });
         }];
@@ -76,13 +85,13 @@
     
     // 初始化文件
     NSString *dataPath = [cachePath stringByAppendingPathComponent:@"MYData"];
-    if ([fileManager fileExistsAtPath:dataPath]) {
+    if (![fileManager fileExistsAtPath:dataPath]) {
         NSError *createError;
         [fileManager createDirectoryAtPath:dataPath withIntermediateDirectories:YES attributes:nil error:&createError];
     }
     
     // 缓存新闻数据
-    NSString *listDataPath = [dataPath stringByAppendingPathComponent:@"list"];
+    NSString *listDataPath = [dataPath stringByAppendingPathComponent:@"videoList"];
     NSData *listData = [NSKeyedArchiver archivedDataWithRootObject:array requiringSecureCoding:YES error:NULL];
     [fileManager createFileAtPath:listDataPath contents:listData attributes:nil];
     

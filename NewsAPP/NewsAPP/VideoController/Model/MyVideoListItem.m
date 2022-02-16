@@ -40,27 +40,27 @@
     self = [super init];
     if (self) {
         // video cover
-        [coder decodeObjectForKey:@"videoCover"];
+        self.videoCover = [coder decodeObjectForKey:@"videoCover"];
         // video detail
-        [coder decodeObjectForKey:@"videoTitle"];
-        [coder decodeObjectForKey:@"videoDescription"];
+        self.videoTitle = [coder decodeObjectForKey:@"videoTitle"];
+        self.videoDescription = [coder decodeObjectForKey:@"videoDescription"];
         // video playUrl
-        [coder decodeObjectForKey:@"videoPlayUrl"];
+        self.videoPlayUrl = [coder decodeObjectForKey:@"videoPlayUrl"];
         // video tag
-        [coder decodeObjectForKey:@"videoCategory"];
+        self.videoCategory = [coder decodeObjectForKey:@"videoCategory"];
         // video author
-        [coder decodeObjectForKey:@"videoAuthorIcon"];
-        [coder decodeObjectForKey:@"videoAuthorName"];
+        self.videoAuthorIcon = [coder decodeObjectForKey:@"videoAuthorIcon"];
+        self.videoAuthorName = [coder decodeObjectForKey:@"videoAuthorName"];
         // video consumption
-        [coder decodeObjectForKey:@"videoCollectionCount"];
-        [coder decodeObjectForKey:@"videoShareCount"];
-        [coder decodeObjectForKey:@"videoReplyCount"];
+        self.videoCollectionCount = [coder decodeObjectForKey:@"videoCollectionCount"];
+        self.videoShareCount = [coder decodeObjectForKey:@"videoShareCount"];
+        self.videoReplyCount = [coder decodeObjectForKey:@"videoReplyCount"];
         // video webUrl
-        [coder decodeObjectForKey:@"videoRaw"];
+        self.videoRaw = [coder decodeObjectForKey:@"videoRaw"];
         // video duration
-        [coder decodeObjectForKey:@"videoDuration"];
+        self.videoDuration = [coder decodeObjectForKey:@"videoDuration"];
         // video cellHeight
-        [coder decodeFloatForKey:@"cellHeight"];
+        self.videoCellHeight = [coder decodeFloatForKey:@"cellHeight"];
     }
     return self;
 }

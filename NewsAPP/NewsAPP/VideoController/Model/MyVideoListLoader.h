@@ -14,6 +14,8 @@ typedef void(^MyListLoaderFinishBlcok)(BOOL success, NSArray<MyVideoListItem *> 
 
 @interface MyVideoListLoader : NSObject
 
++ (instancetype)sharedMyListLoader;
+
 - (void)loadListDataWithChannel:(NSString *)channel FinishBlock:(MyListLoaderFinishBlcok)finishBlock;
 
 @end
