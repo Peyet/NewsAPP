@@ -22,14 +22,11 @@
 
 
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
-    // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-    // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-    // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
     self.window = [[UIWindow alloc] initWithWindowScene:(UIWindowScene *)scene];
         
     UITabBarController *tabbarController = [[UITabBarController alloc] init];
     tabbarController.delegate = self;
-//    tabbarController.tabBarItem.standardAppearance = [[UITabBarAppearance alloc] init];
+    tabbarController.tabBar.backgroundColor = [UIColor colorWithRed:248.0/255 green:248.0/255 blue:244.0/255 alpha:1];
     
     MyNewsViewController *newsViewController = [[MyNewsViewController alloc] init];
 //    UIViewController *newsViewController = [[UIViewController alloc] init];
@@ -43,6 +40,7 @@
     [tabbarController setViewControllers:@[newsViewController, videoViewController, recommendViewController, mineViewController]];
     
     _navigationController = [[UINavigationController alloc] initWithRootViewController:tabbarController];
+    _navigationController.view.backgroundColor = [UIColor redColor];
 
     self.window.rootViewController = _navigationController;
     [self.window makeKeyAndVisible];
