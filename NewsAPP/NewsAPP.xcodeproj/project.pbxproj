@@ -32,6 +32,11 @@
 		2140292D2793C876004712AB /* MyListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2140292C2793C876004712AB /* MyListItem.m */; };
 		2140292F279433F2004712AB /* placeholder_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 2140292E279433F2004712AB /* placeholder_image.png */; };
 		214029322794493F004712AB /* MyVideoCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 214029312794493F004712AB /* MyVideoCoverView.m */; };
+		21819D3627C0BACE00C14F47 /* MyRecommendListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 21819D3527C0BACD00C14F47 /* MyRecommendListItem.m */; };
+		21819D3927C0BB2000C14F47 /* MyRecommendListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 21819D3827C0BB2000C14F47 /* MyRecommendListLoader.m */; };
+		21819D3C27C0BB9C00C14F47 /* MyRecommendPageViewCellCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21819D3B27C0BB9C00C14F47 /* MyRecommendPageViewCellCollectionViewCell.m */; };
+		21819D3F27C0BC0000C14F47 /* MyRecommendPageViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 21819D3E27C0BC0000C14F47 /* MyRecommendPageViewFlowLayout.m */; };
+		21819D4527C0BEEF00C14F47 /* MyRecommendPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21819D4327C0BEEF00C14F47 /* MyRecommendPageViewController.m */; };
 		2196AAE127954ECF00C06FA8 /* MyVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2196AAE027954ECF00C06FA8 /* MyVideoPlayer.m */; };
 		2196AAE42795ACC900C06FA8 /* MyVideoToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2196AAE32795ACC900C06FA8 /* MyVideoToolbar.m */; };
 		2196AB1C2798FC9D00C06FA8 /* NSString+LabelSizeCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2196AB1B2798FC9D00C06FA8 /* NSString+LabelSizeCalculator.m */; };
@@ -93,6 +98,16 @@
 		2140292E279433F2004712AB /* placeholder_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder_image.png; sourceTree = "<group>"; };
 		214029302794493F004712AB /* MyVideoCoverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVideoCoverView.h; sourceTree = "<group>"; };
 		214029312794493F004712AB /* MyVideoCoverView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVideoCoverView.m; sourceTree = "<group>"; };
+		21819D3427C0BACD00C14F47 /* MyRecommendListItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyRecommendListItem.h; sourceTree = "<group>"; };
+		21819D3527C0BACD00C14F47 /* MyRecommendListItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyRecommendListItem.m; sourceTree = "<group>"; };
+		21819D3727C0BB2000C14F47 /* MyRecommendListLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyRecommendListLoader.h; sourceTree = "<group>"; };
+		21819D3827C0BB2000C14F47 /* MyRecommendListLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyRecommendListLoader.m; sourceTree = "<group>"; };
+		21819D3A27C0BB9C00C14F47 /* MyRecommendPageViewCellCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyRecommendPageViewCellCollectionViewCell.h; sourceTree = "<group>"; };
+		21819D3B27C0BB9C00C14F47 /* MyRecommendPageViewCellCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyRecommendPageViewCellCollectionViewCell.m; sourceTree = "<group>"; };
+		21819D3D27C0BC0000C14F47 /* MyRecommendPageViewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyRecommendPageViewFlowLayout.h; sourceTree = "<group>"; };
+		21819D3E27C0BC0000C14F47 /* MyRecommendPageViewFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyRecommendPageViewFlowLayout.m; sourceTree = "<group>"; };
+		21819D4327C0BEEF00C14F47 /* MyRecommendPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRecommendPageViewController.m; sourceTree = "<group>"; };
+		21819D4427C0BEEF00C14F47 /* MyRecommendPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRecommendPageViewController.h; sourceTree = "<group>"; };
 		2196AADF27954ECF00C06FA8 /* MyVideoPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVideoPlayer.h; sourceTree = "<group>"; };
 		2196AAE027954ECF00C06FA8 /* MyVideoPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVideoPlayer.m; sourceTree = "<group>"; };
 		2196AAE22795ACC900C06FA8 /* MyVideoToolbar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVideoToolbar.h; sourceTree = "<group>"; };
@@ -335,6 +350,8 @@
 			children = (
 				2134EF1D2791889300A5B24C /* MyRecommendViewController.h */,
 				2134EF1E2791889300A5B24C /* MyRecommendViewController.m */,
+				21819D4427C0BEEF00C14F47 /* MyRecommendPageViewController.h */,
+				21819D4327C0BEEF00C14F47 /* MyRecommendPageViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -342,6 +359,10 @@
 		2134EF3D2792EB0700A5B24C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				21819D3A27C0BB9C00C14F47 /* MyRecommendPageViewCellCollectionViewCell.h */,
+				21819D3B27C0BB9C00C14F47 /* MyRecommendPageViewCellCollectionViewCell.m */,
+				21819D3D27C0BC0000C14F47 /* MyRecommendPageViewFlowLayout.h */,
+				21819D3E27C0BC0000C14F47 /* MyRecommendPageViewFlowLayout.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -349,6 +370,10 @@
 		2134EF3E2792EB0C00A5B24C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				21819D3427C0BACD00C14F47 /* MyRecommendListItem.h */,
+				21819D3527C0BACD00C14F47 /* MyRecommendListItem.m */,
+				21819D3727C0BB2000C14F47 /* MyRecommendListLoader.h */,
+				21819D3827C0BB2000C14F47 /* MyRecommendListLoader.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -532,6 +557,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2140292D2793C876004712AB /* MyListItem.m in Sources */,
+				21819D3627C0BACE00C14F47 /* MyRecommendListItem.m in Sources */,
 				2196AAE42795ACC900C06FA8 /* MyVideoToolbar.m in Sources */,
 				2134EF222791929300A5B24C /* MyNormalTableViewCell.m in Sources */,
 				21A0EB6927B6956600F30EE2 /* MyNewsPageViewController.m in Sources */,
@@ -543,10 +569,14 @@
 				2134EF2D2792A30000A5B24C /* MyDeleteCellView.m in Sources */,
 				2134EF2A279264EE00A5B24C /* MyDetailViewController.m in Sources */,
 				2134EF382792E83600A5B24C /* MyMineViewController.m in Sources */,
+				21819D3C27C0BB9C00C14F47 /* MyRecommendPageViewCellCollectionViewCell.m in Sources */,
+				21819D4527C0BEEF00C14F47 /* MyRecommendPageViewController.m in Sources */,
 				2134EEC3278A8AE300A5B24C /* AppDelegate.m in Sources */,
+				21819D3F27C0BC0000C14F47 /* MyRecommendPageViewFlowLayout.m in Sources */,
 				2134EED4278A8AE600A5B24C /* main.m in Sources */,
 				2196AB1F2798FFB200C06FA8 /* MyFlowLayout.m in Sources */,
 				219CD3B4279AFDD500FB0759 /* MyVideoListLoader.m in Sources */,
+				21819D3927C0BB2000C14F47 /* MyRecommendListLoader.m in Sources */,
 				21A0EB3C27B0C7AA00F30EE2 /* MySearchBar.m in Sources */,
 				21A0EB6C27B8EDAC00F30EE2 /* MyVideoPageViewController.m in Sources */,
 				2196AAE127954ECF00C06FA8 /* MyVideoPlayer.m in Sources */,
