@@ -10,6 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// 视频界面的model
 @interface MyVideoListItem : NSObject<NSSecureCoding>
 
 // video cover
@@ -35,6 +36,8 @@ NS_ASSUME_NONNULL_BEGIN
 // video cellHeight
 @property (nonatomic, assign, readwrite) CGFloat videoCellHeight;
 
+/// 根据cell内容设置cell的布局信息
+/// @param dictionary cell的内容
 - (instancetype)initWithConfig:(NSDictionary *)dictionary;
 
 @end

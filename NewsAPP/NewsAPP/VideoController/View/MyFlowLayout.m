@@ -17,8 +17,8 @@
 @implementation MyFlowLayout
 
 #pragma mark - 默认参数
-static const CGFloat DefaultRowMargin = 10;
-static const UIEdgeInsets DefaultUIEdgeInsets = {10, 8, 10, 8};
+static const CGFloat DefaultRowMargin = 10;                             ///< 默认行边距
+static const UIEdgeInsets DefaultUIEdgeInsets = {10, 8, 10, 8};         ///< 默认collectionView边距
 
 #pragma mark -  布局计算
 /// 初始化布局

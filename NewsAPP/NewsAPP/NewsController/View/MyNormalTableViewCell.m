@@ -27,61 +27,71 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(nullable NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        [self.contentView addSubview:({
-            self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 15, 270, 60)];
-//            self.titleLabel.backgroundColor = [UIColor redColor];
-            self.titleLabel.font = [UIFont systemFontOfSize:16];
-            self.titleLabel.numberOfLines = 2;
-            self.titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
-            self.titleLabel;
-        })];
-        
-        [self.contentView addSubview:({
-            self.sourceLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 80, 50, 20)];
-//            self.sourceLabel.backgroundColor = [UIColor redColor];
-            self.sourceLabel.textColor = [UIColor grayColor];
-            self.sourceLabel.font = [UIFont systemFontOfSize:12];
-            self.sourceLabel;
-        })];
-
-        [self.contentView addSubview:({
-            self.commentLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 80, 50, 20)];
-//            self.commentLabel.backgroundColor = [UIColor redColor];
-            self.commentLabel.textColor = [UIColor grayColor];
-            self.commentLabel.font = [UIFont systemFontOfSize:12];
-            self.commentLabel;
-        })];
-
-        [self.contentView addSubview:({
-            self.timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(150, 80, 50, 20)];
-//            self.timeLabel.backgroundColor = [UIColor redColor];
-            self.timeLabel.textColor = [UIColor grayColor];
-            self.timeLabel.font = [UIFont systemFontOfSize:12];
-            self.timeLabel;
-        })];
-        
-        [self.contentView addSubview:({
-            self.rightImageView = [[UIImageView alloc] initWithFrame:CGRectMake(295, 15, 125, 80)];
-//            self.rightImageView.backgroundColor = [UIColor redColor];
-            self.rightImageView;
-        })];
-        
-        [self.contentView addSubview:({
-            self.deleteButton = [[UIButton alloc] initWithFrame:CGRectMake(260, 80, 30, 20)];
-            [self.deleteButton setTitle:@"X" forState:UIControlStateNormal];
-//            self.deleteButton.backgroundColor = [UIColor redColor];
-            [self.deleteButton addTarget:self action:@selector(deleteButtonClick) forControlEvents:UIControlEventTouchUpInside];
-            // 设置按钮样式
-            [self.deleteButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-            self.deleteButton.layer.cornerRadius = 10;
-            self.deleteButton.layer.masksToBounds = YES;
-            self.deleteButton.layer.borderWidth = 2;
-            self.deleteButton.layer.borderColor = [UIColor grayColor].CGColor;
-            self.deleteButton;
-        })];
-
+        [self setupView];
     }
     return self ;
+}
+
+/// 初始化view
+- (void)setupView {
+    // 新闻标题label
+    [self.contentView addSubview:({
+        self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 15, 270, 60)];
+//            self.titleLabel.backgroundColor = [UIColor redColor];
+        self.titleLabel.font = [UIFont systemFontOfSize:16];
+        self.titleLabel.numberOfLines = 2;
+        self.titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+        self.titleLabel;
+    })];
+    
+    // 新闻来源label
+    [self.contentView addSubview:({
+        self.sourceLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 80, 50, 20)];
+//            self.sourceLabel.backgroundColor = [UIColor redColor];
+        self.sourceLabel.textColor = [UIColor grayColor];
+        self.sourceLabel.font = [UIFont systemFontOfSize:12];
+        self.sourceLabel;
+    })];
+
+    // 评论label
+    [self.contentView addSubview:({
+        self.commentLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 80, 50, 20)];
+//            self.commentLabel.backgroundColor = [UIColor redColor];
+        self.commentLabel.textColor = [UIColor grayColor];
+        self.commentLabel.font = [UIFont systemFontOfSize:12];
+        self.commentLabel;
+    })];
+
+    // 时间label
+    [self.contentView addSubview:({
+        self.timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(150, 80, 50, 20)];
+//            self.timeLabel.backgroundColor = [UIColor redColor];
+        self.timeLabel.textColor = [UIColor grayColor];
+        self.timeLabel.font = [UIFont systemFontOfSize:12];
+        self.timeLabel;
+    })];
+    
+    // 图片label
+    [self.contentView addSubview:({
+        self.rightImageView = [[UIImageView alloc] initWithFrame:CGRectMake(295, 15, 125, 80)];
+//            self.rightImageView.backgroundColor = [UIColor redColor];
+        self.rightImageView;
+    })];
+    
+    // 删除按钮
+    [self.contentView addSubview:({
+        self.deleteButton = [[UIButton alloc] initWithFrame:CGRectMake(260, 80, 30, 20)];
+        [self.deleteButton setTitle:@"X" forState:UIControlStateNormal];
+//            self.deleteButton.backgroundColor = [UIColor redColor];
+        [self.deleteButton addTarget:self action:@selector(deleteButtonClick) forControlEvents:UIControlEventTouchUpInside];
+        // 设置按钮样式
+        [self.deleteButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        self.deleteButton.layer.cornerRadius = 10;
+        self.deleteButton.layer.masksToBounds = YES;
+        self.deleteButton.layer.borderWidth = 2;
+        self.deleteButton.layer.borderColor = [UIColor grayColor].CGColor;
+        self.deleteButton;
+    })];
 }
 
 /// cell重新布局
@@ -108,25 +118,11 @@
         self.titleLabel.textColor = [UIColor blackColor];
     }
     
-//    UIImage *placeholder_image = [UIImage imageNamed:@"placeholder_image.png"];
-//    self.rightImageView.contentMode = UIViewContentModeScaleToFill;
-//    self.rightImageView.image = placeholder_image;
-//    dispatch_queue_global_t downloadQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-//    dispatch_queue_main_t mainQueue = dispatch_get_main_queue();
-//
-//    dispatch_async(downloadQueue, ^{
-//        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:item.thumbnail_pic_s]]];
-//        dispatch_async(mainQueue, ^{
-//            self.rightImageView.image = image;
-//        });
-//    });
-    
     [self.rightImageView sd_setImageWithURL:[NSURL URLWithString:item.thumbnail_pic_s] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
-            
     }];
-
 }
 
+/// 按钮点击事件
 - (void)deleteButtonClick {
     if (self.delegate && [self.delegate respondsToSelector:@selector(tableViewCell:clickDeleteButton:)]) {
         [self.delegate tableViewCell:self clickDeleteButton:self.deleteButton];

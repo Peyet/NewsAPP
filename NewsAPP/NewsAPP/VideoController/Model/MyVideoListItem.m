@@ -11,6 +11,8 @@
 @implementation MyVideoListItem
 
 #pragma mark - NSSecureCoding
+/// 编解码
+/// @param coder coder description
 - (void)encodeWithCoder:(NSCoder *)coder {
     // video cover
     [coder encodeObject:self.videoCover forKey:@"videoCover"];
@@ -70,6 +72,7 @@
 }
 
 #pragma mark - public method
+/// 给listItem的属性设置网络数据
 - (instancetype)initWithConfig:(NSDictionary *)dictionary {
     if ([dictionary[@"type"] isEqualToString:@"video"]) {
         self = [super init];
@@ -102,6 +105,8 @@
     return nil;
 }
 
+/// 根据cell内容设置cell的布局信息
+/// @param dictionary cell的内容
 - (CGFloat)layoutCell {
     // cell格式默认配置
     CGFloat margin = 10;

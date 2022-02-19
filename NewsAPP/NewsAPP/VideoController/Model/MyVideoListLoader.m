@@ -11,6 +11,7 @@
 
 @implementation MyVideoListLoader
 
+/// 网络数据加载器的单例
 + (instancetype)sharedMyListLoader {
     static MyVideoListLoader *loader;
     static dispatch_once_t onceToken;
@@ -20,6 +21,7 @@
     return loader;
 }
 
+/// 加载网络数据
 - (void)loadListDataWithChannel:(NSString *)channel FinishBlock:(MyListLoaderFinishBlcok)finishBlock {
 
     NSArray<MyVideoListItem *> *listData = [self _readDataFromLocal];
@@ -33,7 +35,7 @@
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             __strong typeof(weakSelf) strongSelf = weakSelf;
-            
+            // 请求成功，返回网络数据
             NSArray *dataArray = responseObject[@"itemList"];
             NSMutableArray *listItemArray = [NSMutableArray arrayWithCapacity:30];
             for (NSDictionary *info in dataArray) {
@@ -50,6 +52,7 @@
             // 缓存数据
             [strongSelf _archiveListDataWithArray:listItemArray.copy];
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            // 请求数据失败，返回本地缓存
             dispatch_async(dispatch_get_main_queue(), ^{
                 if (finishBlock) {
                     finishBlock(NO, listData);
@@ -60,6 +63,7 @@
 
 #pragma mark - private method
 
+/// 读取本地缓存数据
 - (NSArray<MyVideoListItem *> *)_readDataFromLocal{
     
     NSArray *pathArray = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
@@ -78,6 +82,8 @@
     return nil;;
 }
 
+/// 缓存到本地网络数据
+/// @param array 需要缓存的数据
 - (void)_archiveListDataWithArray:(NSArray<MyVideoListItem *> *)array {
     NSArray *pathArray =  NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
     NSString *cachePath = [pathArray firstObject];
@@ -94,9 +100,6 @@
     NSString *listDataPath = [dataPath stringByAppendingPathComponent:@"videoList"];
     NSData *listData = [NSKeyedArchiver archivedDataWithRootObject:array requiringSecureCoding:YES error:NULL];
     [fileManager createFileAtPath:listDataPath contents:listData attributes:nil];
-    
-    NSData *readListData = [fileManager contentsAtPath:listDataPath];
-    id unarchivedObj = [NSKeyedUnarchiver unarchivedObjectOfClasses:[NSSet setWithObjects:[MyVideoListItem class], [NSArray class], nil] fromData:readListData error:NULL];
 }
 
 

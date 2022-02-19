@@ -18,14 +18,6 @@ NS_ASSUME_NONNULL_BEGIN
 /// 返回cell个数
 - (NSInteger)cellCount;
 
-@optional
-/// 列间距
-- (CGFloat)columnMarginInMyFlowLayout:(MyFlowLayout *)myFlowLayout;
-/// 行间距
-- (CGFloat)rowMarginInMyFlowLayout:(MyFlowLayout *)myFlowLayout;
-/// collectionView边距
-- (UIEdgeInsets)edgeInsetsInMyFlowLayout:(MyFlowLayout *)myFlowLayout;
-
 @end
 
 /// 视频tab中collectionView的flowlayout布局

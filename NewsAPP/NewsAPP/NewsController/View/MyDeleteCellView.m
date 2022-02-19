@@ -22,43 +22,49 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        [self addSubview:({
-            _backgroundView = [[UIView alloc] initWithFrame:self.bounds];
-            _backgroundView.backgroundColor = [UIColor blackColor];
-            _backgroundView.alpha  = 0.5;
-            [_backgroundView addGestureRecognizer:({
-                UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissDeleteView)];
-                tapGesture;
-            })];
-            _backgroundView;
-        })];
-
-        // 删除原因背景View
-        [self addSubview:({
-            NSInteger deleteReasonNumber = 3;
-            CGFloat deleteReasonItemHeight = 80;
-            UIEdgeInsets deleteEdge = {(frame.size.height - deleteReasonNumber * deleteReasonItemHeight) / 2, 10, (frame.size.height - deleteReasonNumber * deleteReasonItemHeight) / 2, 10};
-            
-            self.deleteReasonView = [[UIView alloc] initWithFrame:CGRectMake(deleteEdge.left, deleteEdge.top, frame.size.width - deleteEdge.left - deleteEdge.right, 240)];
-            self.deleteReasonView.backgroundColor = [UIColor whiteColor];
-            self.deleteReasonView.layer.cornerRadius = 20;
-            self.deleteReasonView.layer.masksToBounds = YES;
-            [self.deleteReasonView addGestureRecognizer:({
-                            UITapGestureRecognizer *removeView = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(_clickButton)];
-                removeView;
-            })];
-            self.deleteReasonView;
-        })];
-        
-        [self _creatDeleteReasonContentWithFrame:CGRectMake(0, 0, self.deleteReasonView.frame.size.width, 80) Image:@"不感兴趣.png" Content:@"不感兴趣" havesplitLine:YES];
-        
-        [self _creatDeleteReasonContentWithFrame:CGRectMake(0, 81, self.deleteReasonView.frame.size.width, 80) Image:@"屏蔽.png" Content:@"屏蔽来源" havesplitLine:YES];
-        
-        [self _creatDeleteReasonContentWithFrame:CGRectMake(0, 160, self.deleteReasonView.frame.size.width, 80) Image:@"举报.png" Content:@"举报内容" havesplitLine:YES];
-
-        self.clipsToBounds = YES;
+        [self setupView];
      }
     return self;
+}
+
+/// 初始化view
+- (void)setupView {
+    CGRect frame = [UIApplication sharedApplication].keyWindow.bounds;
+    [self addSubview:({
+        _backgroundView = [[UIView alloc] initWithFrame:frame];
+        _backgroundView.backgroundColor = [UIColor blackColor];
+        _backgroundView.alpha  = 0.5;
+        [_backgroundView addGestureRecognizer:({
+            UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissDeleteView)];
+            tapGesture;
+        })];
+        _backgroundView;
+    })];
+
+    // 删除原因背景View
+    [self addSubview:({
+        NSInteger deleteReasonNumber = 3;
+        CGFloat deleteReasonItemHeight = 80;
+        UIEdgeInsets deleteEdge = {(frame.size.height - deleteReasonNumber * deleteReasonItemHeight) / 2, 10, (frame.size.height - deleteReasonNumber * deleteReasonItemHeight) / 2, 10};
+        
+        _deleteReasonView = [[UIView alloc] initWithFrame:CGRectMake(deleteEdge.left, deleteEdge.top, frame.size.width - deleteEdge.left - deleteEdge.right, 240)];
+        _deleteReasonView.backgroundColor = [UIColor whiteColor];
+        _deleteReasonView.layer.cornerRadius = 20;
+        _deleteReasonView.layer.masksToBounds = YES;
+        [_deleteReasonView addGestureRecognizer:({
+                        UITapGestureRecognizer *removeView = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(_clickButton)];
+            removeView;
+        })];
+        _deleteReasonView;
+    })];
+    
+    [self _creatDeleteReasonContentWithFrame:CGRectMake(0, 0, self.deleteReasonView.frame.size.width, 80) Image:@"不感兴趣.png" Content:@"不感兴趣" havesplitLine:YES];
+    
+    [self _creatDeleteReasonContentWithFrame:CGRectMake(0, 81, self.deleteReasonView.frame.size.width, 80) Image:@"屏蔽.png" Content:@"屏蔽来源" havesplitLine:YES];
+    
+    [self _creatDeleteReasonContentWithFrame:CGRectMake(0, 160, self.deleteReasonView.frame.size.width, 80) Image:@"举报.png" Content:@"举报内容" havesplitLine:YES];
+
+    self.clipsToBounds = YES;
 }
 
 /// 创建屏蔽原因
@@ -92,6 +98,9 @@
     }
 }
 
+/// 显示删除的原因
+/// @param point 点击删除按钮的位置
+/// @param clickBlock 回调
 - (void)showDeleteViewFromPoint:(CGPoint)point clickBlock:(dispatch_block_t)clickBlock {
 
     _deleteButton.frame = CGRectMake(point.x, point.y, 0, 0);
@@ -110,10 +119,12 @@
      }];
 }
 
+/// 关闭删除原因界面
 - (void)dismissDeleteView {
     [self removeFromSuperview];
 }
 
+/// 点击删除按钮
 - (void)_clickButton {
     if (_deleteBlock) {
         _deleteBlock();

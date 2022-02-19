@@ -32,7 +32,40 @@
     [super viewWillAppear:animated];
 }
 
-#pragma mark - 初始化tableView
+#pragma mark - UICollectionViewDataSource
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return self.dataArray.count;
+}
+
+- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    MyVideoCoverView * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MyVideoCoverView" forIndexPath:indexPath];
+    if ([cell isKindOfClass:[MyVideoCoverView class]]) {
+        MyVideoListItem *item = self.dataArray[indexPath.item];
+        [cell layoutWithVideoItem:item];
+    }
+    cell.backgroundColor = [UIColor blackColor];
+    return cell;
+}
+
+#pragma mark - UICollectionViewDelegate
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"-----------------selected item at row : %ld----------", indexPath.item);
+}
+
+#pragma mark - MyFlowLayoutDelegate
+/// 返回cell高度
+- (CGFloat)cellHeightWithIndexPath:(NSIndexPath *)indexPath {
+    MyVideoListItem *item = self.dataArray[indexPath.item];
+    return item.videoCellHeight;
+}
+
+- (NSInteger)cellCount {
+    return self.dataArray.count;
+}
+
+#pragma mark - Life Cycle
+/// 初始化tableView
 - (void)setupTableView {
     self.flowLayout = [[MyFlowLayout alloc] init];
     self.flowLayout.delegate = self;
@@ -65,13 +98,13 @@
 
 }
 
-#pragma mark - 创建上下拉刷新
+/// 创建上下拉刷新
 - (void)setupRefresh {
     self.collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewmodels)];
     self.collectionView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoremodels)];
 }
 
-#pragma mark - 加载下拉数据
+/// 加载下拉数据
 - (void)loadNewmodels {
     __weak typeof(self)wself = self;
     [[MyVideoListLoader sharedMyListLoader] loadListDataWithChannel:@"1655" FinishBlock:^(BOOL success, NSArray<MyVideoListItem *> * _Nonnull dataArray) {
@@ -89,7 +122,7 @@
     }];
 }
 
-#pragma mark - 加载上拉数据
+/// 加载上拉数据
 - (void)loadMoremodels {
     __weak typeof(self)wself = self;
     [[MyVideoListLoader sharedMyListLoader] loadListDataWithChannel:@"1655" FinishBlock:^(BOOL success, NSArray<MyVideoListItem *> * _Nonnull dataArray) {
@@ -105,45 +138,6 @@
             });
         }
     }];
-}
-
-#pragma mark - UICollectionViewFlowLayoutDelegate
-
-//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-//    return [collectionView cellForItemAtIndexPath:indexPath].frame.size;
-//}
-
-
-#pragma mark - UICollectionViewDataSource
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.dataArray.count;
-}
-
-- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    MyVideoCoverView * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MyVideoCoverView" forIndexPath:indexPath];
-    if ([cell isKindOfClass:[MyVideoCoverView class]]) {
-        MyVideoListItem *item = self.dataArray[indexPath.item];
-        [cell layoutWithVideoItem:item];
-    }
-    cell.backgroundColor = [UIColor blackColor];
-    return cell;
-}
-
-#pragma mark - UICollectionViewDelegate
--(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"-----------------selected item at row : %ld----------", indexPath.item);
-}
-
-#pragma mark - MyFlowLayoutDelegate
-/// 返回cell高度
-- (CGFloat)cellHeightWithIndexPath:(NSIndexPath *)indexPath {
-    MyVideoListItem *item = self.dataArray[indexPath.item];
-    return item.videoCellHeight;
-}
-
-- (NSInteger)cellCount {
-    return self.dataArray.count;
 }
 
 #pragma mark - setter

@@ -29,61 +29,63 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        
-        // 默认字体大小配置
-        CGFloat titleFontSize = 22, detailFontSize = 15;
-        // 添加视频标题
-        [self addSubview:({
-            _videoTitleLabel = [[UILabel alloc] init];
-            _videoTitleLabel.font = [UIFont systemFontOfSize:titleFontSize];
-            _videoTitleLabel.numberOfLines = 0;
-            _videoTitleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
-//            _videoTitleLabel.backgroundColor = [UIColor yellowColor];
-            _videoTitleLabel;
-                })];
-        
-        // 添加话题标签
-        [self addSubview:({
-            _tagLabel = [[UILabel alloc] init];
-            _tagLabel.font = [UIFont systemFontOfSize:detailFontSize];
-            _tagLabel.textColor = [UIColor redColor];
-            _tagLabel.lineBreakMode = NSLineBreakByTruncatingTail;
-            _tagLabel;
-                })];
-        
-        // 添加作者头像
-        [self addSubview:({
-            _authorAvatarImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 15, 15)];
-            _authorAvatarImageView.layer.cornerRadius = 7.5;
-            _authorAvatarImageView.layer.masksToBounds = YES;
-            _authorAvatarImageView.layer.borderWidth = 0.1;
-            _authorAvatarImageView.contentMode = UIViewContentModeScaleToFill;
-            _authorAvatarImageView;
-                })];
-        
-        // 添加作者名称
-        [self addSubview:({
-            _authorAvatarLabel = [[UILabel alloc] init];
-            _authorAvatarLabel.font = [UIFont systemFontOfSize:detailFontSize];
-            _authorAvatarLabel.textColor = [UIColor grayColor];
-            _authorAvatarLabel.lineBreakMode = NSLineBreakByTruncatingTail;
-            _authorAvatarLabel;
-                })];
-        
-        // 添加删除按钮
-        [self addSubview:({
-            _closeButton = [[UIButton alloc] init];
-            [_closeButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-            _closeButton.titleLabel.font = [UIFont systemFontOfSize:detailFontSize];
-            [_closeButton addTarget:self action:@selector(_closeClicked) forControlEvents:UIControlEventTouchUpInside];
-            _closeButton;
-                })];
-        
-        self.backgroundColor = [UIColor colorWithRed:255.0/255 green:255.0/255 blue:255.0/255 alpha:1];;
-//        self.backgroundColor = [UIColor redColor];
-
+        [self setupViewWithFrame:frame];
     }
     return self;
+}
+
+/// 初始化view
+/// @param frame 当前view的frame
+- (void)setupViewWithFrame:(CGRect)frame {
+    // 默认字体大小配置
+    CGFloat titleFontSize = 22, detailFontSize = 15;
+    // 添加视频标题
+    [self addSubview:({
+        _videoTitleLabel = [[UILabel alloc] init];
+        _videoTitleLabel.font = [UIFont systemFontOfSize:titleFontSize];
+        _videoTitleLabel.numberOfLines = 0;
+        _videoTitleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+        _videoTitleLabel;
+            })];
+    
+    // 添加话题标签
+    [self addSubview:({
+        _tagLabel = [[UILabel alloc] init];
+        _tagLabel.font = [UIFont systemFontOfSize:detailFontSize];
+        _tagLabel.textColor = [UIColor redColor];
+        _tagLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+        _tagLabel;
+            })];
+    
+    // 添加作者头像
+    [self addSubview:({
+        _authorAvatarImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 15, 15)];
+        _authorAvatarImageView.layer.cornerRadius = 7.5;
+        _authorAvatarImageView.layer.masksToBounds = YES;
+        _authorAvatarImageView.layer.borderWidth = 0.1;
+        _authorAvatarImageView.contentMode = UIViewContentModeScaleToFill;
+        _authorAvatarImageView;
+            })];
+    
+    // 添加作者名称
+    [self addSubview:({
+        _authorAvatarLabel = [[UILabel alloc] init];
+        _authorAvatarLabel.font = [UIFont systemFontOfSize:detailFontSize];
+        _authorAvatarLabel.textColor = [UIColor grayColor];
+        _authorAvatarLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+        _authorAvatarLabel;
+            })];
+    
+    // 添加删除按钮
+    [self addSubview:({
+        _closeButton = [[UIButton alloc] init];
+        [_closeButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        _closeButton.titleLabel.font = [UIFont systemFontOfSize:detailFontSize];
+        [_closeButton addTarget:self action:@selector(_closeClicked) forControlEvents:UIControlEventTouchUpInside];
+        _closeButton;
+            })];
+    self.backgroundColor = [UIColor colorWithRed:255.0/255 green:255.0/255 blue:255.0/255 alpha:1];;
+//        self.backgroundColor = [UIColor redColor];
 }
 
 /// 根据model重新布局

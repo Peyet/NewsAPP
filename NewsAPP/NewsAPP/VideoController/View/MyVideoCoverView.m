@@ -31,33 +31,39 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        [self addSubview:({
-            _coverView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, (frame.size.width) * 9 / 16)];
-            _coverView;
-        })];
-
-        [_coverView addSubview:({
-            _playButton = [[UIImageView alloc] initWithFrame:CGRectMake((frame.size.width - 50) / 2, (frame.size.width - 50) * 9 / 16 / 2, 50, 50)];
-            _playButton.image = [UIImage imageNamed:@"toPlay.png"];
-            _playButton;
-        })];
-        
-        [self addSubview:({
-            _videoToolbar = [[MyVideoToolbar alloc] initWithFrame:CGRectMake(0, _coverView.frame.size.height, frame.size.width, 0)];
-            _videoToolbar;
-        })];
-        
-        self.layer.cornerRadius = 15;
-        self.layer.masksToBounds = YES;
-        
-        //点击全部Item都支持播放
-        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(_tapToPlay)];
-        [self addGestureRecognizer:tapGesture];
+        [self setupViewWithFrame:frame];
     }
     return self;
 }
 
 - (void)dealloc {
+}
+
+/// 初始化view
+/// @param frame 当前view的frame
+- (void)setupViewWithFrame:(CGRect)frame {
+    [self addSubview:({
+        _coverView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, (frame.size.width) * 9 / 16)];
+        _coverView;
+    })];
+
+    [_coverView addSubview:({
+        _playButton = [[UIImageView alloc] initWithFrame:CGRectMake((frame.size.width - 50) / 2, (frame.size.width - 50) * 9 / 16 / 2, 50, 50)];
+        _playButton.image = [UIImage imageNamed:@"toPlay.png"];
+        _playButton;
+    })];
+    
+    [self addSubview:({
+        _videoToolbar = [[MyVideoToolbar alloc] initWithFrame:CGRectMake(0, _coverView.frame.size.height, frame.size.width, 0)];
+        _videoToolbar;
+    })];
+    
+    self.layer.cornerRadius = 15;
+    self.layer.masksToBounds = YES;
+    
+    //点击全部Item都支持播放
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(_tapToPlay)];
+    [self addGestureRecognizer:tapGesture];
 }
 
 #pragma mark - public method
@@ -72,6 +78,8 @@
 //
 //}
 
+/// 根据cell内容设置cell的布局信息
+/// @param videoListItem cell的内容
 - (void)layoutWithVideoItem:(MyVideoListItem *)videoListItem {
     self.videoListItem = videoListItem;
     [self.coverView sd_setImageWithURL:[NSURL URLWithString:self.videoListItem.videoCover]];
@@ -81,6 +89,7 @@
 
 #pragma mark - private method
 
+/// 点击开始播放
 - (void)_tapToPlay {
     [[MyVideoPlayer sharedPlayer] playVideoWithvideoUrl:_videoUrl attachView:_coverView];
 }

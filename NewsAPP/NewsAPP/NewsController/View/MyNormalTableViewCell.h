@@ -25,6 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak, readwrite) id<MyNormalTableViewCellDelegate> delegate;
 
+/// 计算cell的大小
+/// @param item cell的模型数据
 - (void)layoutTableViewCellWithItem:(MyListItem *)item;
 
 @end
