@@ -1,10 +1,10 @@
-platform :ios, '15.0'
+platform :ios, '13.0'
 
 target 'NewsAPP' do
 
-  pod 'AFNetworking'
-  pod 'SDWebImage'
-  pod 'CMPageTitleView'
-  pod 'MJRefresh'
+  pod 'AFNetworking', '~> 4.0.1'
+  pod 'SDWebImage', '~> 5.12.2'
+  pod 'CMPageTitleView', '~> 0.7.4'
+  pod 'MJRefresh', '~> 3.7.5'
 
 end

@@ -9,52 +9,38 @@
 /* Begin PBXBuildFile section */
 		2134EEC3278A8AE300A5B24C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2134EEC2278A8AE300A5B24C /* AppDelegate.m */; };
 		2134EEC6278A8AE300A5B24C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2134EEC5278A8AE300A5B24C /* SceneDelegate.m */; };
-		2134EEC9278A8AE300A5B24C /* MyNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2134EEC8278A8AE300A5B24C /* MyNewsViewController.m */; };
+		2134EEC9278A8AE300A5B24C /* ZPJNewsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2134EEC8278A8AE300A5B24C /* ZPJNewsVC.m */; };
 		2134EECE278A8AE600A5B24C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2134EECD278A8AE600A5B24C /* Assets.xcassets */; };
 		2134EED1278A8AE600A5B24C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2134EECF278A8AE600A5B24C /* LaunchScreen.storyboard */; };
 		2134EED4278A8AE600A5B24C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2134EED3278A8AE600A5B24C /* main.m */; };
-		2134EF0F279162A700A5B24C /* like_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2134EF07279162A700A5B24C /* like_selected@2x.png */; };
-		2134EF10279162A800A5B24C /* video@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2134EF08279162A700A5B24C /* video@2x.png */; };
-		2134EF11279162A800A5B24C /* page_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2134EF09279162A700A5B24C /* page_selected@2x.png */; };
-		2134EF12279162A800A5B24C /* page@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2134EF0A279162A700A5B24C /* page@2x.png */; };
-		2134EF13279162A800A5B24C /* video_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2134EF0B279162A700A5B24C /* video_selected@2x.png */; };
-		2134EF14279162A800A5B24C /* home_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2134EF0C279162A700A5B24C /* home_selected@2x.png */; };
-		2134EF15279162A800A5B24C /* like@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2134EF0D279162A700A5B24C /* like@2x.png */; };
-		2134EF16279162A800A5B24C /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2134EF0E279162A700A5B24C /* home@2x.png */; };
-		2134EF1C27916C3A00A5B24C /* MyVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2134EF1B27916C3A00A5B24C /* MyVideoViewController.m */; };
-		2134EF1F2791889300A5B24C /* MyRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2134EF1E2791889300A5B24C /* MyRecommendViewController.m */; };
-		2134EF222791929300A5B24C /* MyNormalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2134EF212791929300A5B24C /* MyNormalTableViewCell.m */; };
-		2134EF242792586B00A5B24C /* aaa.png in Resources */ = {isa = PBXBuildFile; fileRef = 2134EF232792586B00A5B24C /* aaa.png */; };
-		2134EF2A279264EE00A5B24C /* MyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2134EF29279264EE00A5B24C /* MyDetailViewController.m */; };
-		2134EF2D2792A30000A5B24C /* MyDeleteCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2134EF2C2792A30000A5B24C /* MyDeleteCellView.m */; };
-		2134EF382792E83600A5B24C /* MyMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2134EF372792E83600A5B24C /* MyMineViewController.m */; };
-		2134EF442792F88A00A5B24C /* MyListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2134EF432792F88A00A5B24C /* MyListLoader.m */; };
-		2140292D2793C876004712AB /* MyListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2140292C2793C876004712AB /* MyListItem.m */; };
-		2140292F279433F2004712AB /* placeholder_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 2140292E279433F2004712AB /* placeholder_image.png */; };
-		214029322794493F004712AB /* MyVideoCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 214029312794493F004712AB /* MyVideoCoverView.m */; };
+		2134EF1C27916C3A00A5B24C /* ZPJVideoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2134EF1B27916C3A00A5B24C /* ZPJVideoVC.m */; };
+		2134EF222791929300A5B24C /* ZPJNormalNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2134EF212791929300A5B24C /* ZPJNormalNewsCell.m */; };
+		2134EF2A279264EE00A5B24C /* ZPJNewsDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2134EF29279264EE00A5B24C /* ZPJNewsDetailVC.m */; };
+		2134EF2D2792A30000A5B24C /* ZPJDeleteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2134EF2C2792A30000A5B24C /* ZPJDeleteView.m */; };
+		2134EF382792E83600A5B24C /* ZPJMineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2134EF372792E83600A5B24C /* ZPJMineVC.m */; };
+		2134EF442792F88A00A5B24C /* ZPJListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2134EF432792F88A00A5B24C /* ZPJListLoader.m */; };
+		2140292D2793C876004712AB /* ZPJListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2140292C2793C876004712AB /* ZPJListItem.m */; };
+		214029322794493F004712AB /* ZPJVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 214029312794493F004712AB /* ZPJVideoCell.m */; };
+		2163A96927C2941B00ED8CFF /* ZPJTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2163A96827C2941B00ED8CFF /* ZPJTabBarController.m */; };
+		2163A97327C34FBC00ED8CFF /* ZPJHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2163A97227C34FBC00ED8CFF /* ZPJHeader.m */; };
+		2163A97927C3AC1500ED8CFF /* ZPJRecommendDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2163A97827C3AC1500ED8CFF /* ZPJRecommendDetailView.m */; };
 		21819D3627C0BACE00C14F47 /* MyRecommendListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 21819D3527C0BACD00C14F47 /* MyRecommendListItem.m */; };
 		21819D3927C0BB2000C14F47 /* MyRecommendListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 21819D3827C0BB2000C14F47 /* MyRecommendListLoader.m */; };
-		21819D3C27C0BB9C00C14F47 /* MyRecommendPageViewCellCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21819D3B27C0BB9C00C14F47 /* MyRecommendPageViewCellCollectionViewCell.m */; };
-		21819D3F27C0BC0000C14F47 /* MyRecommendPageViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 21819D3E27C0BC0000C14F47 /* MyRecommendPageViewFlowLayout.m */; };
-		21819D4527C0BEEF00C14F47 /* MyRecommendPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21819D4327C0BEEF00C14F47 /* MyRecommendPageViewController.m */; };
-		2196AAE127954ECF00C06FA8 /* MyVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2196AAE027954ECF00C06FA8 /* MyVideoPlayer.m */; };
-		2196AAE42795ACC900C06FA8 /* MyVideoToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2196AAE32795ACC900C06FA8 /* MyVideoToolbar.m */; };
+		21819D3C27C0BB9C00C14F47 /* ZPJRecommendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21819D3B27C0BB9C00C14F47 /* ZPJRecommendCell.m */; };
+		21819D3F27C0BC0000C14F47 /* ZPJRecommendLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 21819D3E27C0BC0000C14F47 /* ZPJRecommendLayout.m */; };
+		21819D4527C0BEEF00C14F47 /* ZPJRecommendVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 21819D4327C0BEEF00C14F47 /* ZPJRecommendVC.m */; };
+		2196AAE127954ECF00C06FA8 /* ZPJVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2196AAE027954ECF00C06FA8 /* ZPJVideoPlayer.m */; };
+		2196AAE42795ACC900C06FA8 /* ZPJVideoToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2196AAE32795ACC900C06FA8 /* ZPJVideoToolbar.m */; };
 		2196AB1C2798FC9D00C06FA8 /* NSString+LabelSizeCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2196AB1B2798FC9D00C06FA8 /* NSString+LabelSizeCalculator.m */; };
-		2196AB1F2798FFB200C06FA8 /* MyFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2196AB1E2798FFB200C06FA8 /* MyFlowLayout.m */; };
-		2196AB23279A475E00C06FA8 /* toPlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 2196AB22279A475E00C06FA8 /* toPlay.png */; };
-		2196AB27279A700200C06FA8 /* 屏蔽.png in Resources */ = {isa = PBXBuildFile; fileRef = 2196AB24279A700100C06FA8 /* 屏蔽.png */; };
-		2196AB28279A700200C06FA8 /* 不感兴趣.png in Resources */ = {isa = PBXBuildFile; fileRef = 2196AB25279A700100C06FA8 /* 不感兴趣.png */; };
-		2196AB29279A700200C06FA8 /* 举报.png in Resources */ = {isa = PBXBuildFile; fileRef = 2196AB26279A700200C06FA8 /* 举报.png */; };
-		219CD3B4279AFDD500FB0759 /* MyVideoListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 219CD3B3279AFDD500FB0759 /* MyVideoListLoader.m */; };
-		219CD3BD279C56C800FB0759 /* MyVideoListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 219CD3BC279C56C800FB0759 /* MyVideoListItem.m */; };
-		219D706527A663550025AFC0 /* MyLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 219D706427A663550025AFC0 /* MyLocation.m */; };
-		219D706827A6D0D80025AFC0 /* MyNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 219D706727A6D0D70025AFC0 /* MyNotification.m */; };
-		21A0EB3C27B0C7AA00F30EE2 /* MySearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A0EB3B27B0C7AA00F30EE2 /* MySearchBar.m */; };
-		21A0EB3E27B6438800F30EE2 /* NewsApp.png in Resources */ = {isa = PBXBuildFile; fileRef = 21A0EB3D27B6438800F30EE2 /* NewsApp.png */; };
-		21A0EB6927B6956600F30EE2 /* MyNewsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A0EB6827B6956600F30EE2 /* MyNewsPageViewController.m */; };
-		21A0EB6C27B8EDAC00F30EE2 /* MyVideoPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A0EB6B27B8EDAC00F30EE2 /* MyVideoPageViewController.m */; };
-		21DE2B6427A29866006C742C /* MySplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DE2B6327A29866006C742C /* MySplashView.m */; };
-		21DE2B6827A2A1B3006C742C /* Splash@x4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 21DE2B6727A2A1B3006C742C /* Splash@x4.jpg */; };
+		2196AB1F2798FFB200C06FA8 /* ZPJFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2196AB1E2798FFB200C06FA8 /* ZPJFlowLayout.m */; };
+		219CD3B4279AFDD500FB0759 /* ZPJVideoListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 219CD3B3279AFDD500FB0759 /* ZPJVideoListLoader.m */; };
+		219CD3BD279C56C800FB0759 /* ZPJVideoListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 219CD3BC279C56C800FB0759 /* ZPJVideoListItem.m */; };
+		219D706527A663550025AFC0 /* ZPJLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 219D706427A663550025AFC0 /* ZPJLocation.m */; };
+		219D706827A6D0D80025AFC0 /* ZPJNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 219D706727A6D0D70025AFC0 /* ZPJNotification.m */; };
+		21A0EB3C27B0C7AA00F30EE2 /* ZPJSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A0EB3B27B0C7AA00F30EE2 /* ZPJSearchBar.m */; };
+		21A0EB6927B6956600F30EE2 /* ZPJNewsPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A0EB6827B6956600F30EE2 /* ZPJNewsPageVC.m */; };
+		21A0EB6C27B8EDAC00F30EE2 /* ZPJVideoPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A0EB6B27B8EDAC00F30EE2 /* ZPJVideoPageVC.m */; };
+		21DE2B6427A29866006C742C /* ZPJSplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DE2B6327A29866006C742C /* ZPJSplashView.m */; };
 		8CC034AE46BB861FF84AA58B /* libPods-NewsAPP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EC15F34A90107CF267E195 /* libPods-NewsAPP.a */; };
 /* End PBXBuildFile section */
 
@@ -64,80 +50,68 @@
 		2134EEC2278A8AE300A5B24C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2134EEC4278A8AE300A5B24C /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		2134EEC5278A8AE300A5B24C /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		2134EEC7278A8AE300A5B24C /* MyNewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyNewsViewController.h; sourceTree = "<group>"; };
-		2134EEC8278A8AE300A5B24C /* MyNewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyNewsViewController.m; sourceTree = "<group>"; };
+		2134EEC7278A8AE300A5B24C /* ZPJNewsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZPJNewsVC.h; sourceTree = "<group>"; };
+		2134EEC8278A8AE300A5B24C /* ZPJNewsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZPJNewsVC.m; sourceTree = "<group>"; };
 		2134EECD278A8AE600A5B24C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2134EED0278A8AE600A5B24C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2134EED2278A8AE600A5B24C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2134EED3278A8AE600A5B24C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2134EF07279162A700A5B24C /* like_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "like_selected@2x.png"; sourceTree = "<group>"; };
-		2134EF08279162A700A5B24C /* video@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video@2x.png"; sourceTree = "<group>"; };
-		2134EF09279162A700A5B24C /* page_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "page_selected@2x.png"; sourceTree = "<group>"; };
-		2134EF0A279162A700A5B24C /* page@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "page@2x.png"; sourceTree = "<group>"; };
-		2134EF0B279162A700A5B24C /* video_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video_selected@2x.png"; sourceTree = "<group>"; };
-		2134EF0C279162A700A5B24C /* home_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_selected@2x.png"; sourceTree = "<group>"; };
-		2134EF0D279162A700A5B24C /* like@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "like@2x.png"; sourceTree = "<group>"; };
-		2134EF0E279162A700A5B24C /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home@2x.png"; sourceTree = "<group>"; };
-		2134EF1A27916C3A00A5B24C /* MyVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVideoViewController.h; sourceTree = "<group>"; };
-		2134EF1B27916C3A00A5B24C /* MyVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVideoViewController.m; sourceTree = "<group>"; };
-		2134EF1D2791889300A5B24C /* MyRecommendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyRecommendViewController.h; sourceTree = "<group>"; };
-		2134EF1E2791889300A5B24C /* MyRecommendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyRecommendViewController.m; sourceTree = "<group>"; };
-		2134EF202791929300A5B24C /* MyNormalTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyNormalTableViewCell.h; sourceTree = "<group>"; };
-		2134EF212791929300A5B24C /* MyNormalTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyNormalTableViewCell.m; sourceTree = "<group>"; };
-		2134EF232792586B00A5B24C /* aaa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aaa.png; sourceTree = "<group>"; };
-		2134EF28279264EE00A5B24C /* MyDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyDetailViewController.h; sourceTree = "<group>"; };
-		2134EF29279264EE00A5B24C /* MyDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyDetailViewController.m; sourceTree = "<group>"; };
-		2134EF2B2792A30000A5B24C /* MyDeleteCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyDeleteCellView.h; sourceTree = "<group>"; };
-		2134EF2C2792A30000A5B24C /* MyDeleteCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyDeleteCellView.m; sourceTree = "<group>"; };
-		2134EF362792E83600A5B24C /* MyMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyMineViewController.h; sourceTree = "<group>"; };
-		2134EF372792E83600A5B24C /* MyMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyMineViewController.m; sourceTree = "<group>"; };
-		2134EF422792F88A00A5B24C /* MyListLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyListLoader.h; sourceTree = "<group>"; };
-		2134EF432792F88A00A5B24C /* MyListLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyListLoader.m; sourceTree = "<group>"; };
-		2140292B2793C876004712AB /* MyListItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyListItem.h; sourceTree = "<group>"; };
-		2140292C2793C876004712AB /* MyListItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyListItem.m; sourceTree = "<group>"; };
-		2140292E279433F2004712AB /* placeholder_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder_image.png; sourceTree = "<group>"; };
-		214029302794493F004712AB /* MyVideoCoverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVideoCoverView.h; sourceTree = "<group>"; };
-		214029312794493F004712AB /* MyVideoCoverView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVideoCoverView.m; sourceTree = "<group>"; };
+		2134EF1A27916C3A00A5B24C /* ZPJVideoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZPJVideoVC.h; sourceTree = "<group>"; };
+		2134EF1B27916C3A00A5B24C /* ZPJVideoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZPJVideoVC.m; sourceTree = "<group>"; };
+		2134EF202791929300A5B24C /* ZPJNormalNewsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZPJNormalNewsCell.h; sourceTree = "<group>"; };
+		2134EF212791929300A5B24C /* ZPJNormalNewsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZPJNormalNewsCell.m; sourceTree = "<group>"; };
+		2134EF28279264EE00A5B24C /* ZPJNewsDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZPJNewsDetailVC.h; sourceTree = "<group>"; };
+		2134EF29279264EE00A5B24C /* ZPJNewsDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZPJNewsDetailVC.m; sourceTree = "<group>"; };
+		2134EF2B2792A30000A5B24C /* ZPJDeleteView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZPJDeleteView.h; sourceTree = "<group>"; };
+		2134EF2C2792A30000A5B24C /* ZPJDeleteView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZPJDeleteView.m; sourceTree = "<group>"; };
+		2134EF362792E83600A5B24C /* ZPJMineVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZPJMineVC.h; sourceTree = "<group>"; };
+		2134EF372792E83600A5B24C /* ZPJMineVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZPJMineVC.m; sourceTree = "<group>"; };
+		2134EF422792F88A00A5B24C /* ZPJListLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZPJListLoader.h; sourceTree = "<group>"; };
+		2134EF432792F88A00A5B24C /* ZPJListLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZPJListLoader.m; sourceTree = "<group>"; };
+		2140292B2793C876004712AB /* ZPJListItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZPJListItem.h; sourceTree = "<group>"; };
+		2140292C2793C876004712AB /* ZPJListItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZPJListItem.m; sourceTree = "<group>"; };
+		214029302794493F004712AB /* ZPJVideoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZPJVideoCell.h; sourceTree = "<group>"; };
+		214029312794493F004712AB /* ZPJVideoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZPJVideoCell.m; sourceTree = "<group>"; };
+		2163A96727C2941B00ED8CFF /* ZPJTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZPJTabBarController.h; sourceTree = "<group>"; };
+		2163A96827C2941B00ED8CFF /* ZPJTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZPJTabBarController.m; sourceTree = "<group>"; };
+		2163A97127C34FBC00ED8CFF /* ZPJHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZPJHeader.h; sourceTree = "<group>"; };
+		2163A97227C34FBC00ED8CFF /* ZPJHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZPJHeader.m; sourceTree = "<group>"; };
+		2163A97727C3AC1500ED8CFF /* ZPJRecommendDetailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZPJRecommendDetailView.h; sourceTree = "<group>"; };
+		2163A97827C3AC1500ED8CFF /* ZPJRecommendDetailView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZPJRecommendDetailView.m; sourceTree = "<group>"; };
 		21819D3427C0BACD00C14F47 /* MyRecommendListItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyRecommendListItem.h; sourceTree = "<group>"; };
 		21819D3527C0BACD00C14F47 /* MyRecommendListItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyRecommendListItem.m; sourceTree = "<group>"; };
 		21819D3727C0BB2000C14F47 /* MyRecommendListLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyRecommendListLoader.h; sourceTree = "<group>"; };
 		21819D3827C0BB2000C14F47 /* MyRecommendListLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyRecommendListLoader.m; sourceTree = "<group>"; };
-		21819D3A27C0BB9C00C14F47 /* MyRecommendPageViewCellCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyRecommendPageViewCellCollectionViewCell.h; sourceTree = "<group>"; };
-		21819D3B27C0BB9C00C14F47 /* MyRecommendPageViewCellCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyRecommendPageViewCellCollectionViewCell.m; sourceTree = "<group>"; };
-		21819D3D27C0BC0000C14F47 /* MyRecommendPageViewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyRecommendPageViewFlowLayout.h; sourceTree = "<group>"; };
-		21819D3E27C0BC0000C14F47 /* MyRecommendPageViewFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyRecommendPageViewFlowLayout.m; sourceTree = "<group>"; };
-		21819D4327C0BEEF00C14F47 /* MyRecommendPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRecommendPageViewController.m; sourceTree = "<group>"; };
-		21819D4427C0BEEF00C14F47 /* MyRecommendPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRecommendPageViewController.h; sourceTree = "<group>"; };
-		2196AADF27954ECF00C06FA8 /* MyVideoPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVideoPlayer.h; sourceTree = "<group>"; };
-		2196AAE027954ECF00C06FA8 /* MyVideoPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVideoPlayer.m; sourceTree = "<group>"; };
-		2196AAE22795ACC900C06FA8 /* MyVideoToolbar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVideoToolbar.h; sourceTree = "<group>"; };
-		2196AAE32795ACC900C06FA8 /* MyVideoToolbar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVideoToolbar.m; sourceTree = "<group>"; };
+		21819D3A27C0BB9C00C14F47 /* ZPJRecommendCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZPJRecommendCell.h; sourceTree = "<group>"; };
+		21819D3B27C0BB9C00C14F47 /* ZPJRecommendCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZPJRecommendCell.m; sourceTree = "<group>"; };
+		21819D3D27C0BC0000C14F47 /* ZPJRecommendLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZPJRecommendLayout.h; sourceTree = "<group>"; };
+		21819D3E27C0BC0000C14F47 /* ZPJRecommendLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZPJRecommendLayout.m; sourceTree = "<group>"; };
+		21819D4327C0BEEF00C14F47 /* ZPJRecommendVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPJRecommendVC.m; sourceTree = "<group>"; };
+		21819D4427C0BEEF00C14F47 /* ZPJRecommendVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPJRecommendVC.h; sourceTree = "<group>"; };
+		2196AADF27954ECF00C06FA8 /* ZPJVideoPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZPJVideoPlayer.h; sourceTree = "<group>"; };
+		2196AAE027954ECF00C06FA8 /* ZPJVideoPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZPJVideoPlayer.m; sourceTree = "<group>"; };
+		2196AAE22795ACC900C06FA8 /* ZPJVideoToolbar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZPJVideoToolbar.h; sourceTree = "<group>"; };
+		2196AAE32795ACC900C06FA8 /* ZPJVideoToolbar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZPJVideoToolbar.m; sourceTree = "<group>"; };
 		2196AB1A2798FC9D00C06FA8 /* NSString+LabelSizeCalculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+LabelSizeCalculator.h"; sourceTree = "<group>"; };
 		2196AB1B2798FC9D00C06FA8 /* NSString+LabelSizeCalculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+LabelSizeCalculator.m"; sourceTree = "<group>"; };
-		2196AB1D2798FFB200C06FA8 /* MyFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyFlowLayout.h; sourceTree = "<group>"; };
-		2196AB1E2798FFB200C06FA8 /* MyFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyFlowLayout.m; sourceTree = "<group>"; };
-		2196AB22279A475E00C06FA8 /* toPlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toPlay.png; sourceTree = "<group>"; };
-		2196AB24279A700100C06FA8 /* 屏蔽.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "屏蔽.png"; sourceTree = "<group>"; };
-		2196AB25279A700100C06FA8 /* 不感兴趣.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "不感兴趣.png"; sourceTree = "<group>"; };
-		2196AB26279A700200C06FA8 /* 举报.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "举报.png"; sourceTree = "<group>"; };
-		219CD3B2279AFDD500FB0759 /* MyVideoListLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVideoListLoader.h; sourceTree = "<group>"; };
-		219CD3B3279AFDD500FB0759 /* MyVideoListLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVideoListLoader.m; sourceTree = "<group>"; };
-		219CD3BB279C56C800FB0759 /* MyVideoListItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVideoListItem.h; sourceTree = "<group>"; };
-		219CD3BC279C56C800FB0759 /* MyVideoListItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVideoListItem.m; sourceTree = "<group>"; };
-		219D706327A663550025AFC0 /* MyLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyLocation.h; sourceTree = "<group>"; };
-		219D706427A663550025AFC0 /* MyLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyLocation.m; sourceTree = "<group>"; };
-		219D706627A6D0D70025AFC0 /* MyNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyNotification.h; sourceTree = "<group>"; };
-		219D706727A6D0D70025AFC0 /* MyNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyNotification.m; sourceTree = "<group>"; };
-		21A0EB3A27B0C7AA00F30EE2 /* MySearchBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MySearchBar.h; sourceTree = "<group>"; };
-		21A0EB3B27B0C7AA00F30EE2 /* MySearchBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MySearchBar.m; sourceTree = "<group>"; };
-		21A0EB3D27B6438800F30EE2 /* NewsApp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewsApp.png; sourceTree = "<group>"; };
-		21A0EB6727B6956600F30EE2 /* MyNewsPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyNewsPageViewController.h; sourceTree = "<group>"; };
-		21A0EB6827B6956600F30EE2 /* MyNewsPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyNewsPageViewController.m; sourceTree = "<group>"; };
-		21A0EB6A27B8EDAC00F30EE2 /* MyVideoPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVideoPageViewController.h; sourceTree = "<group>"; };
-		21A0EB6B27B8EDAC00F30EE2 /* MyVideoPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVideoPageViewController.m; sourceTree = "<group>"; };
-		21DE2B6227A29866006C742C /* MySplashView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MySplashView.h; sourceTree = "<group>"; };
-		21DE2B6327A29866006C742C /* MySplashView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MySplashView.m; sourceTree = "<group>"; };
-		21DE2B6727A2A1B3006C742C /* Splash@x4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Splash@x4.jpg"; sourceTree = "<group>"; };
+		2196AB1D2798FFB200C06FA8 /* ZPJFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZPJFlowLayout.h; sourceTree = "<group>"; };
+		2196AB1E2798FFB200C06FA8 /* ZPJFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZPJFlowLayout.m; sourceTree = "<group>"; };
+		219CD3B2279AFDD500FB0759 /* ZPJVideoListLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZPJVideoListLoader.h; sourceTree = "<group>"; };
+		219CD3B3279AFDD500FB0759 /* ZPJVideoListLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZPJVideoListLoader.m; sourceTree = "<group>"; };
+		219CD3BB279C56C800FB0759 /* ZPJVideoListItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZPJVideoListItem.h; sourceTree = "<group>"; };
+		219CD3BC279C56C800FB0759 /* ZPJVideoListItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZPJVideoListItem.m; sourceTree = "<group>"; };
+		219D706327A663550025AFC0 /* ZPJLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZPJLocation.h; sourceTree = "<group>"; };
+		219D706427A663550025AFC0 /* ZPJLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZPJLocation.m; sourceTree = "<group>"; };
+		219D706627A6D0D70025AFC0 /* ZPJNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZPJNotification.h; sourceTree = "<group>"; };
+		219D706727A6D0D70025AFC0 /* ZPJNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZPJNotification.m; sourceTree = "<group>"; };
+		21A0EB3A27B0C7AA00F30EE2 /* ZPJSearchBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZPJSearchBar.h; sourceTree = "<group>"; };
+		21A0EB3B27B0C7AA00F30EE2 /* ZPJSearchBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZPJSearchBar.m; sourceTree = "<group>"; };
+		21A0EB6727B6956600F30EE2 /* ZPJNewsPageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZPJNewsPageVC.h; sourceTree = "<group>"; };
+		21A0EB6827B6956600F30EE2 /* ZPJNewsPageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZPJNewsPageVC.m; sourceTree = "<group>"; };
+		21A0EB6A27B8EDAC00F30EE2 /* ZPJVideoPageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZPJVideoPageVC.h; sourceTree = "<group>"; };
+		21A0EB6B27B8EDAC00F30EE2 /* ZPJVideoPageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZPJVideoPageVC.m; sourceTree = "<group>"; };
+		21DE2B6227A29866006C742C /* ZPJSplashView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZPJSplashView.h; sourceTree = "<group>"; };
+		21DE2B6327A29866006C742C /* ZPJSplashView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZPJSplashView.m; sourceTree = "<group>"; };
 		64EC15F34A90107CF267E195 /* libPods-NewsAPP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NewsAPP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6DFA0BB8C1D4F988E11C9A4 /* Pods-NewsAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsAPP.debug.xcconfig"; path = "Target Support Files/Pods-NewsAPP/Pods-NewsAPP.debug.xcconfig"; sourceTree = "<group>"; };
 		FE993D6D18BB1DBC3136FF5F /* Pods-NewsAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsAPP.release.xcconfig"; path = "Target Support Files/Pods-NewsAPP/Pods-NewsAPP.release.xcconfig"; sourceTree = "<group>"; };
@@ -176,53 +150,26 @@
 		2134EEC0278A8AE300A5B24C /* NewsAPP */ = {
 			isa = PBXGroup;
 			children = (
-				2134EF2E2792E4F200A5B24C /* NewsController */,
-				2134EF332792E5E700A5B24C /* VideoController */,
-				2134EF342792E5F900A5B24C /* RecommendController */,
-				2134EF352792E60700A5B24C /* MineController */,
-				2134EEE02790702500A5B24C /* icon */,
+				2163A96127C27CF100ED8CFF /* ZPJMain */,
+				2134EF2E2792E4F200A5B24C /* ZPJNews */,
+				2134EF332792E5E700A5B24C /* ZPJVideo */,
+				2134EF342792E5F900A5B24C /* ZPJRecommend */,
+				2134EF352792E60700A5B24C /* ZPJMine */,
+				2163A95F27C11F7B00ED8CFF /* ZPJTools */,
+				2163A96327C28A5700ED8CFF /* ZPJOthers */,
 				2134EEC1278A8AE300A5B24C /* AppDelegate.h */,
 				2134EEC2278A8AE300A5B24C /* AppDelegate.m */,
 				2134EEC4278A8AE300A5B24C /* SceneDelegate.h */,
 				2134EEC5278A8AE300A5B24C /* SceneDelegate.m */,
-				2134EECD278A8AE600A5B24C /* Assets.xcassets */,
 				2134EECF278A8AE600A5B24C /* LaunchScreen.storyboard */,
 				2134EED2278A8AE600A5B24C /* Info.plist */,
 				2134EED3278A8AE600A5B24C /* main.m */,
-				21DE2B6227A29866006C742C /* MySplashView.h */,
-				21DE2B6327A29866006C742C /* MySplashView.m */,
-				219D706327A663550025AFC0 /* MyLocation.h */,
-				219D706427A663550025AFC0 /* MyLocation.m */,
-				219D706627A6D0D70025AFC0 /* MyNotification.h */,
-				219D706727A6D0D70025AFC0 /* MyNotification.m */,
+				2134EECD278A8AE600A5B24C /* Assets.xcassets */,
 			);
 			path = NewsAPP;
 			sourceTree = "<group>";
 		};
-		2134EEE02790702500A5B24C /* icon */ = {
-			isa = PBXGroup;
-			children = (
-				21A0EB3D27B6438800F30EE2 /* NewsApp.png */,
-				21DE2B6727A2A1B3006C742C /* Splash@x4.jpg */,
-				2196AB25279A700100C06FA8 /* 不感兴趣.png */,
-				2196AB26279A700200C06FA8 /* 举报.png */,
-				2196AB24279A700100C06FA8 /* 屏蔽.png */,
-				2196AB22279A475E00C06FA8 /* toPlay.png */,
-				2140292E279433F2004712AB /* placeholder_image.png */,
-				2134EF232792586B00A5B24C /* aaa.png */,
-				2134EF0C279162A700A5B24C /* home_selected@2x.png */,
-				2134EF0E279162A700A5B24C /* home@2x.png */,
-				2134EF07279162A700A5B24C /* like_selected@2x.png */,
-				2134EF0D279162A700A5B24C /* like@2x.png */,
-				2134EF09279162A700A5B24C /* page_selected@2x.png */,
-				2134EF0A279162A700A5B24C /* page@2x.png */,
-				2134EF0B279162A700A5B24C /* video_selected@2x.png */,
-				2134EF08279162A700A5B24C /* video@2x.png */,
-			);
-			path = icon;
-			sourceTree = "<group>";
-		};
-		2134EF2E2792E4F200A5B24C /* NewsController */ = {
+		2134EF2E2792E4F200A5B24C /* ZPJNews */ = {
 			isa = PBXGroup;
 			children = (
 				2134EF312792E5BC00A5B24C /* Model */,
@@ -230,18 +177,16 @@
 				2134EF302792E5B000A5B24C /* Controller */,
 				2134EF322792E5C700A5B24C /* Detail */,
 			);
-			path = NewsController;
+			path = ZPJNews;
 			sourceTree = "<group>";
 		};
 		2134EF2F2792E58600A5B24C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2134EF202791929300A5B24C /* MyNormalTableViewCell.h */,
-				2134EF212791929300A5B24C /* MyNormalTableViewCell.m */,
-				2134EF2B2792A30000A5B24C /* MyDeleteCellView.h */,
-				2134EF2C2792A30000A5B24C /* MyDeleteCellView.m */,
-				21A0EB3A27B0C7AA00F30EE2 /* MySearchBar.h */,
-				21A0EB3B27B0C7AA00F30EE2 /* MySearchBar.m */,
+				2134EF202791929300A5B24C /* ZPJNormalNewsCell.h */,
+				2134EF212791929300A5B24C /* ZPJNormalNewsCell.m */,
+				2134EF2B2792A30000A5B24C /* ZPJDeleteView.h */,
+				2134EF2C2792A30000A5B24C /* ZPJDeleteView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -249,10 +194,10 @@
 		2134EF302792E5B000A5B24C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				2134EEC7278A8AE300A5B24C /* MyNewsViewController.h */,
-				2134EEC8278A8AE300A5B24C /* MyNewsViewController.m */,
-				21A0EB6727B6956600F30EE2 /* MyNewsPageViewController.h */,
-				21A0EB6827B6956600F30EE2 /* MyNewsPageViewController.m */,
+				2134EEC7278A8AE300A5B24C /* ZPJNewsVC.h */,
+				2134EEC8278A8AE300A5B24C /* ZPJNewsVC.m */,
+				21A0EB6727B6956600F30EE2 /* ZPJNewsPageVC.h */,
+				21A0EB6827B6956600F30EE2 /* ZPJNewsPageVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -260,10 +205,10 @@
 		2134EF312792E5BC00A5B24C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2134EF422792F88A00A5B24C /* MyListLoader.h */,
-				2134EF432792F88A00A5B24C /* MyListLoader.m */,
-				2140292B2793C876004712AB /* MyListItem.h */,
-				2140292C2793C876004712AB /* MyListItem.m */,
+				2134EF422792F88A00A5B24C /* ZPJListLoader.h */,
+				2134EF432792F88A00A5B24C /* ZPJListLoader.m */,
+				2140292B2793C876004712AB /* ZPJListItem.h */,
+				2140292C2793C876004712AB /* ZPJListItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -271,50 +216,49 @@
 		2134EF322792E5C700A5B24C /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				2134EF28279264EE00A5B24C /* MyDetailViewController.h */,
-				2134EF29279264EE00A5B24C /* MyDetailViewController.m */,
+				2134EF28279264EE00A5B24C /* ZPJNewsDetailVC.h */,
+				2134EF29279264EE00A5B24C /* ZPJNewsDetailVC.m */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
 		};
-		2134EF332792E5E700A5B24C /* VideoController */ = {
+		2134EF332792E5E700A5B24C /* ZPJVideo */ = {
 			isa = PBXGroup;
 			children = (
-				2196AAE82796C9C300C06FA8 /* Tool */,
 				2134EF3B2792EAF200A5B24C /* Model */,
 				2134EF3A2792EAED00A5B24C /* View */,
 				2134EF392792EADA00A5B24C /* Controller */,
 			);
-			path = VideoController;
+			path = ZPJVideo;
 			sourceTree = "<group>";
 		};
-		2134EF342792E5F900A5B24C /* RecommendController */ = {
+		2134EF342792E5F900A5B24C /* ZPJRecommend */ = {
 			isa = PBXGroup;
 			children = (
 				2134EF3E2792EB0C00A5B24C /* Model */,
 				2134EF3D2792EB0700A5B24C /* View */,
 				2134EF3C2792EAFC00A5B24C /* Controller */,
 			);
-			path = RecommendController;
+			path = ZPJRecommend;
 			sourceTree = "<group>";
 		};
-		2134EF352792E60700A5B24C /* MineController */ = {
+		2134EF352792E60700A5B24C /* ZPJMine */ = {
 			isa = PBXGroup;
 			children = (
 				2134EF412792EB2600A5B24C /* Model */,
 				2134EF402792EB1F00A5B24C /* View */,
 				2134EF3F2792EB1500A5B24C /* Controller */,
 			);
-			path = MineController;
+			path = ZPJMine;
 			sourceTree = "<group>";
 		};
 		2134EF392792EADA00A5B24C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				2134EF1A27916C3A00A5B24C /* MyVideoViewController.h */,
-				2134EF1B27916C3A00A5B24C /* MyVideoViewController.m */,
-				21A0EB6A27B8EDAC00F30EE2 /* MyVideoPageViewController.h */,
-				21A0EB6B27B8EDAC00F30EE2 /* MyVideoPageViewController.m */,
+				2134EF1A27916C3A00A5B24C /* ZPJVideoVC.h */,
+				2134EF1B27916C3A00A5B24C /* ZPJVideoVC.m */,
+				21A0EB6A27B8EDAC00F30EE2 /* ZPJVideoPageVC.h */,
+				21A0EB6B27B8EDAC00F30EE2 /* ZPJVideoPageVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -322,14 +266,14 @@
 		2134EF3A2792EAED00A5B24C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				214029302794493F004712AB /* MyVideoCoverView.h */,
-				214029312794493F004712AB /* MyVideoCoverView.m */,
-				2196AADF27954ECF00C06FA8 /* MyVideoPlayer.h */,
-				2196AAE027954ECF00C06FA8 /* MyVideoPlayer.m */,
-				2196AAE22795ACC900C06FA8 /* MyVideoToolbar.h */,
-				2196AAE32795ACC900C06FA8 /* MyVideoToolbar.m */,
-				2196AB1D2798FFB200C06FA8 /* MyFlowLayout.h */,
-				2196AB1E2798FFB200C06FA8 /* MyFlowLayout.m */,
+				214029302794493F004712AB /* ZPJVideoCell.h */,
+				214029312794493F004712AB /* ZPJVideoCell.m */,
+				2196AADF27954ECF00C06FA8 /* ZPJVideoPlayer.h */,
+				2196AAE027954ECF00C06FA8 /* ZPJVideoPlayer.m */,
+				2196AAE22795ACC900C06FA8 /* ZPJVideoToolbar.h */,
+				2196AAE32795ACC900C06FA8 /* ZPJVideoToolbar.m */,
+				2196AB1D2798FFB200C06FA8 /* ZPJFlowLayout.h */,
+				2196AB1E2798FFB200C06FA8 /* ZPJFlowLayout.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -337,10 +281,10 @@
 		2134EF3B2792EAF200A5B24C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				219CD3B2279AFDD500FB0759 /* MyVideoListLoader.h */,
-				219CD3B3279AFDD500FB0759 /* MyVideoListLoader.m */,
-				219CD3BB279C56C800FB0759 /* MyVideoListItem.h */,
-				219CD3BC279C56C800FB0759 /* MyVideoListItem.m */,
+				219CD3B2279AFDD500FB0759 /* ZPJVideoListLoader.h */,
+				219CD3B3279AFDD500FB0759 /* ZPJVideoListLoader.m */,
+				219CD3BB279C56C800FB0759 /* ZPJVideoListItem.h */,
+				219CD3BC279C56C800FB0759 /* ZPJVideoListItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -348,10 +292,8 @@
 		2134EF3C2792EAFC00A5B24C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				2134EF1D2791889300A5B24C /* MyRecommendViewController.h */,
-				2134EF1E2791889300A5B24C /* MyRecommendViewController.m */,
-				21819D4427C0BEEF00C14F47 /* MyRecommendPageViewController.h */,
-				21819D4327C0BEEF00C14F47 /* MyRecommendPageViewController.m */,
+				21819D4427C0BEEF00C14F47 /* ZPJRecommendVC.h */,
+				21819D4327C0BEEF00C14F47 /* ZPJRecommendVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -359,10 +301,12 @@
 		2134EF3D2792EB0700A5B24C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				21819D3A27C0BB9C00C14F47 /* MyRecommendPageViewCellCollectionViewCell.h */,
-				21819D3B27C0BB9C00C14F47 /* MyRecommendPageViewCellCollectionViewCell.m */,
-				21819D3D27C0BC0000C14F47 /* MyRecommendPageViewFlowLayout.h */,
-				21819D3E27C0BC0000C14F47 /* MyRecommendPageViewFlowLayout.m */,
+				21819D3A27C0BB9C00C14F47 /* ZPJRecommendCell.h */,
+				21819D3B27C0BB9C00C14F47 /* ZPJRecommendCell.m */,
+				21819D3D27C0BC0000C14F47 /* ZPJRecommendLayout.h */,
+				21819D3E27C0BC0000C14F47 /* ZPJRecommendLayout.m */,
+				2163A97727C3AC1500ED8CFF /* ZPJRecommendDetailView.h */,
+				2163A97827C3AC1500ED8CFF /* ZPJRecommendDetailView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -381,8 +325,8 @@
 		2134EF3F2792EB1500A5B24C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				2134EF362792E83600A5B24C /* MyMineViewController.h */,
-				2134EF372792E83600A5B24C /* MyMineViewController.m */,
+				2134EF362792E83600A5B24C /* ZPJMineVC.h */,
+				2134EF372792E83600A5B24C /* ZPJMineVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -401,13 +345,39 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		2196AAE82796C9C300C06FA8 /* Tool */ = {
+		2163A95F27C11F7B00ED8CFF /* ZPJTools */ = {
 			isa = PBXGroup;
 			children = (
 				2196AB1A2798FC9D00C06FA8 /* NSString+LabelSizeCalculator.h */,
 				2196AB1B2798FC9D00C06FA8 /* NSString+LabelSizeCalculator.m */,
 			);
-			path = Tool;
+			path = ZPJTools;
+			sourceTree = "<group>";
+		};
+		2163A96127C27CF100ED8CFF /* ZPJMain */ = {
+			isa = PBXGroup;
+			children = (
+				2163A97127C34FBC00ED8CFF /* ZPJHeader.h */,
+				2163A97227C34FBC00ED8CFF /* ZPJHeader.m */,
+				2163A96727C2941B00ED8CFF /* ZPJTabBarController.h */,
+				2163A96827C2941B00ED8CFF /* ZPJTabBarController.m */,
+				21A0EB3A27B0C7AA00F30EE2 /* ZPJSearchBar.h */,
+				21A0EB3B27B0C7AA00F30EE2 /* ZPJSearchBar.m */,
+			);
+			path = ZPJMain;
+			sourceTree = "<group>";
+		};
+		2163A96327C28A5700ED8CFF /* ZPJOthers */ = {
+			isa = PBXGroup;
+			children = (
+				21DE2B6227A29866006C742C /* ZPJSplashView.h */,
+				21DE2B6327A29866006C742C /* ZPJSplashView.m */,
+				219D706327A663550025AFC0 /* ZPJLocation.h */,
+				219D706427A663550025AFC0 /* ZPJLocation.m */,
+				219D706627A6D0D70025AFC0 /* ZPJNotification.h */,
+				219D706727A6D0D70025AFC0 /* ZPJNotification.m */,
+			);
+			path = ZPJOthers;
 			sourceTree = "<group>";
 		};
 		41190DF981BF77FC7C5F123B /* Frameworks */ = {
@@ -486,24 +456,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2140292F279433F2004712AB /* placeholder_image.png in Resources */,
-				2196AB29279A700200C06FA8 /* 举报.png in Resources */,
 				2134EED1278A8AE600A5B24C /* LaunchScreen.storyboard in Resources */,
-				2134EF14279162A800A5B24C /* home_selected@2x.png in Resources */,
-				21A0EB3E27B6438800F30EE2 /* NewsApp.png in Resources */,
-				2134EF13279162A800A5B24C /* video_selected@2x.png in Resources */,
 				2134EECE278A8AE600A5B24C /* Assets.xcassets in Resources */,
-				2196AB27279A700200C06FA8 /* 屏蔽.png in Resources */,
-				2134EF12279162A800A5B24C /* page@2x.png in Resources */,
-				2134EF11279162A800A5B24C /* page_selected@2x.png in Resources */,
-				2134EF0F279162A700A5B24C /* like_selected@2x.png in Resources */,
-				21DE2B6827A2A1B3006C742C /* Splash@x4.jpg in Resources */,
-				2134EF10279162A800A5B24C /* video@2x.png in Resources */,
-				2134EF242792586B00A5B24C /* aaa.png in Resources */,
-				2134EF15279162A800A5B24C /* like@2x.png in Resources */,
-				2196AB23279A475E00C06FA8 /* toPlay.png in Resources */,
-				2196AB28279A700200C06FA8 /* 不感兴趣.png in Resources */,
-				2134EF16279162A800A5B24C /* home@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,35 +510,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2140292D2793C876004712AB /* MyListItem.m in Sources */,
+				2140292D2793C876004712AB /* ZPJListItem.m in Sources */,
 				21819D3627C0BACE00C14F47 /* MyRecommendListItem.m in Sources */,
-				2196AAE42795ACC900C06FA8 /* MyVideoToolbar.m in Sources */,
-				2134EF222791929300A5B24C /* MyNormalTableViewCell.m in Sources */,
-				21A0EB6927B6956600F30EE2 /* MyNewsPageViewController.m in Sources */,
-				2134EEC9278A8AE300A5B24C /* MyNewsViewController.m in Sources */,
-				219CD3BD279C56C800FB0759 /* MyVideoListItem.m in Sources */,
-				2134EF1F2791889300A5B24C /* MyRecommendViewController.m in Sources */,
-				214029322794493F004712AB /* MyVideoCoverView.m in Sources */,
-				219D706527A663550025AFC0 /* MyLocation.m in Sources */,
-				2134EF2D2792A30000A5B24C /* MyDeleteCellView.m in Sources */,
-				2134EF2A279264EE00A5B24C /* MyDetailViewController.m in Sources */,
-				2134EF382792E83600A5B24C /* MyMineViewController.m in Sources */,
-				21819D3C27C0BB9C00C14F47 /* MyRecommendPageViewCellCollectionViewCell.m in Sources */,
-				21819D4527C0BEEF00C14F47 /* MyRecommendPageViewController.m in Sources */,
+				2163A96927C2941B00ED8CFF /* ZPJTabBarController.m in Sources */,
+				2163A97327C34FBC00ED8CFF /* ZPJHeader.m in Sources */,
+				2196AAE42795ACC900C06FA8 /* ZPJVideoToolbar.m in Sources */,
+				2134EF222791929300A5B24C /* ZPJNormalNewsCell.m in Sources */,
+				21A0EB6927B6956600F30EE2 /* ZPJNewsPageVC.m in Sources */,
+				2134EEC9278A8AE300A5B24C /* ZPJNewsVC.m in Sources */,
+				219CD3BD279C56C800FB0759 /* ZPJVideoListItem.m in Sources */,
+				214029322794493F004712AB /* ZPJVideoCell.m in Sources */,
+				219D706527A663550025AFC0 /* ZPJLocation.m in Sources */,
+				2134EF2D2792A30000A5B24C /* ZPJDeleteView.m in Sources */,
+				2134EF2A279264EE00A5B24C /* ZPJNewsDetailVC.m in Sources */,
+				2134EF382792E83600A5B24C /* ZPJMineVC.m in Sources */,
+				21819D3C27C0BB9C00C14F47 /* ZPJRecommendCell.m in Sources */,
+				2163A97927C3AC1500ED8CFF /* ZPJRecommendDetailView.m in Sources */,
+				21819D4527C0BEEF00C14F47 /* ZPJRecommendVC.m in Sources */,
 				2134EEC3278A8AE300A5B24C /* AppDelegate.m in Sources */,
-				21819D3F27C0BC0000C14F47 /* MyRecommendPageViewFlowLayout.m in Sources */,
+				21819D3F27C0BC0000C14F47 /* ZPJRecommendLayout.m in Sources */,
 				2134EED4278A8AE600A5B24C /* main.m in Sources */,
-				2196AB1F2798FFB200C06FA8 /* MyFlowLayout.m in Sources */,
-				219CD3B4279AFDD500FB0759 /* MyVideoListLoader.m in Sources */,
+				2196AB1F2798FFB200C06FA8 /* ZPJFlowLayout.m in Sources */,
+				219CD3B4279AFDD500FB0759 /* ZPJVideoListLoader.m in Sources */,
 				21819D3927C0BB2000C14F47 /* MyRecommendListLoader.m in Sources */,
-				21A0EB3C27B0C7AA00F30EE2 /* MySearchBar.m in Sources */,
-				21A0EB6C27B8EDAC00F30EE2 /* MyVideoPageViewController.m in Sources */,
-				2196AAE127954ECF00C06FA8 /* MyVideoPlayer.m in Sources */,
-				219D706827A6D0D80025AFC0 /* MyNotification.m in Sources */,
+				21A0EB3C27B0C7AA00F30EE2 /* ZPJSearchBar.m in Sources */,
+				21A0EB6C27B8EDAC00F30EE2 /* ZPJVideoPageVC.m in Sources */,
+				2196AAE127954ECF00C06FA8 /* ZPJVideoPlayer.m in Sources */,
+				219D706827A6D0D80025AFC0 /* ZPJNotification.m in Sources */,
 				2196AB1C2798FC9D00C06FA8 /* NSString+LabelSizeCalculator.m in Sources */,
-				2134EF442792F88A00A5B24C /* MyListLoader.m in Sources */,
-				21DE2B6427A29866006C742C /* MySplashView.m in Sources */,
-				2134EF1C27916C3A00A5B24C /* MyVideoViewController.m in Sources */,
+				2134EF442792F88A00A5B24C /* ZPJListLoader.m in Sources */,
+				21DE2B6427A29866006C742C /* ZPJSplashView.m in Sources */,
+				2134EF1C27916C3A00A5B24C /* ZPJVideoVC.m in Sources */,
 				2134EEC6278A8AE300A5B24C /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

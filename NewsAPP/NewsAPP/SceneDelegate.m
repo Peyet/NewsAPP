@@ -6,16 +6,12 @@
 //
 
 #import "SceneDelegate.h"
-#import "NewsController/Controller/MyNewsViewController.h"
-#import "VideoController/Controller/MyVideoViewController.h"
-#import "RecommendController/Controller/MyRecommendViewController.h"
-#import "MineController/Controller/MyMineViewController.h"
-#import "MySplashView.h"
+#import "ZPJSplashView.h"
+
+#import "ZPJTabBarController.h"
+
 
 @interface SceneDelegate () <UITabBarControllerDelegate>
-
-@property (nonatomic, strong, readwrite) UINavigationController *navigationController;
-
 @end
 
 @implementation SceneDelegate
@@ -24,40 +20,19 @@
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
     self.window = [[UIWindow alloc] initWithWindowScene:(UIWindowScene *)scene];
         
-    UITabBarController *tabbarController = [[UITabBarController alloc] init];
-    tabbarController.delegate = self;
-    tabbarController.tabBar.backgroundColor = [UIColor colorWithRed:248.0/255 green:248.0/255 blue:244.0/255 alpha:1];
+    ZPJTabBarController *tabbarController = [[ZPJTabBarController alloc] init];
     
-    MyNewsViewController *newsViewController = [[MyNewsViewController alloc] init];
-//    UIViewController *newsViewController = [[UIViewController alloc] init];
- 
-    MyVideoViewController *videoViewController = [[MyVideoViewController alloc] init];
-    
-    MyRecommendViewController *recommendViewController = [[MyRecommendViewController alloc] init];
-    
-    MyMineViewController *mineViewController = [[MyMineViewController alloc] init];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:tabbarController];
+    navigationController.view.backgroundColor = [UIColor redColor];
 
-    [tabbarController setViewControllers:@[newsViewController, videoViewController, recommendViewController, mineViewController]];
-    
-    _navigationController = [[UINavigationController alloc] initWithRootViewController:tabbarController];
-    _navigationController.view.backgroundColor = [UIColor redColor];
-
-    self.window.rootViewController = _navigationController;
+    self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
+    // 开屏广告
     [self.window addSubview:({
-            MySplashView *splash = [[MySplashView alloc] initWithFrame:self.window.bounds];
+            ZPJSplashView *splash = [[ZPJSplashView alloc] initWithFrame:self.window.bounds];
             splash;
     })];
 
-}
-
-#pragma mark - UITabBarControllerDelegate
-- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
-    if ([viewController isKindOfClass:[MyNewsViewController class]]) {
-        [_navigationController setNavigationBarHidden:NO animated:NO];
-    } else {
-        [_navigationController setNavigationBarHidden:YES animated:NO];
-    }
 }
 
 - (void)sceneDidDisconnect:(UIScene *)scene {

@@ -6,8 +6,8 @@
 //
 
 #import "AppDelegate.h"
-#import "MyLocation.h"
-#import "MyNotification.h"
+#import "ZPJLocation.h"
+#import "ZPJNotification.h"
 
 @interface AppDelegate ()
 
@@ -18,8 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [[MyLocation locationManager] checkLocationAuthorization];
-    [[MyNotification notificationManager] checkNotificationAuthorization];;
+    [[ZPJLocation sharedLocation] checkLocationAuthorization];
+    [[ZPJNotification sharedNotification] checkNotificationAuthorization];;
     return YES;
 }
 
