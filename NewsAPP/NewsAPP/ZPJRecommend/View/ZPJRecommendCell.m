@@ -53,7 +53,7 @@
     NSDictionary *imageInfo = [model.images firstObject];
     //https://photo.tuchong.com/ + user_id +/f/ + img_id 即图片地址
     NSString *imageURL = [NSString stringWithFormat:kZPJNetworkRecommendDetailURL, imageInfo[kZPJModelKeyRecommendImageUserID], imageInfo[kZPJModelKeyRecommendImageImageID]];
-    [_pictureImageView sd_setImageWithURL:[NSURL URLWithString:imageURL]];
+    [_pictureImageView sd_setImageWithURL:[NSURL URLWithString:imageURL] placeholderImage:[UIImage imageNamed:kZPJImagePlaceHolder]];
     // cell重用的时候重新布局大小
     _pictureImageView.frame = CGRectMake(0, 0, [model.cellSize[kZPJModelKeyRecommendPictureSize] CGSizeValue].width, [model.cellSize[kZPJModelKeyRecommendPictureSize] CGSizeValue].height);
     _pictureExcerptLabel.frame = CGRectMake(5, [model.cellSize[kZPJModelKeyRecommendPictureSize] CGSizeValue].height + 5, [model.cellSize[kZPJModelKeyRecommendPictureSize] CGSizeValue].width, [model.cellSize[kZPJModelKeyRecommendExcerptSize] CGSizeValue].height);

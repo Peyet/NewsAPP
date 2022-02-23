@@ -46,43 +46,44 @@ UIKIT_EXTERN NSString *const kZPJLocalCacheRecommendFileName;               // �
 
 
 #pragma mark - CellReuseIdentifier
-UIKIT_EXTERN NSString *const kZPJCellReuseIdentifierNewsCell;          // 新闻cell重用ID
-UIKIT_EXTERN NSString *const kZPJCellReuseIdentifierVideoCell;          // 视频cell重用ID
+UIKIT_EXTERN NSString *const kZPJCellReuseIdentifierNewsCell;               // 新闻单图cell重用ID
+UIKIT_EXTERN NSString *const kZPJCellReuseIdentifierNewsMultiPicCell;       // 新闻多图cell重用ID
+UIKIT_EXTERN NSString *const kZPJCellReuseIdentifierVideoCell;              // 视频cell重用ID
 UIKIT_EXTERN NSString *const kZPJCellReuseIdentifierRecommendCell;          // 推荐cell重用ID
 
 
 #pragma mark - Model Dictionary Key
 // News mdoel
-UIKIT_EXTERN NSString *const kZPJModelKeyNewsRespondResult;               // 判断返回是否结果为空
-UIKIT_EXTERN NSString *const kZPJModelKeyNewsGetData;               // 获取新闻模型数组
-UIKIT_EXTERN NSString *const kZPJModelKeyNewsChannelTitle;               // 子频道标题
-UIKIT_EXTERN NSString *const kZPJModelKeyNewsChannelType;               // 子频道类型
+UIKIT_EXTERN NSString *const kZPJModelKeyNewsRespondResult;                 // 判断返回是否结果为空
+UIKIT_EXTERN NSString *const kZPJModelKeyNewsGetData;                       // 获取新闻模型数组
+UIKIT_EXTERN NSString *const kZPJModelKeyNewsChannelTitle;                  // 子频道标题
+UIKIT_EXTERN NSString *const kZPJModelKeyNewsChannelType;                   // 子频道类型
 UIKIT_EXTERN NSString *const kZPJModelKeyNewsChannelPageSize;               // 子频道视图大小
-UIKIT_EXTERN NSString *const kZPJModelKeyNewsChannelPage;               // 子频道中控制翻页
+UIKIT_EXTERN NSString *const kZPJModelKeyNewsChannelPage;                   // 子频道中控制翻页
 // Video mdoel
-UIKIT_EXTERN NSString *const kZPJModelKeyVideoGetData;               // 获取视频模型数组
-UIKIT_EXTERN NSString *const kZPJModelKeyVideoChannelPageSize;               // 子频道视图大小
-UIKIT_EXTERN NSString *const kZPJModelKeyVideoChannelTitle;               // 子频道标题
-UIKIT_EXTERN NSString *const kZPJModelKeyVideoChannelType;               // 子频道类型
+UIKIT_EXTERN NSString *const kZPJModelKeyVideoGetData;                      // 获取视频模型数组
+UIKIT_EXTERN NSString *const kZPJModelKeyVideoChannelPageSize;              // 子频道视图大小
+UIKIT_EXTERN NSString *const kZPJModelKeyVideoChannelTitle;                 // 子频道标题
+UIKIT_EXTERN NSString *const kZPJModelKeyVideoChannelType;                  // 子频道类型
 // Recommend mdoel
-UIKIT_EXTERN NSString *const kZPJModelKeyRecommendGetData;               // 获取图片模型数组
-UIKIT_EXTERN NSString *const kZPJModelKeyRecommendImageUserID;               // 作者ID
-UIKIT_EXTERN NSString *const kZPJModelKeyRecommendImageImageID;               // 图片ID
-UIKIT_EXTERN NSString *const kZPJModelKeyRecommendImageHeight;               // 图片高度
+UIKIT_EXTERN NSString *const kZPJModelKeyRecommendGetData;                  // 获取图片模型数组
+UIKIT_EXTERN NSString *const kZPJModelKeyRecommendImageUserID;              // 作者ID
+UIKIT_EXTERN NSString *const kZPJModelKeyRecommendImageImageID;             // 图片ID
+UIKIT_EXTERN NSString *const kZPJModelKeyRecommendImageHeight;              // 图片高度
 UIKIT_EXTERN NSString *const kZPJModelKeyRecommendImageWidth;               // 图片宽度
 
-UIKIT_EXTERN NSString *const kZPJModelKeyRecommendAuthorIcon;           // 作者头像
-UIKIT_EXTERN NSString *const kZPJModelKeyRecommendAuthorName;           // 作者名
-UIKIT_EXTERN NSString *const kZPJModelKeyRecommendAuthorURL;            // 作者主页
-UIKIT_EXTERN NSString *const kZPJModelKeyRecommendAuthorDescription;    // 作者个签
-UIKIT_EXTERN NSString *const kZPJModelKeyRecommendAuthorFollowers;      // 作者粉丝数量
+UIKIT_EXTERN NSString *const kZPJModelKeyRecommendAuthorIcon;               // 作者头像
+UIKIT_EXTERN NSString *const kZPJModelKeyRecommendAuthorName;               // 作者名
+UIKIT_EXTERN NSString *const kZPJModelKeyRecommendAuthorURL;                // 作者主页
+UIKIT_EXTERN NSString *const kZPJModelKeyRecommendAuthorDescription;        // 作者个签
+UIKIT_EXTERN NSString *const kZPJModelKeyRecommendAuthorFollowers;          // 作者粉丝数量
 
-UIKIT_EXTERN NSString *const kZPJModelKeyRecommendPictureSize;               // 图片
-UIKIT_EXTERN NSString *const kZPJModelKeyRecommendExcerptSize;               // 图片
+UIKIT_EXTERN NSString *const kZPJModelKeyRecommendPictureSize;              // 图片View大小
+UIKIT_EXTERN NSString *const kZPJModelKeyRecommendExcerptSize;              // 图片说明view大小
 
 
 #pragma  mark - Image
-UIKIT_EXTERN NSString *const kZPJImagePlaceHolder;               // 图片
+UIKIT_EXTERN NSString *const kZPJImagePlaceHolder;                          // 占位图片
 
 
 

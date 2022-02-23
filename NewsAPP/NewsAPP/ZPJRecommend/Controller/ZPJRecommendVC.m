@@ -112,9 +112,7 @@
 /// 加载数据
 - (void)loadData {
     __weak typeof(self)wself = self;
-    [[MyRecommendListLoader sharedMyListLoader] loadListDataWithRequstBlock:^NSString * _Nonnull{
-        return kZPJNetworkRecommendURL;
-    } FinishBlock:^(BOOL success, NSArray<MyRecommendListItem *> * _Nonnull dataArray) {
+    [[MyRecommendListLoader sharedMyListLoader] loadListDataWithChannelInfo:nil FinishBlock:^(BOOL success, NSArray<MyRecommendListItem *> * _Nonnull dataArray) {
         if (success) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 __strong typeof(wself) strongSelf = wself;
@@ -141,9 +139,7 @@
 /// 加载下拉数据
 - (void)loadNewmodels {
     __weak typeof(self)wself = self;
-    [[MyRecommendListLoader sharedMyListLoader] loadListDataWithRequstBlock:^NSString * _Nonnull{
-        return kZPJNetworkRecommendURL;
-    } FinishBlock:^(BOOL success, NSArray<MyRecommendListItem *> * _Nonnull dataArray) {
+    [[MyRecommendListLoader sharedMyListLoader] loadListDataWithChannelInfo:nil FinishBlock:^(BOOL success, NSArray<MyRecommendListItem *> * _Nonnull dataArray) {
         if (success) {
             [wself.collectionView.mj_header endRefreshing];
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -163,9 +159,7 @@
 /// 加载上拉数据
 - (void)loadMoremodels {
     __weak typeof(self)wself = self;
-    [[MyRecommendListLoader sharedMyListLoader] loadListDataWithRequstBlock:^NSString * _Nonnull{
-        return kZPJNetworkRecommendURL;
-    } FinishBlock:^(BOOL success, NSArray<MyRecommendListItem *> * _Nonnull dataArray) {
+    [[MyRecommendListLoader sharedMyListLoader] loadListDataWithChannelInfo:nil FinishBlock:^(BOOL success, NSArray<MyRecommendListItem *> * _Nonnull dataArray) {
         if (success) {
             [wself.collectionView.mj_footer endRefreshing];
             dispatch_async(dispatch_get_main_queue(), ^{

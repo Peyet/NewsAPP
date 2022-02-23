@@ -14,16 +14,14 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MyRecommendListLoader : NSObject
 
 typedef void(^MyListLoaderFinishBlcok)(BOOL success, NSArray<MyRecommendListItem *>  * _Nullable dataArray);
-typedef  NSString * _Nonnull (^MyListLoaderRequestURLBlcok)(void);
-
 
 /// 网络数据加载器单例
 + (instancetype)sharedMyListLoader;
 
 /// 加载网络数据
-/// @param requestURL 需要加载数据的网址
+/// @param channelInfo 需要加载数据的频道（目前只有一个请求地址，为以后增加功能用，暂时为空）
 /// @param finishBlock 完成网络请求的回调
-- (void)loadListDataWithRequstBlock:(MyListLoaderRequestURLBlcok)requestURL FinishBlock:(MyListLoaderFinishBlcok)finishBlock;
+- (void)loadListDataWithChannelInfo:(NSString * _Nullable )channelInfo FinishBlock:(MyListLoaderFinishBlcok)finishBlock;
 
 @end
 

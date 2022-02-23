@@ -129,4 +129,12 @@
     }
 }
 
+/// 取消cell选中高亮
+- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
+}
+/// 取消cell选中高亮
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+}
+
+
 @end

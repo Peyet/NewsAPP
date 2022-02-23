@@ -23,11 +23,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupChildrenViewController];
+    [self setupNewsNaviBar];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self setupNewsNaviBar];
 }
 
 #pragma mark - UITabBarControllerDelegate

@@ -10,9 +10,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ZPJVideoPageVC : UIViewController
-@property (nonatomic, strong, readwrite) NSDictionary *channelInfo;
 
-//- (void)loadControllerWithChannel:(NSDictionary *)channel Frame:(CGRect)frame;
+/// 设置page View的初始化信息
+/// @param channelInfo 设置频道的信息
+- (void)setPageChannleInfo:(NSDictionary *)channelInfo;
 
 @end
 

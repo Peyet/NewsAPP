@@ -23,13 +23,14 @@
 }
 
 /// 加载网络数据
-- (void)loadListDataWithRequstBlock:(MyListLoaderRequestURLBlcok)requestURL FinishBlock:(MyListLoaderFinishBlcok)finishBlock {
+- (void)loadListDataWithChannelInfo:(NSDictionary *)channelInfo FinishBlock:(MyListLoaderFinishBlcok)finishBlock {
     NSArray<ZPJListItem *> *listData = [self _readDataFromLocal];
     if (listData) {
         finishBlock(YES, listData);
     }
     __weak typeof(self) weakSelf = self;
-    [[AFHTTPSessionManager manager] GET:requestURL() parameters:nil headers:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    NSString *requestURL = [NSString stringWithFormat:kZPJNetworkNewsURL, channelInfo[kZPJModelKeyNewsChannelType], channelInfo[kZPJModelKeyNewsChannelPage]];
+    [[AFHTTPSessionManager manager] GET:requestURL parameters:nil headers:nil progress:^(NSProgress * _Nonnull downloadProgress) {
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             __strong typeof(weakSelf) strongSelf = weakSelf;

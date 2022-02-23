@@ -19,6 +19,7 @@
 @property (nonatomic, strong) ZPJFlowLayout *flowLayout;
 
 @property (nonatomic, strong) NSMutableArray *dataArray;
+@property (nonatomic, strong, readwrite) NSDictionary *channelInfo;
 
 @end
 
@@ -71,7 +72,7 @@
     self.flowLayout.delegate = self;
     UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:self.flowLayout];
     self.collectionView = collectionView;
-    CGSize pageSize = [_channelInfo[kZPJModelKeyVideoChannelPageSize] CGSizeValue];
+    CGSize pageSize = CGSizeMake(kZPJScreenWidth, kZPJScreenHeight - kZPJScreenNavigationBarHeight);
     self.view.frame = CGRectMake(0, 0, pageSize.width, pageSize.height);
     self.collectionView.frame = CGRectMake(0, 0, pageSize.width, pageSize.height);
 
@@ -140,16 +141,10 @@
     }];
 }
 
-#pragma mark - setter
-- (void)setChannelInfo:(NSMutableDictionary *)channelInfo {
-    if (![channelInfo isKindOfClass:[NSMutableDictionary class]]) {
-        _channelInfo = [channelInfo copy];
-    } else {
-    _channelInfo = channelInfo;
-    }
-//    // 设置初始页
-//    [_channelInfo setObject:[NSNumber numberWithInt:1] forKey:@"page"];
+- (void)setPageChannleInfo:(NSDictionary *)channelInfo {
+    self.channelInfo = channelInfo;
     self.title = channelInfo[kZPJModelKeyVideoChannelTitle];
+
 }
 
 @end

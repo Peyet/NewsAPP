@@ -11,7 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZPJNewsPageVC : UIViewController
 
-@property (nonatomic, strong) NSMutableDictionary *channelInfo;
+/// 设置page View的初始化信息
+/// @param channelInfo 设置频道的信息
+- (void)setPageChannleInfo:(NSDictionary *)channelInfo;
 
 @end
 

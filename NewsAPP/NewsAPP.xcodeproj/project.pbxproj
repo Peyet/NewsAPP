@@ -24,6 +24,8 @@
 		2163A96927C2941B00ED8CFF /* ZPJTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2163A96827C2941B00ED8CFF /* ZPJTabBarController.m */; };
 		2163A97327C34FBC00ED8CFF /* ZPJHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2163A97227C34FBC00ED8CFF /* ZPJHeader.m */; };
 		2163A97927C3AC1500ED8CFF /* ZPJRecommendDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2163A97827C3AC1500ED8CFF /* ZPJRecommendDetailView.m */; };
+		2163A97C27C4A52500ED8CFF /* ZPJMultiPicNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2163A97B27C4A52500ED8CFF /* ZPJMultiPicNewsCell.m */; };
+		2163A97E27C4EA0C00ED8CFF /* ZPJMultiPicNewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2163A97D27C4EA0C00ED8CFF /* ZPJMultiPicNewsCell.xib */; };
 		21819D3627C0BACE00C14F47 /* MyRecommendListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 21819D3527C0BACD00C14F47 /* MyRecommendListItem.m */; };
 		21819D3927C0BB2000C14F47 /* MyRecommendListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 21819D3827C0BB2000C14F47 /* MyRecommendListLoader.m */; };
 		21819D3C27C0BB9C00C14F47 /* ZPJRecommendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21819D3B27C0BB9C00C14F47 /* ZPJRecommendCell.m */; };
@@ -78,6 +80,9 @@
 		2163A97227C34FBC00ED8CFF /* ZPJHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZPJHeader.m; sourceTree = "<group>"; };
 		2163A97727C3AC1500ED8CFF /* ZPJRecommendDetailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZPJRecommendDetailView.h; sourceTree = "<group>"; };
 		2163A97827C3AC1500ED8CFF /* ZPJRecommendDetailView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZPJRecommendDetailView.m; sourceTree = "<group>"; };
+		2163A97A27C4A52500ED8CFF /* ZPJMultiPicNewsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZPJMultiPicNewsCell.h; sourceTree = "<group>"; };
+		2163A97B27C4A52500ED8CFF /* ZPJMultiPicNewsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZPJMultiPicNewsCell.m; sourceTree = "<group>"; };
+		2163A97D27C4EA0C00ED8CFF /* ZPJMultiPicNewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZPJMultiPicNewsCell.xib; sourceTree = "<group>"; };
 		21819D3427C0BACD00C14F47 /* MyRecommendListItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyRecommendListItem.h; sourceTree = "<group>"; };
 		21819D3527C0BACD00C14F47 /* MyRecommendListItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyRecommendListItem.m; sourceTree = "<group>"; };
 		21819D3727C0BB2000C14F47 /* MyRecommendListLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyRecommendListLoader.h; sourceTree = "<group>"; };
@@ -187,6 +192,9 @@
 				2134EF212791929300A5B24C /* ZPJNormalNewsCell.m */,
 				2134EF2B2792A30000A5B24C /* ZPJDeleteView.h */,
 				2134EF2C2792A30000A5B24C /* ZPJDeleteView.m */,
+				2163A97A27C4A52500ED8CFF /* ZPJMultiPicNewsCell.h */,
+				2163A97B27C4A52500ED8CFF /* ZPJMultiPicNewsCell.m */,
+				2163A97D27C4EA0C00ED8CFF /* ZPJMultiPicNewsCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -456,6 +464,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2163A97E27C4EA0C00ED8CFF /* ZPJMultiPicNewsCell.xib in Resources */,
 				2134EED1278A8AE600A5B24C /* LaunchScreen.storyboard in Resources */,
 				2134EECE278A8AE600A5B24C /* Assets.xcassets in Resources */,
 			);
@@ -533,6 +542,7 @@
 				2196AB1F2798FFB200C06FA8 /* ZPJFlowLayout.m in Sources */,
 				219CD3B4279AFDD500FB0759 /* ZPJVideoListLoader.m in Sources */,
 				21819D3927C0BB2000C14F47 /* MyRecommendListLoader.m in Sources */,
+				2163A97C27C4A52500ED8CFF /* ZPJMultiPicNewsCell.m in Sources */,
 				21A0EB3C27B0C7AA00F30EE2 /* ZPJSearchBar.m in Sources */,
 				21A0EB6C27B8EDAC00F30EE2 /* ZPJVideoPageVC.m in Sources */,
 				2196AAE127954ECF00C06FA8 /* ZPJVideoPlayer.m in Sources */,

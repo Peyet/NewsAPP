@@ -23,10 +23,12 @@
 }
 
 /// 加载网络数据
-- (void)loadListDataWithRequstBlock:(MyListLoaderRequestURLBlcok)requestURL FinishBlock:(MyListLoaderFinishBlcok)finishBlock {
+- (void)loadListDataWithChannelInfo:(NSString * _Nullable)channelInfo FinishBlock:(MyListLoaderFinishBlcok)finishBlock {
     // 加载网络数据
     __weak typeof(self) weakSelf = self;
-    [[AFHTTPSessionManager manager] GET:requestURL() parameters:nil headers:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    // 目前只有一个请求地址，所以所以使用默认的
+    NSString *requestURL = kZPJNetworkRecommendURL;
+    [[AFHTTPSessionManager manager] GET:requestURL parameters:nil headers:nil progress:^(NSProgress * _Nonnull downloadProgress) {
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             __strong typeof(weakSelf) strongSelf = weakSelf;

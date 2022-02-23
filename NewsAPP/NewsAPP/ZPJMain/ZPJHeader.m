@@ -41,6 +41,7 @@ NSString *const kZPJLocalCacheRecommendFileName =  @"recommendList";
 #pragma mark - CellReuseIdentifier
 
 NSString *const kZPJCellReuseIdentifierNewsCell =  @"ZPJNewsNormalCell";
+NSString *const kZPJCellReuseIdentifierNewsMultiPicCell =  @"ZPJMultiPicNewsCell";
 NSString *const kZPJCellReuseIdentifierVideoCell =  @"ZPJVideoCell";
 NSString *const kZPJCellReuseIdentifierRecommendCell =  @"ZPJRecommendCell";
 
