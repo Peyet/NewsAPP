@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://gitee.com/Peyet/image-library/raw/master/NewsAPP/Splash.gif" alt="NewsAPP" title="NewsAPP" width="557"/>
+<img src="http://img.cdn.peyet.org/img/NewsAPP/TitleImage.png" alt="NewsAPP" title="NewsAPP" width="557"/>
 </p>
 <p align="center">
 <img src="https://img.shields.io/badge/platform-iOS-blue" alt="platform">
@@ -9,6 +9,7 @@
 <img src="https://img.shields.io/github/license/peyet/NewsAPP" alt="License">  
 <a href="https://twitter.com/PeyetZh"><img src="https://img.shields.io/twitter/follow/peyetzh?style=social" alt="Twitter Follow"></a>
 </p>
+
 
 
 # NewsAPP
@@ -24,8 +25,8 @@
 </table>
 
 ## 应用演示
-
-<img src="https://gitee.com/Peyet/image-library/raw/master/NewsAPP/Splash.gif" alt="Splash" style="zoom:48%;" /><img src="https://gitee.com/Peyet/image-library/raw/master/NewsAPP/News.gif" alt="News" style="zoom:48%;" /><img src="https://gitee.com/Peyet/image-library/raw/master/NewsAPP/Video.gif" alt="Video" style="zoom:48%;" /><img src="https://gitee.com/Peyet/image-library/raw/master/NewsAPP/Recommend.gif" alt="Recommend" style="zoom:48%;" />						
+<a href="http://img.cdn.peyet.org/img/NewsAPP/Splash.gif"><img src="http://img.cdn.peyet.org/img/NewsAPP/Splash.gif" alt="Splash" style="zoom:48%;" /></a><a href="http://img.cdn.peyet.org/img/NewsAPP/News.gif"><img src="http://img.cdn.peyet.org/img/NewsAPP/News.gif" alt="News" style="zoom:48%;" /></a><a href="http://img.cdn.peyet.org/img/NewsAPP/Video.gif"><img src="http://img.cdn.peyet.org/img/NewsAPP/Video.gif" alt="Video" style="zoom:48%;" /></a><a href="http://img.cdn.peyet.org/img/NewsAPP/Recommend.gif"><img src="http://img.cdn.peyet.org/img/NewsAPP/Recommend.gif" alt="Recommend" style="zoom:48%;" /></a>
+如果不能正常显示，请点击加载失败图片的链接跳转查看						
 
 ## TODO List
 
@@ -60,3 +61,4 @@
   ​	iOS系统在App启动前，也就是AppDelegate的`- application: didFinishLaunchingWithOptions:` 前，会加载一个从LaunchScreen中提前准备好的启动图片，在加载完成App UI后，这张图片就会消失。由于现在手机手机处理器速度很快，这张图片的展示事件非常短，所以需要在展示完系统启动图后衔接一个和系统启动图一样的界面。
 
   ​	这里选择了在SceneDelegate中 `- scene: willConnectToSession options:` 即将把Scene绑定到UIWindow的时候，配置我们的自定义广告界面。这样就实现了无缝切换 。
+
