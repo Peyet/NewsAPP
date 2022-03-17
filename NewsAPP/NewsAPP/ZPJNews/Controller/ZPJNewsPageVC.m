@@ -108,7 +108,6 @@
         strongSelf.dataArray = [dataArray mutableCopy];
         [strongSelf.tableView reloadData];
     }];
-    
 }
 
 /// 创建上下拉刷新
@@ -122,15 +121,15 @@
 - (void)loadNewmodels {
     __weak typeof(self)wself = self;
     [self.listLoader loadListDataWithChannelInfo:self.channelInfo FinishBlock:^(BOOL success, NSArray<ZPJListItem *> * _Nonnull dataArray) {
+        __strong typeof(wself) strongSelf = wself;
         if (success) {
-            __strong typeof(wself) strongSelf = wself;
             strongSelf.dataArray = [dataArray mutableCopy];
             [strongSelf.tableView.mj_header endRefreshing];
             [strongSelf.tableView reloadData];
         } else {
             dispatch_async(dispatch_get_main_queue(), ^{
-                [wself.tableView.mj_header endRefreshing];
-                [wself.tableView reloadData];
+                [strongSelf.tableView.mj_header endRefreshing];
+                [strongSelf.tableView reloadData];
             });
         }
     }];
@@ -140,16 +139,16 @@
 - (void)loadMoremodels {
     __weak typeof(self)wself = self;
     [self.listLoader loadListDataWithChannelInfo:self.channelInfo FinishBlock:^(BOOL success, NSArray<ZPJListItem *> * _Nonnull dataArray) {
+        __strong typeof(wself) strongSelf = wself;
         if (success) {
-            __strong typeof(wself) strongSelf = wself;
             [strongSelf.dataArray addObjectsFromArray:dataArray];
             [strongSelf.tableView.mj_header endRefreshing];
             [strongSelf.tableView reloadData];
         } else {
             dispatch_async(dispatch_get_main_queue(), ^{
-                [wself.dataArray addObjectsFromArray:dataArray];
-                [wself.tableView.mj_header endRefreshing];
-                [wself.tableView reloadData];
+                [strongSelf.dataArray addObjectsFromArray:dataArray];
+                [strongSelf.tableView.mj_header endRefreshing];
+                [strongSelf.tableView reloadData];
             });
         }
     }];

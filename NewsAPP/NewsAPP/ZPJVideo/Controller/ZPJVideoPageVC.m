@@ -80,16 +80,13 @@
     collectionView.delegate = self;
     collectionView.dataSource = self;
     [collectionView registerClass:[ZPJVideoCell class] forCellWithReuseIdentifier:kZPJCellReuseIdentifierVideoCell];
-    __weak typeof(self)wself = self;
     [[ZPJVideoListLoader sharedMyListLoader] loadListDataWithChannel:self.channelInfo[kZPJModelKeyVideoChannelType] FinishBlock:^(BOOL success, NSArray<ZPJVideoListItem *> * _Nonnull dataArray) {
         if (success) {
-            __strong typeof(wself) strongSelf = wself;
-            strongSelf.dataArray = [dataArray mutableCopy];
-            [strongSelf.collectionView reloadData];
+            self.dataArray = [dataArray mutableCopy];
+            [self.collectionView reloadData];
         } else {
-            __strong typeof(wself) strongSelf = wself;
-            strongSelf.dataArray = [dataArray mutableCopy];
-            [strongSelf.collectionView reloadData];
+            self.dataArray = [dataArray mutableCopy];
+            [self.collectionView reloadData];
         }
     }];
     collectionView.backgroundColor = kZPJ_COLOR_VIDEOPAGE;
@@ -107,17 +104,15 @@
 
 /// 加载下拉数据
 - (void)loadNewmodels {
-    __weak typeof(self)wself = self;
     [[ZPJVideoListLoader sharedMyListLoader] loadListDataWithChannel:@"1655" FinishBlock:^(BOOL success, NSArray<ZPJVideoListItem *> * _Nonnull dataArray) {
         if (success) {
-            __strong typeof(wself) strongSelf = wself;
-            strongSelf.dataArray = [dataArray mutableCopy];
-            [strongSelf.collectionView.mj_header endRefreshing];
-            [strongSelf.collectionView reloadData];
+            self.dataArray = [dataArray mutableCopy];
+            [self.collectionView.mj_header endRefreshing];
+            [self.collectionView reloadData];
         } else {
             dispatch_async(dispatch_get_main_queue(), ^{
-                [wself.collectionView.mj_header endRefreshing];
-                [wself.collectionView reloadData];
+                [self.collectionView.mj_header endRefreshing];
+                [self.collectionView reloadData];
             });
         }
     }];
@@ -125,17 +120,15 @@
 
 /// 加载上拉数据
 - (void)loadMoremodels {
-    __weak typeof(self)wself = self;
     [[ZPJVideoListLoader sharedMyListLoader] loadListDataWithChannel:@"1655" FinishBlock:^(BOOL success, NSArray<ZPJVideoListItem *> * _Nonnull dataArray) {
         if (success) {
-            __strong typeof(wself) strongSelf = wself;
-            [strongSelf.dataArray addObjectsFromArray:dataArray];
-            [strongSelf.collectionView.mj_header endRefreshing];
-            [strongSelf.collectionView reloadData];
+            [self.dataArray addObjectsFromArray:dataArray];
+            [self.collectionView.mj_header endRefreshing];
+            [self.collectionView reloadData];
         } else {
             dispatch_async(dispatch_get_main_queue(), ^{
-                [wself.collectionView.mj_header endRefreshing];
-                [wself.collectionView reloadData];
+                [self.collectionView.mj_header endRefreshing];
+                [self.collectionView reloadData];
             });
         }
     }];

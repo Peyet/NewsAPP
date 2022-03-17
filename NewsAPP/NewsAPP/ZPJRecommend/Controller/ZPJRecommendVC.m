@@ -111,20 +111,18 @@
 
 /// 加载数据
 - (void)loadData {
-    __weak typeof(self)wself = self;
     [[MyRecommendListLoader sharedMyListLoader] loadListDataWithChannelInfo:nil FinishBlock:^(BOOL success, NSArray<MyRecommendListItem *> * _Nonnull dataArray) {
         if (success) {
             dispatch_async(dispatch_get_main_queue(), ^{
-                __strong typeof(wself) strongSelf = wself;
-                strongSelf.models = [dataArray mutableCopy];
+                self.models = [dataArray mutableCopy];
                 // 由于一次加载的数据较少，所以手动添加一些数据
-                [strongSelf.models addObjectsFromArray:self.models];
-                [strongSelf.models addObjectsFromArray:self.models];
-                [strongSelf.collectionView reloadData];
+                [self.models addObjectsFromArray:self.models];
+                [self.models addObjectsFromArray:self.models];
+                [self.collectionView reloadData];
             });
         } else {
             dispatch_async(dispatch_get_main_queue(), ^{
-                [wself.collectionView reloadData];
+                [self.collectionView reloadData];
             });
         }
     }];
@@ -138,19 +136,16 @@
 
 /// 加载下拉数据
 - (void)loadNewmodels {
-    __weak typeof(self)wself = self;
     [[MyRecommendListLoader sharedMyListLoader] loadListDataWithChannelInfo:nil FinishBlock:^(BOOL success, NSArray<MyRecommendListItem *> * _Nonnull dataArray) {
         if (success) {
-            [wself.collectionView.mj_header endRefreshing];
             dispatch_async(dispatch_get_main_queue(), ^{
-                __strong typeof(wself) strongSelf = wself;
-                strongSelf.models = [dataArray mutableCopy];
-                [wself.collectionView reloadData];
+                self.models = [dataArray mutableCopy];
+                [self.collectionView reloadData];
             });
         } else {
             dispatch_async(dispatch_get_main_queue(), ^{
-                [wself.collectionView.mj_header endRefreshing];
-                [wself.collectionView reloadData];
+                [self.collectionView.mj_header endRefreshing];
+                [self.collectionView reloadData];
             });
         }
     }];
@@ -158,19 +153,16 @@
 
 /// 加载上拉数据
 - (void)loadMoremodels {
-    __weak typeof(self)wself = self;
     [[MyRecommendListLoader sharedMyListLoader] loadListDataWithChannelInfo:nil FinishBlock:^(BOOL success, NSArray<MyRecommendListItem *> * _Nonnull dataArray) {
         if (success) {
-            [wself.collectionView.mj_footer endRefreshing];
             dispatch_async(dispatch_get_main_queue(), ^{
-                __strong typeof(wself) strongSelf = wself;
-                strongSelf.models = [dataArray arrayByAddingObjectsFromArray:dataArray.mutableCopy];
-                [wself.collectionView reloadData];
+                self.models = [dataArray arrayByAddingObjectsFromArray:dataArray.mutableCopy];
+                [self.collectionView reloadData];
             });
         } else {
             dispatch_async(dispatch_get_main_queue(), ^{
-                [wself.collectionView.mj_footer endRefreshing];
-                [wself.collectionView reloadData];
+                [self.collectionView.mj_footer endRefreshing];
+                [self.collectionView reloadData];
             });
         }
     }];
